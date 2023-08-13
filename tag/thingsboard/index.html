@@ -1,0 +1,330 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Jump!Alang</title>
+<meta name="description" content="永远年轻！永远热泪盈眶！" />
+<link rel="shortcut icon" href="http://git.alang.run/favicon.ico?v=1691903147411">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+<link rel="stylesheet" href="http://git.alang.run/styles/main.css">
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main px-4 flex flex-col lg:flex-row">
+      <div id="sidebar" class="sidebar-wrapper lg:static lg:w-1/4">
+  <div class="lg:sticky top-0">
+    <div class="sidebar-content">
+      <div class="flex lg:block p-4 lg:px-0 items-center fixed lg:static lg:block top-0 right-0 left-0 bg-white z-50">
+        <i class="ri-menu-2-line lg:mt-4 text-2xl cursor-pointer animated fadeIn" onclick="openMenu()"></i>
+        <a href="http://git.alang.run">
+          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="http://git.alang.run/images/avatar.png?v=1691903147411" alt="">
+        </a>
+        <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">Jump!Alang</h1>
+      </div>
+      
+        <div class="animated fadeInLeft" style="animation-delay: 0.4s">
+          <p class="my-4 text-gray-600 font-light hidden lg:block">
+            永远年轻！永远热泪盈眶！
+          </p>
+          <div class="animated fadeInLeft social-container hidden lg:block" style="animation-delay: 0.6s">
+            
+              
+                <a href="https://github.com/JumpAlang" target="_blank" class="mr-4 text-xl text-gray-400 font-light hover:text-gray-900">
+                  <i class="ri-github-line"></i>
+                </a>
+              
+            
+              
+            
+              
+                <a href="https://weibo.com/JumpAlang" target="_blank" class="mr-4 text-xl text-gray-400 font-light hover:text-gray-900">
+                  <i class="ri-weibo-line"></i>
+                </a>
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+          </div>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="menu-container">
+  <i class="ri-arrow-left-line text-2xl cursor-pointer animated fadeIn close-menu-btn" onclick="closeMenu()"></i>
+  <div>
+    
+      
+        <a href="/" class="menu" style="animation-delay: 0s">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu" style="animation-delay: 0.2s">
+          所有
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu" style="animation-delay: 0.4s">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu" style="animation-delay: 0.6000000000000001s">
+          关于
+        </a>
+      
+    
+      
+        <a href="/post/world" class="menu" style="animation-delay: 0.8s" target="_blank">
+          世界
+        </a>
+      
+    
+  </div>
+  <div class="site-footer">
+    <div class="py-4 text-gray-700">JumpAlang ©2019  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a></div>
+    <a class="rss" href="http://git.alang.run/atom.xml" target="_blank">RSS</a>
+  </div>
+</div>
+<div class="mask" onclick="closeMenu()">
+</div>
+      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4">
+        <h2 class="text-lg text-gray-700 mb-8">
+          <i class="ri-bookmark-line"></i> thingsboard
+        </h2>
+        
+  <section class="post-item md:flex pb-12 animated fadeIn" :style="{ 'animation-delay': `${0 * 0.2}s` }">
+    
+    <div class="content">
+      <a href="http://git.alang.run/post/thingsboard-gateway-http-kuo-zhan-pi-pei-duo-ji-lu-jing/">
+        <h2 class="post-title text-xl font-extrabold mt-5 md:mt-0">thingsboard gateway http扩展匹配多级路径</h2>
+      </a>
+      <div class="post-abstract text-gray-700 font-light my-4">
+        <p>调测http扩展时，发现转换器序列号中的url只能配置一级，如只支持<code>green</code>格式，不支持<code>green/1/2/3</code>之类多级。</p>
+
+      </div>
+      <div class="text-gray-400 text-sm font-light">2019-11-13 / 2 min read</div>
+    </div>
+  </section>
+
+  <section class="post-item md:flex pb-12 animated fadeIn" :style="{ 'animation-delay': `${1 * 0.2}s` }">
+    
+    <div class="content">
+      <a href="http://git.alang.run/post/thingsboard-wang-guan-kuo-zhan-yu-tb-tong-bu-de-li-jie/">
+        <h2 class="post-title text-xl font-extrabold mt-5 md:mt-0">thingsboard网关扩展与tb同步的理解</h2>
+      </a>
+      <div class="post-abstract text-gray-700 font-light my-4">
+        <p>最近由于要经常操作网关扩展，如添加http扩展，新增mqtt扩展的映射。经常出现网关不同步问题。导致了经过网关的数据，设备有创建，但是没有相应遥测数据，之前有看过群里大佬写过thingsboard网关与tb配置同步的源码分析：</p>
+<blockquote>
+<p><a href="https://blog.csdn.net/Zzhou1990/article/details/102477059">https://blog.csdn.net/Zzhou1990/article/details/102477059</a> <em><strong>Thingsboard Gateway 根据云端配置初始化</strong></em></p>
+</blockquote>
+
+      </div>
+      <div class="text-gray-400 text-sm font-light">2019-11-04 / 4 min read</div>
+    </div>
+  </section>
+
+  <section class="post-item md:flex pb-12 animated fadeIn" :style="{ 'animation-delay': `${2 * 0.2}s` }">
+    
+    <div class="content">
+      <a href="http://git.alang.run/post/thingsboard-gateway-http-kuo-zhan-shang-chuan-shu-xing-ji-yao-ce-shu-ju/">
+        <h2 class="post-title text-xl font-extrabold mt-5 md:mt-0">thingsboard gateway http扩展 创建设备、上传属性及遥测数据</h2>
+      </a>
+      <div class="post-abstract text-gray-700 font-light my-4">
+        <p>thingsboard官网文档有介绍网关mqtt扩展的使用，http扩展的使用方法找了许久也未找到。于是就想从thinsboard pe版本中的http整合找下灵感。pe版本中的http整合其实也就是提供中间的一个整合器服务和转换器（可以转换json/text/binary(base64)），然后跟着这个线索去查看gateway的源码，发现有一个controller有配置uplink上传链，至于downlink还待研究。<em><strong>对于thingsboard还是小白，如文章理解有误，希望看者多多帮忙指正，互相一起进步</strong></em></p>
+
+      </div>
+      <div class="text-gray-400 text-sm font-light">2019-11-01 / 2 min read</div>
+    </div>
+  </section>
+
+  <section class="post-item md:flex pb-12 animated fadeIn" :style="{ 'animation-delay': `${3 * 0.2}s` }">
+    
+    <div class="content">
+      <a href="http://git.alang.run/post/thingsboard-xiu-gai-logo-ji-biao-ti/">
+        <h2 class="post-title text-xl font-extrabold mt-5 md:mt-0">ThingsBoard修改logo</h2>
+      </a>
+      <div class="post-abstract text-gray-700 font-light my-4">
+        <p>本来以为很简单的事，但其中问题不断，写在此愿能帮助遇到同样问题的你。<br>
+要实时查看logo替换效果，建议在热部署模式下运行，官方文档：<a href="https://thingsboard.io/docs/user-guide/contribution/how-to-contribute/#running-ui-container-in-hot-redeploy-mode">https://thingsboard.io/docs/user-guide/contribution/how-to-contribute/#running-ui-container-in-hot-redeploy-mode</a></p>
+
+      </div>
+      <div class="text-gray-400 text-sm font-light">2019-10-17 / 2 min read</div>
+    </div>
+  </section>
+
+  <section class="post-item md:flex pb-12 animated fadeIn" :style="{ 'animation-delay': `${4 * 0.2}s` }">
+    
+    <div class="content">
+      <a href="http://git.alang.run/post/thingsboard-rpc-da-lao-zong-jie/">
+        <h2 class="post-title text-xl font-extrabold mt-5 md:mt-0">thingsboard rpc大佬总结</h2>
+      </a>
+      <div class="post-abstract text-gray-700 font-light my-4">
+        <p>感谢大佬：@苏州-大侠，@杭州～三升水<br>
+QQ群：China Thingsboard（726442610）</p>
+
+      </div>
+      <div class="text-gray-400 text-sm font-light">2019-09-27 / 2 min read</div>
+    </div>
+  </section>
+
+  <section class="post-item md:flex pb-12 animated fadeIn" :style="{ 'animation-delay': `${5 * 0.2}s` }">
+    
+    <div class="content">
+      <a href="http://git.alang.run/post/thingsboard-rest-api-shi-yong-zhun-bei/">
+        <h2 class="post-title text-xl font-extrabold mt-5 md:mt-0">thingsboard rest api使用准备</h2>
+      </a>
+      <div class="post-abstract text-gray-700 font-light my-4">
+        <p>服务器端核心API</p>
+
+      </div>
+      <div class="text-gray-400 text-sm font-light">2019-09-25 / 1 min read</div>
+    </div>
+  </section>
+
+  <section class="post-item md:flex pb-12 animated fadeIn" :style="{ 'animation-delay': `${6 * 0.2}s` }">
+    
+    <div class="content">
+      <a href="http://git.alang.run/post/thingsboard-gateway-gai-shu/">
+        <h2 class="post-title text-xl font-extrabold mt-5 md:mt-0">thingsboard gateWay概述</h2>
+      </a>
+      <div class="post-abstract text-gray-700 font-light my-4">
+        <p>thingsboard网关可让您将与旧式和第三方系统连接的IoT设备与ThingsBoard集成在一起。<br>
+网关是ThingsBoard中的一种特殊类型的设备，能够充当连接到不同系统的外部设备和ThingsBoard之间的桥梁。网关API提供了使用单个MQTT连接在多个设备和平台之间交换数据的功能。网关还充当ThingsBoard设备，并且可以利用现有的MQTT Device API来报告统计信息，接收配置更新等等。</p>
+
+      </div>
+      <div class="text-gray-400 text-sm font-light">2019-09-24 / 3 min read</div>
+    </div>
+  </section>
+
+        <div class="pagination-container animated fadeIn">
+  
+  
+</div>
+
+      </div>
+    </div>
+
+    <script src="http://git.alang.run/media/prism.js"></script>  
+<script>
+
+Prism.highlightAll()
+let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+// This should probably be throttled.
+// Especially because it triggers during smooth scrolling.
+// https://lodash.com/docs/4.17.10#throttle
+// You could do like...
+// window.addEventListener("scroll", () => {
+//    _.throttle(doThatStuff, 100);
+// });
+// Only not doing it here to keep this Pen dependency-free.
+
+window.addEventListener("scroll", event => {
+  let fromTop = window.scrollY;
+
+  mainNavLinks.forEach((link, index) => {
+    let section = document.getElementById(decodeURI(link.hash).substring(1));
+    let nextSection = null
+    if (mainNavLinks[index + 1]) {
+      nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+    }
+    if (section.offsetTop <= fromTop) {
+      if (nextSection) {
+        if (nextSection.offsetTop > fromTop) {
+          link.classList.add("current");
+        } else {
+          link.classList.remove("current");    
+        }
+      } else {
+        link.classList.add("current");
+      }
+    } else {
+      link.classList.remove("current");
+    }
+  });
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  var lazyImages = [].slice.call(document.querySelectorAll(".post-feature-image.lazy"));
+
+  if ("IntersectionObserver" in window) {
+    let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          let lazyImage = entry.target
+          lazyImage.style.backgroundImage = `url(${lazyImage.dataset.bg})`
+          lazyImage.classList.remove("lazy")
+          lazyImageObserver.unobserve(lazyImage)
+        }
+      });
+    });
+
+    lazyImages.forEach(function(lazyImage) {
+      lazyImageObserver.observe(lazyImage)
+    })
+  } else {
+    // Possibly fall back to a more compatible method here
+  }
+});
+
+const menuContainer = document.querySelector('.menu-container')
+const menus = document.querySelectorAll('.menu-container .menu')
+const mask = document.querySelector('.mask')
+const contentWrapper = document.querySelector('.content-wrapper')
+const latestArticle = document.querySelector('.latest-article')
+const readMore = document.querySelector('.read-more')
+const indexPage = document.querySelector('.index-page')
+
+const isHome = location.pathname === '/'
+if (latestArticle) {
+  latestArticle.style.display = isHome ? 'block' : 'none'
+  readMore.style.display = isHome ? 'block' : 'none'
+  indexPage.style.display = isHome ? 'none' : 'block'
+}
+
+const openMenu = () => {
+  menuContainer.classList.add('open')
+  menus.forEach(menu => {
+    menu.classList.add('animated', 'fadeInLeft')
+  })
+  mask.classList.add('open')
+  contentWrapper.classList.add('is-second')
+}
+
+const closeMenu = () => {
+  menuContainer.classList.remove('open')
+  menus.forEach(menu => {
+    menu.classList.remove('animated', 'fadeInLeft')
+  })
+  mask.classList.remove('open')
+  contentWrapper.classList.remove('is-second')
+}
+</script>
+  
+  </body>
+</html>

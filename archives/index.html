@@ -1,0 +1,903 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Jump!Alang</title>
+<meta name="description" content="永远年轻！永远热泪盈眶！" />
+<link rel="shortcut icon" href="http://git.alang.run/favicon.ico?v=1691903147411">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+<link rel="stylesheet" href="http://git.alang.run/styles/main.css">
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main px-4 flex flex-col lg:flex-row">
+      <div id="sidebar" class="sidebar-wrapper lg:static lg:w-1/4">
+  <div class="lg:sticky top-0">
+    <div class="sidebar-content">
+      <div class="flex lg:block p-4 lg:px-0 items-center fixed lg:static lg:block top-0 right-0 left-0 bg-white z-50">
+        <i class="ri-menu-2-line lg:mt-4 text-2xl cursor-pointer animated fadeIn" onclick="openMenu()"></i>
+        <a href="http://git.alang.run">
+          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="http://git.alang.run/images/avatar.png?v=1691903147411" alt="">
+        </a>
+        <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">Jump!Alang</h1>
+      </div>
+      
+        <div class="animated fadeInLeft" style="animation-delay: 0.4s">
+          <p class="my-4 text-gray-600 font-light hidden lg:block">
+            永远年轻！永远热泪盈眶！
+          </p>
+          <div class="animated fadeInLeft social-container hidden lg:block" style="animation-delay: 0.6s">
+            
+              
+                <a href="https://github.com/JumpAlang" target="_blank" class="mr-4 text-xl text-gray-400 font-light hover:text-gray-900">
+                  <i class="ri-github-line"></i>
+                </a>
+              
+            
+              
+            
+              
+                <a href="https://weibo.com/JumpAlang" target="_blank" class="mr-4 text-xl text-gray-400 font-light hover:text-gray-900">
+                  <i class="ri-weibo-line"></i>
+                </a>
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+          </div>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="menu-container">
+  <i class="ri-arrow-left-line text-2xl cursor-pointer animated fadeIn close-menu-btn" onclick="closeMenu()"></i>
+  <div>
+    
+      
+        <a href="/" class="menu" style="animation-delay: 0s">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu" style="animation-delay: 0.2s">
+          所有
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu" style="animation-delay: 0.4s">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu" style="animation-delay: 0.6000000000000001s">
+          关于
+        </a>
+      
+    
+      
+        <a href="/post/world" class="menu" style="animation-delay: 0.8s" target="_blank">
+          世界
+        </a>
+      
+    
+  </div>
+  <div class="site-footer">
+    <div class="py-4 text-gray-700">JumpAlang ©2019  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a></div>
+    <a class="rss" href="http://git.alang.run/atom.xml" target="_blank">RSS</a>
+  </div>
+</div>
+<div class="mask" onclick="closeMenu()">
+</div>
+      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4">
+        <h2 class="text-lg text-gray-700 mb-8">
+          <i class="ri-archive-line"></i> 文章归档
+        </h2>
+        
+
+        <div class="archives-container">
+          
+            <h2 class="text-gray-600 py-4 animated fadeIn">
+              <i class="ri-map-pin-time-line"></i>
+              2021
+            </h2>
+            
+              
+                <a href="http://git.alang.run/post/sheng-huo-jian-jie/" class="post">
+                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
+                    生活见解
+                  </h2>
+                </a>
+                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2021-12-08</div>
+              
+            
+              
+                <a href="http://git.alang.run/post/springmvc-chu-li-liu-cheng/" class="post">
+                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
+                    springmvc  处理流程
+                  </h2>
+                </a>
+                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2021-10-29</div>
+              
+            
+              
+                <a href="http://git.alang.run/post/lei-de-jia-zai-yu-classloader-de-li-jie/" class="post">
+                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
+                    类的加载与ClassLoader的理解
+                  </h2>
+                </a>
+                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2021-10-18</div>
+              
+            
+              
+                <a href="http://git.alang.run/post/thread-xue-xi/" class="post">
+                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
+                    thread学习
+                  </h2>
+                </a>
+                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2021-10-13</div>
+              
+            
+              
+                <a href="http://git.alang.run/post/io-liu-de-xue-xi/" class="post">
+                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
+                    IO流的学习
+                  </h2>
+                </a>
+                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2021-10-12</div>
+              
+            
+              
+                <a href="http://git.alang.run/post/mei-tian-mian-fei-ling-hi-bi-shuo-bu-ding-shi-wei-lai-de-bi-te-bi/" class="post">
+                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
+                    每天免费领HI币，说不定是未来的比特币
+                  </h2>
+                </a>
+                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2021-08-10</div>
+              
+            
+              
+                <a href="http://git.alang.run/post/c-dll-fu-jia-da-bao-dao-exe-li/" class="post">
+                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
+                    C# dll附加打包到exe里
+                  </h2>
+                </a>
+                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2021-04-01</div>
+              
+            
+              
+                <a href="http://git.alang.run/post/lesslessnei-wai-jian-xiu-cheng-xu-yuan-de-cheng-chang-zhi-lu-greatergreater-zhai-lu/" class="post">
+                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
+                    《内外兼修(程序员的成长之路)》摘录
+                  </h2>
+                </a>
+                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2021-03-21</div>
+              
+            
+              
+                <a href="http://git.alang.run/post/gei-exe-zhuo-mian-ruan-jian-zeng-jia-shi-yong-xian-zhi/" class="post">
+                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
+                    给.exe桌面软件增加使用限制
+                  </h2>
+                </a>
+                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2021-03-17</div>
+              
+            
+              
+                <a href="http://git.alang.run/post/ipad3-3104-an-zhuang-wei-xin-ji-qq/" class="post">
+                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
+                    ipad3 3.10.4安装微信及QQ
+                  </h2>
+                </a>
+                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2021-02-28</div>
+              
+            
+              
+                <a href="http://git.alang.run/post/yin-cang-wang-ye-suo-you-tu-pian-dai-ma/" class="post">
+                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
+                    隐藏网页所有图片代码
+                  </h2>
+                </a>
+                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2021-02-21</div>
+              
+            
+              
+                <a href="http://git.alang.run/post/lesslesshow-to-get-richgreatergreater-zhai-lu/" class="post">
+                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
+                    《How to get rich》摘录
+                  </h2>
+                </a>
+                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2021-02-18</div>
+              
+            
+              
+                <a href="http://git.alang.run/post/tencent-video-business/" class="post">
+                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
+                    tencent video business
+                  </h2>
+                </a>
+                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2021-01-10</div>
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+          
+            <h2 class="text-gray-600 py-4 animated fadeIn">
+              <i class="ri-map-pin-time-line"></i>
+              2020
+            </h2>
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+                <a href="http://git.alang.run/post/chuang-jian-springbootredisnodejs-xiang-mu-de-docker-jing-xiang/" class="post">
+                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
+                    创建Springboot+Redis+NodeJs项目的Docker镜像
+                  </h2>
+                </a>
+                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2020-10-08</div>
+              
+            
+              
+                <a href="http://git.alang.run/post/kai-yuan-de-you-xiu-hou-duan-guan-li-xi-tong/" class="post">
+                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
+                    开源的优秀后端管理系统
+                  </h2>
+                </a>
+                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2020-09-27</div>
+              
+            
+              
+                <a href="http://git.alang.run/post/pm2-de-jian-dan-shi-yong/" class="post">
+                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
+                    pm2的简单使用
+                  </h2>
+                </a>
+                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2020-08-07</div>
+              
+            
+              
+                <a href="http://git.alang.run/post/muse-uivue-cli-bian-yi-jian-rong-ie1011/" class="post">
+                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
+                    muse-ui+vue-cli编译兼容ie10/11
+                  </h2>
+                </a>
+                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2020-06-06</div>
+              
+            
+              
+                <a href="http://git.alang.run/post/it-sheng-huo-jing-yan/" class="post">
+                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
+                    IT生活经验
+                  </h2>
+                </a>
+                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2020-05-18</div>
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+          
+            <h2 class="text-gray-600 py-4 animated fadeIn">
+              <i class="ri-map-pin-time-line"></i>
+              2019
+            </h2>
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+                <a href="http://git.alang.run/post/wei-shi-me-da-duo-shu-ren-qiong-qi-yi-sheng-zhong-jiu-yi-wu-suo-huo/" class="post">
+                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
+                    为什么大多数人穷其一生，终究一无所获？
+                  </h2>
+                </a>
+                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2019-12-03</div>
+              
+            
+              
+                <a href="http://git.alang.run/post/outside-zhang-yu-qi-nasa-yan-chang/" class="post">
+                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
+                    《Outside》张钰琪NASA演唱
+                  </h2>
+                </a>
+                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2019-11-26</div>
+              
+            
+              
+                <a href="http://git.alang.run/post/thingsboard-gateway-http-kuo-zhan-pi-pei-duo-ji-lu-jing/" class="post">
+                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
+                    thingsboard gateway http扩展匹配多级路径
+                  </h2>
+                </a>
+                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2019-11-13</div>
+              
+            
+              
+                <a href="http://git.alang.run/post/thingsboard-wang-guan-kuo-zhan-yu-tb-tong-bu-de-li-jie/" class="post">
+                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
+                    thingsboard网关扩展与tb同步的理解
+                  </h2>
+                </a>
+                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2019-11-04</div>
+              
+            
+              
+                <a href="http://git.alang.run/post/thingsboard-gateway-http-kuo-zhan-shang-chuan-shu-xing-ji-yao-ce-shu-ju/" class="post">
+                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
+                    thingsboard gateway http扩展 创建设备、上传属性及遥测数据
+                  </h2>
+                </a>
+                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2019-11-01</div>
+              
+            
+              
+                <a href="http://git.alang.run/post/postgresql-1151-an-zhuang-timescaledb-142-hou-wu-fa-jia-zai-ku-jie-jue-fang-fa/" class="post">
+                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
+                    postgresql-11.5.1安装timescaledb-1.4.2后无法加载库解决方法
+                  </h2>
+                </a>
+                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2019-10-20</div>
+              
+            
+              
+                <a href="http://git.alang.run/post/thingsboard-xiu-gai-logo-ji-biao-ti/" class="post">
+                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
+                    ThingsBoard修改logo
+                  </h2>
+                </a>
+                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2019-10-17</div>
+              
+            
+              
+                <a href="http://git.alang.run/post/thingsboard-rpc-da-lao-zong-jie/" class="post">
+                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
+                    thingsboard rpc大佬总结
+                  </h2>
+                </a>
+                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2019-09-27</div>
+              
+            
+              
+                <a href="http://git.alang.run/post/thingsboard-rest-api-shi-yong-zhun-bei/" class="post">
+                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
+                    thingsboard rest api使用准备
+                  </h2>
+                </a>
+                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2019-09-25</div>
+              
+            
+              
+                <a href="http://git.alang.run/post/thingsboard-gateway-gai-shu/" class="post">
+                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
+                    thingsboard gateWay概述
+                  </h2>
+                </a>
+                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2019-09-24</div>
+              
+            
+              
+                <a href="http://git.alang.run/post/ni-chi-kai-liao-nan-jing-cong-ci-mei-you-ren-he-wo-shuo-hua/" class="post">
+                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
+                    你离开了南京，从此没有人和我说话
+                  </h2>
+                </a>
+                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2019-08-26</div>
+              
+            
+              
+                <a href="http://git.alang.run/post/mou-pao-xuan-ze-cha-ru-kuai-su-pai-xu-java-suan-fa/" class="post">
+                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
+                    冒泡、选择、插入、快速排序JAVA算法
+                  </h2>
+                </a>
+                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2019-08-11</div>
+              
+            
+              
+                <a href="http://git.alang.run/post/java-mian-shi-ti/" class="post">
+                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
+                    JAVA面试题
+                  </h2>
+                </a>
+                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2019-08-11</div>
+              
+            
+              
+                <a href="http://git.alang.run/post/xiao-kou-chang-kai-hao-cai-zi-ran-lai/" class="post">
+                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
+                    笑口常开，好彩自然来
+                  </h2>
+                </a>
+                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2019-08-07</div>
+              
+            
+              
+                <a href="http://git.alang.run/post/idea-kuai-jie-jian/" class="post">
+                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
+                    idea快捷键
+                  </h2>
+                </a>
+                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2019-07-26</div>
+              
+            
+              
+                <a href="http://git.alang.run/post/zhuan-zai-gao-kao-wan-liao-zen-yang-xuan-zhuan-ye-cai-neng-yue-xin-ba-wan/" class="post">
+                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
+                    (转载)高考完了，怎样选专业才能月薪八万
+                  </h2>
+                </a>
+                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2019-07-11</div>
+              
+            
+              
+                <a href="http://git.alang.run/post/zhuan-zai-wei-shi-me-jue-da-bu-fen-ren-du-diao-jin-liao-keng-li/" class="post">
+                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
+                    (转载)为什么绝大部分人都掉进了坑里
+                  </h2>
+                </a>
+                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2019-07-11</div>
+              
+            
+              
+                <a href="http://git.alang.run/post/di-yi-zhang-spring-gai-shu/" class="post">
+                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
+                    第一章-spring概述-精通spring4.x企业应用开发实战
+                  </h2>
+                </a>
+                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2019-07-09</div>
+              
+            
+              
+                <a href="http://git.alang.run/post/zhuan-zai-zen-yang-xiang-shang-kua-yue-jie-ceng/" class="post">
+                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
+                    (转载)怎样向上跨越阶层
+                  </h2>
+                </a>
+                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2019-07-05</div>
+              
+            
+              
+                <a href="http://git.alang.run/post/lesslesszhe-ge-shi-jie-ji-can-ku-you-wen-rou-greatergreater-zhai-chao/" class="post">
+                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
+                    摘抄《这个世界既残酷又温柔》
+                  </h2>
+                </a>
+                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2019-07-04</div>
+              
+            
+              
+                <a href="http://git.alang.run/post/zhuan-ni-yu-huo-gu-da-lao-men-zhi-chai-zhe-ji-ben-shu-de-ju-chi/" class="post">
+                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
+                    (转)你与硅谷大佬们，只差这几本书的距离！
+                  </h2>
+                </a>
+                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2019-06-04</div>
+              
+            
+              
+                <a href="http://git.alang.run/post/zhuan-wei-shi-me-zhe-xie-shu-ying-xiang-liao-ma-yun-qiao-bu-si-yi-sheng-ni-que-mei-you-du-guo/" class="post">
+                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
+                    (转)为什么这些书影响了马云、乔布斯一生，你却没有读过？
+                  </h2>
+                </a>
+                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2019-06-04</div>
+              
+            
+              
+                <a href="http://git.alang.run/post/da-lao-shu-dan-er/" class="post">
+                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
+                    大佬书单（二）
+                  </h2>
+                </a>
+                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2019-06-04</div>
+              
+            
+              
+                <a href="http://git.alang.run/post/wu-wei-zi-ben-quan-da-lao-qiang-tui-shu-dan/" class="post">
+                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
+                    五位资本圈大佬“强推”书单
+                  </h2>
+                </a>
+                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2019-06-04</div>
+              
+            
+              
+                <a href="http://git.alang.run/post/da-lao-shu-dan/" class="post">
+                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
+                    大佬书单（一）
+                  </h2>
+                </a>
+                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2019-06-03</div>
+              
+            
+              
+                <a href="http://git.alang.run/post/wo-xi-huan-de-ge-qu-mv/" class="post">
+                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
+                    我喜欢的歌曲MV
+                  </h2>
+                </a>
+                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2019-05-22</div>
+              
+            
+              
+                <a href="http://git.alang.run/post/wei-ai-chi-kuang/" class="post">
+                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
+                    为爱痴狂
+                  </h2>
+                </a>
+                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2019-05-20</div>
+              
+            
+              
+                <a href="http://git.alang.run/post/lei-hai/" class="post">
+                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
+                    泪海
+                  </h2>
+                </a>
+                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2019-05-20</div>
+              
+            
+              
+                <a href="http://git.alang.run/post/ke-neng-fou/" class="post">
+                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
+                    可能否
+                  </h2>
+                </a>
+                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2019-05-18</div>
+              
+            
+              
+                <a href="http://git.alang.run/post/zhuan-zai-bi-te-bi-ru-men-jiao-cheng/" class="post">
+                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
+                    (转载)比特币入门教程
+                  </h2>
+                </a>
+                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2019-04-18</div>
+              
+            
+              
+                <a href="http://git.alang.run/post/zhuan-zai-fen-xiang-wo-de-xue-xi-fang-fa-huan-shi-jian-chi-nu-li/" class="post">
+                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
+                    (转载)分享我的学习方法——还是坚持+努力
+                  </h2>
+                </a>
+                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2019-04-18</div>
+              
+            
+              
+                <a href="http://git.alang.run/post/gan-wu-ji-zhai-chao/" class="post">
+                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
+                    感悟及摘抄
+                  </h2>
+                </a>
+                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2019-04-18</div>
+              
+            
+          
+        </div>
+
+        <div>
+          <div class="pagination-container animated fadeIn">
+  
+  
+    <a href="http://git.alang.run/archives/page/2" class="page-btn">下一页 <i class="ri-arrow-right-line"></i></a>
+  
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="http://git.alang.run/media/prism.js"></script>  
+<script>
+
+Prism.highlightAll()
+let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+// This should probably be throttled.
+// Especially because it triggers during smooth scrolling.
+// https://lodash.com/docs/4.17.10#throttle
+// You could do like...
+// window.addEventListener("scroll", () => {
+//    _.throttle(doThatStuff, 100);
+// });
+// Only not doing it here to keep this Pen dependency-free.
+
+window.addEventListener("scroll", event => {
+  let fromTop = window.scrollY;
+
+  mainNavLinks.forEach((link, index) => {
+    let section = document.getElementById(decodeURI(link.hash).substring(1));
+    let nextSection = null
+    if (mainNavLinks[index + 1]) {
+      nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+    }
+    if (section.offsetTop <= fromTop) {
+      if (nextSection) {
+        if (nextSection.offsetTop > fromTop) {
+          link.classList.add("current");
+        } else {
+          link.classList.remove("current");    
+        }
+      } else {
+        link.classList.add("current");
+      }
+    } else {
+      link.classList.remove("current");
+    }
+  });
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  var lazyImages = [].slice.call(document.querySelectorAll(".post-feature-image.lazy"));
+
+  if ("IntersectionObserver" in window) {
+    let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          let lazyImage = entry.target
+          lazyImage.style.backgroundImage = `url(${lazyImage.dataset.bg})`
+          lazyImage.classList.remove("lazy")
+          lazyImageObserver.unobserve(lazyImage)
+        }
+      });
+    });
+
+    lazyImages.forEach(function(lazyImage) {
+      lazyImageObserver.observe(lazyImage)
+    })
+  } else {
+    // Possibly fall back to a more compatible method here
+  }
+});
+
+const menuContainer = document.querySelector('.menu-container')
+const menus = document.querySelectorAll('.menu-container .menu')
+const mask = document.querySelector('.mask')
+const contentWrapper = document.querySelector('.content-wrapper')
+const latestArticle = document.querySelector('.latest-article')
+const readMore = document.querySelector('.read-more')
+const indexPage = document.querySelector('.index-page')
+
+const isHome = location.pathname === '/'
+if (latestArticle) {
+  latestArticle.style.display = isHome ? 'block' : 'none'
+  readMore.style.display = isHome ? 'block' : 'none'
+  indexPage.style.display = isHome ? 'none' : 'block'
+}
+
+const openMenu = () => {
+  menuContainer.classList.add('open')
+  menus.forEach(menu => {
+    menu.classList.add('animated', 'fadeInLeft')
+  })
+  mask.classList.add('open')
+  contentWrapper.classList.add('is-second')
+}
+
+const closeMenu = () => {
+  menuContainer.classList.remove('open')
+  menus.forEach(menu => {
+    menu.classList.remove('animated', 'fadeInLeft')
+  })
+  mask.classList.remove('open')
+  contentWrapper.classList.remove('is-second')
+}
+</script>
+  
+  </body>
+</html>

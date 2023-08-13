@@ -1,0 +1,293 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Jump!Alang</title>
+<meta name="description" content="永远年轻！永远热泪盈眶！" />
+<link rel="shortcut icon" href="http://git.alang.run/favicon.ico?v=1691903147411">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+<link rel="stylesheet" href="http://git.alang.run/styles/main.css">
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main px-4 flex flex-col lg:flex-row">
+      <div id="sidebar" class="sidebar-wrapper lg:static lg:w-1/4">
+  <div class="lg:sticky top-0">
+    <div class="sidebar-content">
+      <div class="flex lg:block p-4 lg:px-0 items-center fixed lg:static lg:block top-0 right-0 left-0 bg-white z-50">
+        <i class="ri-menu-2-line lg:mt-4 text-2xl cursor-pointer animated fadeIn" onclick="openMenu()"></i>
+        <a href="http://git.alang.run">
+          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="http://git.alang.run/images/avatar.png?v=1691903147411" alt="">
+        </a>
+        <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">Jump!Alang</h1>
+      </div>
+      
+        <div class="animated fadeInLeft" style="animation-delay: 0.4s">
+          <p class="my-4 text-gray-600 font-light hidden lg:block">
+            文章目录
+          </p>
+          <div class="toc-container hidden lg:block">
+            <ul class="markdownIt-TOC">
+<li><a href="#%E4%BA%92%E8%81%94%E7%BD%91%E6%9F%A5%E6%89%BE%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88">互联网查找解决方案</a></li>
+<li><a href="#%E6%80%BB%E4%BD%93%E6%80%9D%E8%B7%AF">总体思路</a></li>
+<li><a href="#%E5%89%8D%E6%9C%9F%E5%87%86%E5%A4%87">前期准备</a></li>
+<li><a href="#%E5%8F%AF%E8%83%BD%E5%87%BA%E7%8E%B0%E7%9A%84%E9%97%AE%E9%A2%98">可能出现的问题</a></li>
+<li><a href="#%E5%AE%89%E8%A3%85qq">安装QQ</a></li>
+<li><a href="#%E6%80%BB%E7%BB%93">总结</a></li>
+</ul>
+
+          </div>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="menu-container">
+  <i class="ri-arrow-left-line text-2xl cursor-pointer animated fadeIn close-menu-btn" onclick="closeMenu()"></i>
+  <div>
+    
+      
+        <a href="/" class="menu" style="animation-delay: 0s">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu" style="animation-delay: 0.2s">
+          所有
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu" style="animation-delay: 0.4s">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu" style="animation-delay: 0.6000000000000001s">
+          关于
+        </a>
+      
+    
+      
+        <a href="/post/world" class="menu" style="animation-delay: 0.8s" target="_blank">
+          世界
+        </a>
+      
+    
+  </div>
+  <div class="site-footer">
+    <div class="py-4 text-gray-700">JumpAlang ©2019  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a></div>
+    <a class="rss" href="http://git.alang.run/atom.xml" target="_blank">RSS</a>
+  </div>
+</div>
+<div class="mask" onclick="closeMenu()">
+</div>
+      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
+        <h1 class="text-3xl font-bold lg:mt-16">ipad3 3.10.4安装微信及QQ</h1>
+        <div class="text-sm text-gray-700 lg:my-8">
+          2021-02-28 / 2 min read
+        </div>
+        
+        <div class="post-content yue">
+          <p>发小从闲鱼上买了台二手ipad4，800大洋，想用来挂微信及QQ。可从app store安装微信或者QQ总是下载完后提示无法安装。</p>
+<!-- more -->
+<h1 id="互联网查找解决方案">互联网查找解决方案</h1>
+<p>于是Google了一番，终于找到个大牛分享的视频教程：<br>
+<a href="https://www.bilibili.com/video/av838195980">iPad4登陆微信提示版本低，全过程完整版视频来啦！快快登陆吧！<br>
+</a></p>
+<h1 id="总体思路">总体思路</h1>
+<p>大致思路：安装支持ipad4的微信版本7.0.2，安装后登录会提示版本过低，只要越狱后，把微信安装目录下的info.plist中微信版本号改成目前最新版本号即可。<br>
+大致流程如下：</p>
+<ol>
+<li>ipad必须先越狱</li>
+<li>安装afc2</li>
+<li>在ipad端的爱思助手安装微信历史版本中的7.0.2</li>
+<li>在电脑的爱思助手修改微信安装目录下的info.plist为最新版本号</li>
+<li>先在ipad单独登录微信，不要手机+ipad同时登录</li>
+<li>退出上一步单独的登录微信，使用ipad+手机同时登录</li>
+</ol>
+<h1 id="前期准备">前期准备</h1>
+<ol>
+<li>爱思助手7.0电脑端</li>
+</ol>
+<h1 id="可能出现的问题">可能出现的问题</h1>
+<ul>
+<li>cydia无法访问网络<br>
+参照：<a href="https://www.bilibili.com/video/av370580939/">【教程】教你修正越狱后Cydia无法联网</a> 阴差阳错的解决了<br>
+或者试下换个电信网络</li>
+</ul>
+<h1 id="安装qq">安装QQ</h1>
+<p>QQ目前还不会强制要求安装最新版本，直接在ipad爱思助手下载历史版本试下哪个可行即可。</p>
+<h1 id="总结">总结</h1>
+<p>刚开始没看清楚视频教程，直接在爱思助手点了一键刷机，应该选择越狱才对的，脑子秀逗了。<br>
+后面cydia网络问题也浪费了很多时间，后面解决也不知是因为换了电信网络还是看了视频教程操作生效，待验证。</p>
+
+        </div>
+
+        
+
+
+        <div class="flex justify-between py-8">
+          
+            <div class="prev-post">
+              <a href="http://git.alang.run/post/gei-exe-zhuo-mian-ruan-jian-zeng-jia-shi-yong-xian-zhi/">
+                <h3 class="post-title">
+                  <i class="ri-arrow-left-line"></i>
+                  给.exe桌面软件增加使用限制
+                </h3>
+              </a>
+            </div>
+          
+
+          
+            <div class="next-post">
+              <a href="http://git.alang.run/post/yin-cang-wang-ye-suo-you-tu-pian-dai-ma/">
+                <h3 class="post-title">
+                  隐藏网页所有图片代码
+                  <i class="ri-arrow-right-line"></i>
+                </h3>
+              </a>
+            </div>
+          
+        </div>
+
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: 'dd6b58508cc9af58fc1c',
+    clientSecret: 'aa86bd09e6d2eedc03f182792c20275d200ffb62',
+    repo: 'JumpAlang.github.io',
+    owner: 'JumpAlang',
+    admin: ['JumpAlang'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+
+      </div>
+    </div>
+
+    <script src="http://git.alang.run/media/prism.js"></script>  
+<script>
+
+Prism.highlightAll()
+let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+// This should probably be throttled.
+// Especially because it triggers during smooth scrolling.
+// https://lodash.com/docs/4.17.10#throttle
+// You could do like...
+// window.addEventListener("scroll", () => {
+//    _.throttle(doThatStuff, 100);
+// });
+// Only not doing it here to keep this Pen dependency-free.
+
+window.addEventListener("scroll", event => {
+  let fromTop = window.scrollY;
+
+  mainNavLinks.forEach((link, index) => {
+    let section = document.getElementById(decodeURI(link.hash).substring(1));
+    let nextSection = null
+    if (mainNavLinks[index + 1]) {
+      nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+    }
+    if (section.offsetTop <= fromTop) {
+      if (nextSection) {
+        if (nextSection.offsetTop > fromTop) {
+          link.classList.add("current");
+        } else {
+          link.classList.remove("current");    
+        }
+      } else {
+        link.classList.add("current");
+      }
+    } else {
+      link.classList.remove("current");
+    }
+  });
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  var lazyImages = [].slice.call(document.querySelectorAll(".post-feature-image.lazy"));
+
+  if ("IntersectionObserver" in window) {
+    let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          let lazyImage = entry.target
+          lazyImage.style.backgroundImage = `url(${lazyImage.dataset.bg})`
+          lazyImage.classList.remove("lazy")
+          lazyImageObserver.unobserve(lazyImage)
+        }
+      });
+    });
+
+    lazyImages.forEach(function(lazyImage) {
+      lazyImageObserver.observe(lazyImage)
+    })
+  } else {
+    // Possibly fall back to a more compatible method here
+  }
+});
+
+const menuContainer = document.querySelector('.menu-container')
+const menus = document.querySelectorAll('.menu-container .menu')
+const mask = document.querySelector('.mask')
+const contentWrapper = document.querySelector('.content-wrapper')
+const latestArticle = document.querySelector('.latest-article')
+const readMore = document.querySelector('.read-more')
+const indexPage = document.querySelector('.index-page')
+
+const isHome = location.pathname === '/'
+if (latestArticle) {
+  latestArticle.style.display = isHome ? 'block' : 'none'
+  readMore.style.display = isHome ? 'block' : 'none'
+  indexPage.style.display = isHome ? 'none' : 'block'
+}
+
+const openMenu = () => {
+  menuContainer.classList.add('open')
+  menus.forEach(menu => {
+    menu.classList.add('animated', 'fadeInLeft')
+  })
+  mask.classList.add('open')
+  contentWrapper.classList.add('is-second')
+}
+
+const closeMenu = () => {
+  menuContainer.classList.remove('open')
+  menus.forEach(menu => {
+    menu.classList.remove('animated', 'fadeInLeft')
+  })
+  mask.classList.remove('open')
+  contentWrapper.classList.remove('is-second')
+}
+</script>
+  
+  </body>
+</html>

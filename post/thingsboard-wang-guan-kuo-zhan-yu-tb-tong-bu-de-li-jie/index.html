@@ -1,0 +1,403 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Jump!Alang</title>
+<meta name="description" content="永远年轻！永远热泪盈眶！" />
+<link rel="shortcut icon" href="http://git.alang.run/favicon.ico?v=1691903147411">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+<link rel="stylesheet" href="http://git.alang.run/styles/main.css">
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main px-4 flex flex-col lg:flex-row">
+      <div id="sidebar" class="sidebar-wrapper lg:static lg:w-1/4">
+  <div class="lg:sticky top-0">
+    <div class="sidebar-content">
+      <div class="flex lg:block p-4 lg:px-0 items-center fixed lg:static lg:block top-0 right-0 left-0 bg-white z-50">
+        <i class="ri-menu-2-line lg:mt-4 text-2xl cursor-pointer animated fadeIn" onclick="openMenu()"></i>
+        <a href="http://git.alang.run">
+          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="http://git.alang.run/images/avatar.png?v=1691903147411" alt="">
+        </a>
+        <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">Jump!Alang</h1>
+      </div>
+      
+        <div class="animated fadeInLeft" style="animation-delay: 0.4s">
+          <p class="my-4 text-gray-600 font-light hidden lg:block">
+            文章目录
+          </p>
+          <div class="toc-container hidden lg:block">
+            <ul class="markdownIt-TOC">
+<li><a href="#%E5%89%8D%E8%AE%B0">前记</a></li>
+<li><a href="#%E7%90%86%E8%A7%A3%E5%A4%A7%E4%BD%AC%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90">理解大佬源码分析</a></li>
+<li><a href="#%E5%90%8C%E6%AD%A5%E7%8A%B6%E6%80%81%E5%88%A4%E6%96%AD%E4%BE%9D%E6%8D%AE">同步状态判断依据</a></li>
+</ul>
+
+          </div>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="menu-container">
+  <i class="ri-arrow-left-line text-2xl cursor-pointer animated fadeIn close-menu-btn" onclick="closeMenu()"></i>
+  <div>
+    
+      
+        <a href="/" class="menu" style="animation-delay: 0s">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu" style="animation-delay: 0.2s">
+          所有
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu" style="animation-delay: 0.4s">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu" style="animation-delay: 0.6000000000000001s">
+          关于
+        </a>
+      
+    
+      
+        <a href="/post/world" class="menu" style="animation-delay: 0.8s" target="_blank">
+          世界
+        </a>
+      
+    
+  </div>
+  <div class="site-footer">
+    <div class="py-4 text-gray-700">JumpAlang ©2019  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a></div>
+    <a class="rss" href="http://git.alang.run/atom.xml" target="_blank">RSS</a>
+  </div>
+</div>
+<div class="mask" onclick="closeMenu()">
+</div>
+      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
+        <h1 class="text-3xl font-bold lg:mt-16">thingsboard网关扩展与tb同步的理解</h1>
+        <div class="text-sm text-gray-700 lg:my-8">
+          2019-11-04 / 4 min read
+        </div>
+        
+        <div class="post-content yue">
+          <p>最近由于要经常操作网关扩展，如添加http扩展，新增mqtt扩展的映射。经常出现网关不同步问题。导致了经过网关的数据，设备有创建，但是没有相应遥测数据，之前有看过群里大佬写过thingsboard网关与tb配置同步的源码分析：</p>
+<blockquote>
+<p><a href="https://blog.csdn.net/Zzhou1990/article/details/102477059">https://blog.csdn.net/Zzhou1990/article/details/102477059</a> <em><strong>Thingsboard Gateway 根据云端配置初始化</strong></em></p>
+</blockquote>
+<!-- more -->
+<h1 id="前记">前记</h1>
+<p>以下纯属本人臆想推测，难免会有疏漏。欢迎看者多加指正，互相进步。</p>
+<h1 id="理解大佬源码分析">理解大佬源码分析</h1>
+<p>从大佬文章中，大致可以理解成:当网关配置与thingsboard互通后，并允许thingsboard远程更新，则网关中连接thingsboard mqtt broker的mqtt客户端有订阅了属性更新主题<code>v1/devices/me/attributes</code>，用于实时获取共享属性更新。每当在thingsboard平台上配置网关扩展，thingsboard就会自动将配置信息保存为共享属性<code>configuration</code>的值。此时网关中的mqtt客户端监听到共享属性更新，会根据共享属性值重新初始化网关扩展配置。而后再把相应扩展配置上传至网关客户端属性<code>appliedConfiguration</code>,见如下代码：</p>
+<pre><code class="language-java">private void updateConfiguration(String configuration) {
+        try {
+            if (extensionsConfigListener != null) {
+                extensionsConfigListener.accept(configuration);
+            }
+            onAppliedConfiguration(configuration);
+        } catch (Exception e) {
+            log.warn(&quot;Failed to update extension configurations [[]]&quot;, e.getMessage(), e);
+        }
+
+public void onAppliedConfiguration(String configuration) {
+        byte[] msgData = toBytes(newNode().put(&quot;appliedConfiguration&quot;, configuration));
+        persistMessage(DEVICE_ATTRIBUTES_TOPIC, msgIdSeq.incrementAndGet(), msgData, null, null,
+                error -&gt;
+                        log.warn(&quot;Could not publish applied configuration&quot;, error));
+    }
+</code></pre>
+<h1 id="同步状态判断依据">同步状态判断依据</h1>
+<p>查阅thingsboard ui模块下的如下文件：<br>
+<code>D:\JAVA\iot\code\thingsboard\ui\src\app\extension\extension-table.directive.js</code><br>
+确认同步方法：</p>
+<pre><code class="language-js">function reloadExtensions() {
+        vm.subscribed = false;
+        vm.allExtensions.length = 0;
+        vm.extensions.length = 0;
+        vm.extensionsPromise = attributeService.getEntityAttributesValues(vm.entityType, vm.entityId, types.attributesScope.shared.value, [&quot;configuration&quot;]);
+        vm.extensionsPromise.then(
+            function success(data) {
+                if (data.length) {
+                    vm.allExtensions = angular.fromJson(data[0].value);
+                } else {
+                    vm.allExtensions = [];
+                }
+
+                vm.selectedExtensions = [];
+                updateExtensions();
+                vm.extensionsPromise = null;
+            },
+            function fail() {
+                vm.extensions = [];
+                vm.selectedExtensions = [];
+                updateExtensions();
+                vm.extensionsPromise = null;
+            }
+        );
+    }
+
+function updateExtensions() {
+        vm.selectedExtensions = [];
+        var result = $filter('orderBy')(vm.allExtensions, vm.query.order);
+        // $log.info(result);
+        if (vm.query.search != null) {
+            result = $filter('filter')(result, function(extension) {
+                if(!vm.query.search || (extension.id.indexOf(vm.query.search) != -1) || (extension.type.indexOf(vm.query.search) != -1)) {
+                    return true;
+                }
+                return false;
+            });
+        }
+        vm.extensionsCount = result.length;
+        var startIndex = vm.query.limit * (vm.query.page - 1);
+        vm.extensions = result.slice(startIndex, startIndex + vm.query.limit);
+
+        vm.extensionsJSON = angular.toJson(vm.extensions);
+        checkForSync();
+    }
+
+function subscribeForClientAttributes() {
+        if (!vm.subscribed) {
+            if (vm.entityId &amp;&amp; vm.entityType) {
+                $scope.subscriber = {
+                    subscriptionCommands: [{
+                        entityType: vm.entityType,
+                        entityId: vm.entityId,
+                        scope: 'CLIENT_SCOPE'
+                    }],
+                    type: 'attribute',
+                    onData: function (data) {
+                        if (data.data) {
+                            onSubscriptionData(data.data);
+                        }
+                        vm.subscribed = true;
+                    }
+                };
+                telemetryWebsocketService.subscribe($scope.subscriber);
+            }
+        }
+    }
+
+function onSubscriptionData(data) {
+         // $log.info(data);
+        if ($.isEmptyObject(data)) {
+            vm.appliedConfiguration = undefined;
+        } else {
+            if (data.appliedConfiguration &amp;&amp; data.appliedConfiguration[0] &amp;&amp; data.appliedConfiguration[0][1]) {
+                vm.appliedConfiguration = data.appliedConfiguration[0][1];
+            }
+        }
+
+        updateExtensions();
+        $scope.$digest();
+    }
+
+function checkForSync() {
+         // $log.info(&quot;app:&quot;+vm.appliedConfiguration);
+         // $log.info(&quot;ext:&quot;+vm.extensionsJSON);
+        if (vm.appliedConfiguration &amp;&amp; vm.extensionsJSON &amp;&amp; vm.appliedConfiguration === vm.extensionsJSON) {
+            vm.syncStatus = $translate.instant('extension.sync.sync');
+            vm.syncLastTime = formatDate();
+            $scope.isSync = true;
+        } else {
+            vm.syncStatus = $translate.instant('extension.sync.not-sync');
+
+            $scope.isSync = false;
+        }
+    }
+</code></pre>
+<p>可以看出同步状态是通过判断网关的客户端属性<code>appliedConfiguration</code>与加工过的共享属性<code>configuration</code>值是否一致。<br>
+同时发现一个自认为的bug：共享属性<code>configuration</code>会被排序加工成<code>extensionsJSON</code>,排序是根据扩展id升序排序的,所以会导致客户端属性与加工后的共享属性不一致，导致提示不同步，但好像并不影响使用：<br>
+<code>var result = $filter('orderBy')(vm.allExtensions, vm.query.order);</code></p>
+<pre><code class="language-js">vm.query = {
+        order: 'id',
+        limit: 5,
+        page: 1,
+        search: null
+    };
+</code></pre>
+<p>所以我自己建议是添加网关扩展时id累加命名，如1_green,2_red。</p>
+
+        </div>
+
+        
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="http://git.alang.run/tag/iot/">
+            <span class="flex-auto">物联网</span>
+          </a>
+        
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="http://git.alang.run/tag/thingsboard/">
+            <span class="flex-auto">thingsboard</span>
+          </a>
+        
+
+
+        <div class="flex justify-between py-8">
+          
+            <div class="prev-post">
+              <a href="http://git.alang.run/post/thingsboard-gateway-http-kuo-zhan-pi-pei-duo-ji-lu-jing/">
+                <h3 class="post-title">
+                  <i class="ri-arrow-left-line"></i>
+                  thingsboard gateway http扩展匹配多级路径
+                </h3>
+              </a>
+            </div>
+          
+
+          
+            <div class="next-post">
+              <a href="http://git.alang.run/post/thingsboard-gateway-http-kuo-zhan-shang-chuan-shu-xing-ji-yao-ce-shu-ju/">
+                <h3 class="post-title">
+                  thingsboard gateway http扩展 创建设备、上传属性及遥测数据
+                  <i class="ri-arrow-right-line"></i>
+                </h3>
+              </a>
+            </div>
+          
+        </div>
+
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: 'dd6b58508cc9af58fc1c',
+    clientSecret: 'aa86bd09e6d2eedc03f182792c20275d200ffb62',
+    repo: 'JumpAlang.github.io',
+    owner: 'JumpAlang',
+    admin: ['JumpAlang'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+
+      </div>
+    </div>
+
+    <script src="http://git.alang.run/media/prism.js"></script>  
+<script>
+
+Prism.highlightAll()
+let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+// This should probably be throttled.
+// Especially because it triggers during smooth scrolling.
+// https://lodash.com/docs/4.17.10#throttle
+// You could do like...
+// window.addEventListener("scroll", () => {
+//    _.throttle(doThatStuff, 100);
+// });
+// Only not doing it here to keep this Pen dependency-free.
+
+window.addEventListener("scroll", event => {
+  let fromTop = window.scrollY;
+
+  mainNavLinks.forEach((link, index) => {
+    let section = document.getElementById(decodeURI(link.hash).substring(1));
+    let nextSection = null
+    if (mainNavLinks[index + 1]) {
+      nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+    }
+    if (section.offsetTop <= fromTop) {
+      if (nextSection) {
+        if (nextSection.offsetTop > fromTop) {
+          link.classList.add("current");
+        } else {
+          link.classList.remove("current");    
+        }
+      } else {
+        link.classList.add("current");
+      }
+    } else {
+      link.classList.remove("current");
+    }
+  });
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  var lazyImages = [].slice.call(document.querySelectorAll(".post-feature-image.lazy"));
+
+  if ("IntersectionObserver" in window) {
+    let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          let lazyImage = entry.target
+          lazyImage.style.backgroundImage = `url(${lazyImage.dataset.bg})`
+          lazyImage.classList.remove("lazy")
+          lazyImageObserver.unobserve(lazyImage)
+        }
+      });
+    });
+
+    lazyImages.forEach(function(lazyImage) {
+      lazyImageObserver.observe(lazyImage)
+    })
+  } else {
+    // Possibly fall back to a more compatible method here
+  }
+});
+
+const menuContainer = document.querySelector('.menu-container')
+const menus = document.querySelectorAll('.menu-container .menu')
+const mask = document.querySelector('.mask')
+const contentWrapper = document.querySelector('.content-wrapper')
+const latestArticle = document.querySelector('.latest-article')
+const readMore = document.querySelector('.read-more')
+const indexPage = document.querySelector('.index-page')
+
+const isHome = location.pathname === '/'
+if (latestArticle) {
+  latestArticle.style.display = isHome ? 'block' : 'none'
+  readMore.style.display = isHome ? 'block' : 'none'
+  indexPage.style.display = isHome ? 'none' : 'block'
+}
+
+const openMenu = () => {
+  menuContainer.classList.add('open')
+  menus.forEach(menu => {
+    menu.classList.add('animated', 'fadeInLeft')
+  })
+  mask.classList.add('open')
+  contentWrapper.classList.add('is-second')
+}
+
+const closeMenu = () => {
+  menuContainer.classList.remove('open')
+  menus.forEach(menu => {
+    menu.classList.remove('animated', 'fadeInLeft')
+  })
+  mask.classList.remove('open')
+  contentWrapper.classList.remove('is-second')
+}
+</script>
+  
+  </body>
+</html>

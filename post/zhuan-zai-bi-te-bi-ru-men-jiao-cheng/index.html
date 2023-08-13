@@ -1,0 +1,369 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Jump!Alang</title>
+<meta name="description" content="永远年轻！永远热泪盈眶！" />
+<link rel="shortcut icon" href="http://git.alang.run/favicon.ico?v=1691903147411">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+<link rel="stylesheet" href="http://git.alang.run/styles/main.css">
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main px-4 flex flex-col lg:flex-row">
+      <div id="sidebar" class="sidebar-wrapper lg:static lg:w-1/4">
+  <div class="lg:sticky top-0">
+    <div class="sidebar-content">
+      <div class="flex lg:block p-4 lg:px-0 items-center fixed lg:static lg:block top-0 right-0 left-0 bg-white z-50">
+        <i class="ri-menu-2-line lg:mt-4 text-2xl cursor-pointer animated fadeIn" onclick="openMenu()"></i>
+        <a href="http://git.alang.run">
+          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="http://git.alang.run/images/avatar.png?v=1691903147411" alt="">
+        </a>
+        <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">Jump!Alang</h1>
+      </div>
+      
+        <div class="animated fadeInLeft" style="animation-delay: 0.4s">
+          <p class="my-4 text-gray-600 font-light hidden lg:block">
+            文章目录
+          </p>
+          <div class="toc-container hidden lg:block">
+            <ul class="markdownIt-TOC">
+<li><a href="#%E9%9D%9E%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86">非对称加密</a></li>
+<li><a href="#%E6%AF%94%E7%89%B9%E5%B8%81%E9%92%B1%E5%8C%85">比特币钱包</a></li>
+<li><a href="#%E4%BA%A4%E6%98%93%E8%BF%87%E7%A8%8B">交易过程</a></li>
+<li><a href="#%E5%9B%9B-%E4%BA%A4%E6%98%93%E7%A1%AE%E8%AE%A4%E4%B8%8E%E5%8C%BA%E5%9D%97%E9%93%BE">四、交易确认与区块链</a></li>
+<li><a href="#%E4%BA%94-%E7%9F%BF%E5%B7%A5%E7%9A%84%E6%94%B6%E7%9B%8A">五、矿工的收益</a></li>
+<li><a href="#%E5%85%AD-%E5%8C%BA%E5%9D%97%E7%9A%84%E6%89%A9%E5%AE%B9">六、区块的扩容</a></li>
+<li><a href="#%E4%B8%83-%E7%82%B9%E5%AF%B9%E7%82%B9%E7%BD%91%E7%BB%9C">七、点对点网络</a></li>
+<li><a href="#%E5%85%AB-%E8%BF%98%E6%9C%89%E4%B8%80%E4%B8%AA%E9%97%AE%E9%A2%98">八、还有一个问题</a></li>
+<li><a href="#%E4%B9%9D-%E5%8F%82%E8%80%83%E9%93%BE%E6%8E%A5">九、参考链接</a></li>
+</ul>
+
+          </div>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="menu-container">
+  <i class="ri-arrow-left-line text-2xl cursor-pointer animated fadeIn close-menu-btn" onclick="closeMenu()"></i>
+  <div>
+    
+      
+        <a href="/" class="menu" style="animation-delay: 0s">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu" style="animation-delay: 0.2s">
+          所有
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu" style="animation-delay: 0.4s">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu" style="animation-delay: 0.6000000000000001s">
+          关于
+        </a>
+      
+    
+      
+        <a href="/post/world" class="menu" style="animation-delay: 0.8s" target="_blank">
+          世界
+        </a>
+      
+    
+  </div>
+  <div class="site-footer">
+    <div class="py-4 text-gray-700">JumpAlang ©2019  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a></div>
+    <a class="rss" href="http://git.alang.run/atom.xml" target="_blank">RSS</a>
+  </div>
+</div>
+<div class="mask" onclick="closeMenu()">
+</div>
+      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
+        <h1 class="text-3xl font-bold lg:mt-16">(转载)比特币入门教程</h1>
+        <div class="text-sm text-gray-700 lg:my-8">
+          2019-04-18 / 12 min read
+        </div>
+        
+        <div class="post-content yue">
+          <blockquote>
+<p>作者：阮一峰 日期：2018年1月4日 摘自：<a target="_blank" href="http://www.ruanyifeng.com/blog/2018/01/bitcoin-tutorial.html">链接</a></p>
+</blockquote>
+<!--more-->
+<p>比特币（bitcoin）诞生于2008年的一篇<a href="https://bitcoin.org/en/bitcoin-paper">论文</a>。<br>
+一个署名为中本聪的人,提出了革命性的构想：让我们创造一种不受政府或其他任何人控制的代币！这个想法堪称疯狂：一串 数字，背后没有任何资产支持，也没有任何人负责，你把它当作钱付给对方，怎么会有人愿意授受？</p>
+<figure data-type="image" tabindex="1"><img src="http://git.alang.run/post-images/1562768967827.jpg" alt="" loading="lazy"></figure>
+<p>但是，猜想居然变成了现实。随后的几年，在全世界无数爱好者的支持下，比特币网络运行起来了，越来越多的人和资本参与，星星之火，终成燎原。刚刚过去的2017年，比特币迎来了爆发式的增长，从年初的1000美元，最高涨到了2万美元，全世界都为之震动，上到政府，下到普通百姓都在关注。事实就是比特币已经并将断续改变世界。</p>
+<figure data-type="image" tabindex="2"><img src="http://git.alang.run/post-images/1562768978007.png" alt="" loading="lazy"></figure>
+<p>新闻媒体往往只关注它的火爆表现，忽视或者无法回答一些基本的问题。</p>
+<blockquote>
+<ul>
+<li>比特币的原理是什么？</li>
+<li>为什么这个无人管理的体系可以成功运作？</li>
+<li>比特币交易的流程是怎么回事？</li>
+<li>它与区块链又是什么关系？</li>
+</ul>
+</blockquote>
+<p>下面，我尝试回答这些问题，希望帮助大家理解比特币。拋开技术细节，还是很容易解释的。<br>
+有一点说明，本文只讨论技术问题，不涉及如何投资比特币，更不会预测价格走势。事实上，我也不知道。如果我知道怎么发财，可能就不会在这里写博客了。</p>
+<h1 id="非对称加密">非对称加密</h1>
+<p>首先，理解比特币，必须理解<a href="http://www.ruanyifeng.com/blog/2013/06/rsa_algorithm_part_one.html">非对称加密</a>。<br>
+你可能听说过这个词，所谓非对称加密，其实很简单，就是加密和解密需要两把钥匙：一把公钥和一把私钥。</p>
+<figure data-type="image" tabindex="3"><img src="http://git.alang.run/post-images/1562768986542.png" alt="" loading="lazy"></figure>
+<p>公钥是公开的，任何人都可以获取。私钥是保密的，只有拥有者才能使用。他人使用你的公钥加密信息，然后发送给你<br>
+，你用私钥解密，取出信息。反过来，你也可以用私钥加密信息，别人用你的公钥解开，从而证明这个信息确实是你发出的，且未被篡改，这叫做数字签名（更详细的介绍请看<a href="http://www.ruanyifeng.com/blog/2011/08/what_is_a_digital_signature.html">《什么是数字签名》</a>）。<br>
+现在请设想，<strong>如果公钥加密的不是普通的信息，而是加密了一笔钱，发送给你，这会怎样？</strong><br>
+首先，你能解开加密包，取出里面的钱，因为私钥在你手里。其次，别人偷不走这笔钱，因为他们没有你的私钥。因此，支付可以成功。</p>
+<p>这就是比特币（以及其他数字货币）的原理：非对称加密保证了支付的可靠性。</p>
+<p>由于支付的钱必须通过私钥取出，所以你是谁并不重要，重要的是谁拥有私钥。只有拥有了私钥，才能取出支付给你的钱。（事实上，真实的交易流程稍有不同，私钥保证的不是取出支付给你的钱，而是保证只有你能把这些属于你的钱支付出去，详见后文。）</p>
+<h1 id="比特币钱包">比特币钱包</h1>
+<p>对于比特币来说，钱不是支付给个人的，而是支付给某一把私钥。这就是交易匿名性的根本原因，因为没有人知道，那些私钥背后的主人是谁。</p>
+<p>所以，<strong>比特币交易的第一件事，就是你必须拥有自己的公钥和私钥。</strong><br>
+你去网上那些比特币交易所开户，它们会让你首先生成一个比特币钱包（wallet）。**这个钱包不是用来存放比特币，而是存放你的公钥和私钥。**软件会帮你生成这两把钥匙，然后放在钱包里面。</p>
+<figure data-type="image" tabindex="4"><img src="http://git.alang.run/post-images/1562769008786.png" alt="" loading="lazy"></figure>
+<p>根据协议，公钥的长度是512位。这个长度不太方便传播，因此协议又规定，要为公钥生成一个160位的指纹。所谓指纹，就是一个比较短的、易于传播的哈希值。160位是二进制，写成十六进制，大约是26到35个字符，比如<strong>1BvBMSEYstWetqTFn5Au4m4GFg7xJaNVN2</strong>。这个字符串就叫做钱包的地址，它是唯一的，即每个钱包的地址肯定都是不一样的。</p>
+<figure data-type="image" tabindex="5"><img src="http://git.alang.run/post-images/1562769023808.png" alt="" loading="lazy"></figure>
+<p>你向别人收钱时，只要告诉对方你的钱包地址即可，对方向这个地址付款。由于你是这个地址的拥有者，所以你会收到这笔钱。</p>
+<p>由于你是否拥有某个钱包地址，是由私钥证明的（具体的证明方法稍后介绍），所以一定要保护好私钥。这是极其重要，如果你的私钥被偷了，你的比特币也就等于没了，因为他人可以冒用你的身份了，把钱包里面的钱都转走。</p>
+<p>同样的，你向他人支付比特币，千万不能写错他人的钱包地址，否则你的比特币就支付到了另一个不同的人了。</p>
+<h1 id="交易过程">交易过程</h1>
+<p>下面，我把整个流程串起来，看看比特币如何完成一笔交易。<br>
+**一笔交易就是一个地址的比特币，转移到另一个地址。**由于比特币的交易记录全部都是公开的，哪个地址拥有多少比特币，都是可以查到的。因此，支付方是否拥有足够的比特币，完成这笔交易，这是可以轻易验证的。</p>
+<p>问题出在怎么防止其他人，冒用你的名义申报交易。举例来说，有人申报了一笔交易：地址A向地址B支付10个比特币。我怎么知道这个申报是真的，申报人就是地址A的主人？</p>
+<p>比特币协议规定，申报交易的时候，除了交易金额，转出比特币的一方还必须提供以下数据：</p>
+<blockquote>
+<ul>
+<li>上一笔交易的Hash（你从哪里得到这些比特币）</li>
+<li>本次交易双方的地址</li>
+<li>支付方的公钥</li>
+<li>支付方的私钥生成的数字签名</li>
+</ul>
+</blockquote>
+<p>验证这笔交易是否属实，需要三步：</p>
+<blockquote>
+<ul>
+<li>第一步，找到上一笔交易，确认支付方的比特币来源。</li>
+<li>第二步，算出支付方公钥的指纹，确认与支付方的地址一致，从而保证公钥属实。</li>
+<li>第三步，使用公钥去解开数字签名，保证私钥属实。</li>
+</ul>
+</blockquote>
+<p>经过上面三步，就可以认定这笔交易是真实的。</p>
+<h1 id="四-交易确认与区块链">四、交易确认与区块链</h1>
+<p>确认交易的真实性以后，交易还不算完成。<strong>交易数据必须写入数据库，才算成立。对方才能真正收到钱。</strong><br>
+比特币使用的是一种特殊的数据库，叫做区块链（blockchain），详细的介绍请看<a href="http://www.ruanyifeng.com/blog/2017/12/blockchain-tutorial.html">《区块链入门教程》</a>。本文只讨论交易如何写入区块链。<br>
+首先，所有的交易数据都会传送到矿工那里。矿工负责把这些交易写入区块链。<br>
+根据比特币协议，一个区块的大小最大是1MB，而一笔交易大概是500字节左右，因此一个区块最多可以包含2000多笔交易。矿工负责把这2000多笔交易打包在一起，组成一个区块，然后计算这个区块的Hash。</p>
+<p><img src="http://git.alang.run/post-images/1562769040212.jpg" alt="" loading="lazy"><br>
+计算Hash的过程叫做采矿，这需要大量的计算。矿工之间也在竞争，谁先算出Hash，谁就能第一个添加新区块进入区块链，从而享受这个区块全部收益，而其他矿工将一无所获。<br>
+一笔交易一旦写入了区块链，就无法反悔了。这里需要建立一个观念：**比特币不存放在钱包或其他别的地方，而是只存在于区块链上面。**区块链记载了你参与的第一笔交易，你得到过多少比特币，你又支付了多少比特币，因此可以算出来你拥有多少资产。</p>
+<h1 id="五-矿工的收益">五、矿工的收益</h1>
+<p>交易的确认离不开矿工。为什么有人愿意做矿工呢？<br>
+比特币协议规定，挖到新区块的矿工将获得奖励，一开始（2008年）是50个比特币，然后每4年减半，目前（2018）年是12.5个比特币。这也是比特币的供给增加机制，流通中新增的比特币都是这样诞生的。<br>
+你可能看出来了，每4年奖励减半，那么到了2140年，矿工将得不到任何奖励，比特币的数量也将停止增加。这时，矿工的收益就完全依靠交易手续费了。<br>
+所谓交易手续费，就是矿工可以从每笔交易抽成，具体的金额由支付方自愿决定。你完全可以一毛不拔，一分钱也不给矿工，但是那样的话，你的交易就会没人处理，迟迟无法写入区块链，得到确认。矿工们总是优先处理手续费最高的交易。<br>
+目前由于交易数量猛增，手续费已经水涨船高，一个区块2000多笔交易的手续费总额可以达到3~10个比特币。如果你的手续费给低了，很可能过了一个星期，交易还没确认。<br>
+一个区块的奖励金12.5个比特币，再加上手续费，收益是相当可观的。按照目前的价格，可以达到100万~200万人民币。想想看，运气好的话，几分钟就能挖到一个区块，拿到这样一笔钱，怪不得人们对挖矿趋之若鹜。</p>
+<h1 id="六-区块的扩容">六、区块的扩容</h1>
+<p><a href="http://www.ruanyifeng.com/blog/2017/12/blockchain-tutorial.html">《区块链入门教程》</a>说过，比特币协议规定，平均10分钟诞生一个区块。区块的大小只有1MB，最多只能包含2000多笔交易。也就是说，比特币网络每10分钟，最多只能处理2000多笔交易，换算一下，就是处理速度为3~5笔/秒。<br>
+全世界的比特币交易这么多，可是区块链每秒最多只能处理5笔，这已经成为制约比特币发展的一个瓶颈。<br>
+很早就有人呼吁，改革比特币协议，提升处理速度。这件事在2017年8月有了一点眉目，当时区块链发生了一次分叉，诞生了一个新协议，称为<a href="https://en.wikipedia.org/wiki/Bitcoin_Cash">Bitcoin Cash</a>（简称BCH）。这种新货币其他方面与比特币致，就是每个区块的大小从1MB增加到8MB，因此处理速度提升了8倍，手续费也低得多。该协议是对原有区块链的分叉，因此当时持有比特币的人，等于一人获赠了一份同样数量的<strong>BCH</strong>。</p>
+<figure data-type="image" tabindex="6"><img src="http://git.alang.run/post-images/1562769047236.png" alt="" loading="lazy"></figure>
+<p><strong>BCH</strong>等于创建了一种新货币，还有人提议，原始比特币的区块大小提升到2MB，这称为<a href="https://en.wikipedia.org/wiki/SegWit2x">SegWit2x</a>。这个建议原定于2017年11月实施，但是最后一刻由于缺乏共识，就被取消了，目前还在讨论中。</p>
+<h1 id="七-点对点网络">七、点对点网络</h1>
+<p>比特币是一个全世界的开放网络，只要你有服务器，就能加入这个网络，成为一个节点。每个节点都包含了整个区块链（目前大概100多GB），并且节点之间时刻不停在同步信息。</p>
+<figure data-type="image" tabindex="7"><img src="http://git.alang.run/post-images/1562769055748.png" alt="" loading="lazy"></figure>
+<p>当你发生了一笔支付，你所在的节点就会把这笔交易告诉另一个节点，直至传遍整个网络。矿工从网上收集各自新发生的交易，将它们打包写入区块链。一旦写入成功，矿工所在节点的区块链，就成为最新版本，其他节点都会来复制新增的区块，保证全网的区块链都是一致的。<br>
+最后，你所在的节点也拿到了最新的区块链，从而得知你早先的那笔交易，已经写在里面了，至此交易确认成功。</p>
+<h1 id="八-还有一个问题">八、还有一个问题</h1>
+<p>写到这里，我就介绍完了比特币的基本知识，希望你已经明白了比特币是怎么回事。但是还有一个根本的问题，我没有回答：比特币的本质到底是什么？<br>
+说到底，比特币只是区块链的一条记录，是凭空生成的，为什么可以当钱用？举例来说：矿工获得12.5个比特币的奖励，其实就是区块链有一个记录：“xxx地址获得12.5个比特币”。正是这行记录，导致该矿工获得了大笔金钱。如果区块链突然增加了一条记录，记载你的地址获得了1000个比特币，你就真的会有1000个比特币。这到底是为什么？</p>
+<p>这篇文章已经够长了，这个问题就留到下次再谈，欢迎关注本系统的最后一篇文章《数字货币的本质》。</p>
+<h1 id="九-参考链接">九、参考链接</h1>
+<ul>
+<li><a href="https://arstechnica.com/tech-policy/2017/12/how-bitcoin-works/">How Bitcoin works</a>，by Timothy B.Lee</li>
+<li><a href="http://www.righto.com/2014/02/bitcoins-hard-way-using-raw-bitcoin.html">Bitcoins the hard way:Using the raw Bitcoin protocol</a> by Ken Shirriff</li>
+</ul>
+
+        </div>
+
+        
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="http://git.alang.run/tag/science/">
+            <span class="flex-auto">科普</span>
+          </a>
+        
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="http://git.alang.run/tag/summary/">
+            <span class="flex-auto">摘抄</span>
+          </a>
+        
+
+
+        <div class="flex justify-between py-8">
+          
+            <div class="prev-post">
+              <a href="http://git.alang.run/post/ke-neng-fou/">
+                <h3 class="post-title">
+                  <i class="ri-arrow-left-line"></i>
+                  可能否
+                </h3>
+              </a>
+            </div>
+          
+
+          
+            <div class="next-post">
+              <a href="http://git.alang.run/post/zhuan-zai-fen-xiang-wo-de-xue-xi-fang-fa-huan-shi-jian-chi-nu-li/">
+                <h3 class="post-title">
+                  (转载)分享我的学习方法——还是坚持+努力
+                  <i class="ri-arrow-right-line"></i>
+                </h3>
+              </a>
+            </div>
+          
+        </div>
+
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: 'dd6b58508cc9af58fc1c',
+    clientSecret: 'aa86bd09e6d2eedc03f182792c20275d200ffb62',
+    repo: 'JumpAlang.github.io',
+    owner: 'JumpAlang',
+    admin: ['JumpAlang'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+
+      </div>
+    </div>
+
+    <script src="http://git.alang.run/media/prism.js"></script>  
+<script>
+
+Prism.highlightAll()
+let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+// This should probably be throttled.
+// Especially because it triggers during smooth scrolling.
+// https://lodash.com/docs/4.17.10#throttle
+// You could do like...
+// window.addEventListener("scroll", () => {
+//    _.throttle(doThatStuff, 100);
+// });
+// Only not doing it here to keep this Pen dependency-free.
+
+window.addEventListener("scroll", event => {
+  let fromTop = window.scrollY;
+
+  mainNavLinks.forEach((link, index) => {
+    let section = document.getElementById(decodeURI(link.hash).substring(1));
+    let nextSection = null
+    if (mainNavLinks[index + 1]) {
+      nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+    }
+    if (section.offsetTop <= fromTop) {
+      if (nextSection) {
+        if (nextSection.offsetTop > fromTop) {
+          link.classList.add("current");
+        } else {
+          link.classList.remove("current");    
+        }
+      } else {
+        link.classList.add("current");
+      }
+    } else {
+      link.classList.remove("current");
+    }
+  });
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  var lazyImages = [].slice.call(document.querySelectorAll(".post-feature-image.lazy"));
+
+  if ("IntersectionObserver" in window) {
+    let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          let lazyImage = entry.target
+          lazyImage.style.backgroundImage = `url(${lazyImage.dataset.bg})`
+          lazyImage.classList.remove("lazy")
+          lazyImageObserver.unobserve(lazyImage)
+        }
+      });
+    });
+
+    lazyImages.forEach(function(lazyImage) {
+      lazyImageObserver.observe(lazyImage)
+    })
+  } else {
+    // Possibly fall back to a more compatible method here
+  }
+});
+
+const menuContainer = document.querySelector('.menu-container')
+const menus = document.querySelectorAll('.menu-container .menu')
+const mask = document.querySelector('.mask')
+const contentWrapper = document.querySelector('.content-wrapper')
+const latestArticle = document.querySelector('.latest-article')
+const readMore = document.querySelector('.read-more')
+const indexPage = document.querySelector('.index-page')
+
+const isHome = location.pathname === '/'
+if (latestArticle) {
+  latestArticle.style.display = isHome ? 'block' : 'none'
+  readMore.style.display = isHome ? 'block' : 'none'
+  indexPage.style.display = isHome ? 'none' : 'block'
+}
+
+const openMenu = () => {
+  menuContainer.classList.add('open')
+  menus.forEach(menu => {
+    menu.classList.add('animated', 'fadeInLeft')
+  })
+  mask.classList.add('open')
+  contentWrapper.classList.add('is-second')
+}
+
+const closeMenu = () => {
+  menuContainer.classList.remove('open')
+  menus.forEach(menu => {
+    menu.classList.remove('animated', 'fadeInLeft')
+  })
+  mask.classList.remove('open')
+  contentWrapper.classList.remove('is-second')
+}
+</script>
+  
+  </body>
+</html>

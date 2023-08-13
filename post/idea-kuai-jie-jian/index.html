@@ -1,0 +1,318 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Jump!Alang</title>
+<meta name="description" content="永远年轻！永远热泪盈眶！" />
+<link rel="shortcut icon" href="http://git.alang.run/favicon.ico?v=1691903147411">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+<link rel="stylesheet" href="http://git.alang.run/styles/main.css">
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main px-4 flex flex-col lg:flex-row">
+      <div id="sidebar" class="sidebar-wrapper lg:static lg:w-1/4">
+  <div class="lg:sticky top-0">
+    <div class="sidebar-content">
+      <div class="flex lg:block p-4 lg:px-0 items-center fixed lg:static lg:block top-0 right-0 left-0 bg-white z-50">
+        <i class="ri-menu-2-line lg:mt-4 text-2xl cursor-pointer animated fadeIn" onclick="openMenu()"></i>
+        <a href="http://git.alang.run">
+          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="http://git.alang.run/images/avatar.png?v=1691903147411" alt="">
+        </a>
+        <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">Jump!Alang</h1>
+      </div>
+      
+        <div class="animated fadeInLeft" style="animation-delay: 0.4s">
+          <p class="my-4 text-gray-600 font-light hidden lg:block">
+            文章目录
+          </p>
+          <div class="toc-container hidden lg:block">
+            <ul class="markdownIt-TOC">
+<li><a href="#simple">simple</a></li>
+<li><a href="#altshift">alt+shift</a></li>
+<li><a href="#ctrlshift">ctrl+shift</a></li>
+<li><a href="#ctrlalt">ctrl+alt</a></li>
+</ul>
+
+          </div>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="menu-container">
+  <i class="ri-arrow-left-line text-2xl cursor-pointer animated fadeIn close-menu-btn" onclick="closeMenu()"></i>
+  <div>
+    
+      
+        <a href="/" class="menu" style="animation-delay: 0s">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu" style="animation-delay: 0.2s">
+          所有
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu" style="animation-delay: 0.4s">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu" style="animation-delay: 0.6000000000000001s">
+          关于
+        </a>
+      
+    
+      
+        <a href="/post/world" class="menu" style="animation-delay: 0.8s" target="_blank">
+          世界
+        </a>
+      
+    
+  </div>
+  <div class="site-footer">
+    <div class="py-4 text-gray-700">JumpAlang ©2019  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a></div>
+    <a class="rss" href="http://git.alang.run/atom.xml" target="_blank">RSS</a>
+  </div>
+</div>
+<div class="mask" onclick="closeMenu()">
+</div>
+      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
+        <h1 class="text-3xl font-bold lg:mt-16">idea快捷键</h1>
+        <div class="text-sm text-gray-700 lg:my-8">
+          2019-07-26 / 3 min read
+        </div>
+        
+        <div class="post-content yue">
+          <p>此份快捷键是从myeclipse移植过来的，from<code>尚硅谷·宋红康 设置版</code></p>
+<!-- more -->
+<h1 id="simple">simple</h1>
+<p>alt+r(run) 执行<br>
+alt+enter 万能解错/生成返回值变量</p>
+<p>alt+left 退回到前一个编辑的页面<br>
+alt+right 进入到下一个编辑的页面</p>
+<p>ctrl+c 复制代码<br>
+ctlr+z 撤销<br>
+ctrl+y 反撤销<br>
+ctrl+x 剪切<br>
+ctrl+v 粘贴<br>
+ctrl+s 保存<br>
+ctlr+a 全选</p>
+<p>ctrl+o(outline) 查看类的结构<br>
+ctrl+d(delete line) 删除一行或选中行</p>
+<p>ctrl+E 打开最近修改的文件</p>
+<p>ctrl+f 查找/替换(当前)<br>
+ctrl+h 查找(全局)<br>
+shift+shift 查找文件</p>
+<p>tab 选中数行，整体往后移动tab<br>
+shift+tab 选中数行，整体往前移动tab</p>
+<p>F2 查看文档说明<br>
+F4 查看继承关系</p>
+<h1 id="altshift">alt+shift</h1>
+<p>alt+shift+r(rename) 修改变量名与方法名<br>
+alt+shift+s 生成构造器/get/set/toString<br>
+alt+shift+z 生成try-catch等</p>
+<p>alt+shift+f 局部变量抽取为成员变量<br>
+alt+shift+m 局部代码抽取为方法</p>
+<p>alt+shift+c(collapse) 收起所有方法<br>
+alt+shift+x(expand) 打开所有方法</p>
+<h1 id="ctrlshift">ctrl+shift</h1>
+<p>ctrl+/ 单行注释<br>
+ctrl+shift+/ 多行注释</p>
+<p>shift+enter 向下开始新的一行<br>
+ctrl+shift+enter 向上开始新的一行</p>
+<p>ctrl+shift+t 查看源码（ctrl+选中指定结构也可）<br>
+ctrl+shift+f(format) 格式化代码</p>
+<p>ctrl+w 关闭当前打开的代码栏<br>
+ctrl+shift+w 关闭打开的所有代码栏</p>
+<p>ctrl+shift+y 大小写互转<br>
+ctrl+shift+x 打开代码所在硬盘文件夹<br>
+ctrl+shift+u(UML) 查看类的继承结构图<br>
+ctrl+shift+h(call hierarchy) 查找方法在哪里被调用<br>
+ctrl+shift+q 快速搜索类中的错误<br>
+ctrl+shift+v 选择要粘贴的内容</p>
+<h1 id="ctrlalt">ctrl+alt</h1>
+<p>alt+/ 提示补全<br>
+ctrl+alt+/ 提示方法参数 类型</p>
+<p>alt+up 向上移动行<br>
+alt+down 向下移动行<br>
+ctrl+alt+down 向下复制行</p>
+<p>ctrl+alt+h(method hierarchy) 查看方法多层重写结构<br>
+ctrl+alt+f(favorites) 添加到收藏</p>
+
+        </div>
+
+        
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="http://git.alang.run/tag/idea_strategy/">
+            <span class="flex-auto">idea技巧</span>
+          </a>
+        
+
+
+        <div class="flex justify-between py-8">
+          
+            <div class="prev-post">
+              <a href="http://git.alang.run/post/xiao-kou-chang-kai-hao-cai-zi-ran-lai/">
+                <h3 class="post-title">
+                  <i class="ri-arrow-left-line"></i>
+                  笑口常开，好彩自然来
+                </h3>
+              </a>
+            </div>
+          
+
+          
+            <div class="next-post">
+              <a href="http://git.alang.run/post/zhuan-zai-gao-kao-wan-liao-zen-yang-xuan-zhuan-ye-cai-neng-yue-xin-ba-wan/">
+                <h3 class="post-title">
+                  (转载)高考完了，怎样选专业才能月薪八万
+                  <i class="ri-arrow-right-line"></i>
+                </h3>
+              </a>
+            </div>
+          
+        </div>
+
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: 'dd6b58508cc9af58fc1c',
+    clientSecret: 'aa86bd09e6d2eedc03f182792c20275d200ffb62',
+    repo: 'JumpAlang.github.io',
+    owner: 'JumpAlang',
+    admin: ['JumpAlang'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+
+      </div>
+    </div>
+
+    <script src="http://git.alang.run/media/prism.js"></script>  
+<script>
+
+Prism.highlightAll()
+let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+// This should probably be throttled.
+// Especially because it triggers during smooth scrolling.
+// https://lodash.com/docs/4.17.10#throttle
+// You could do like...
+// window.addEventListener("scroll", () => {
+//    _.throttle(doThatStuff, 100);
+// });
+// Only not doing it here to keep this Pen dependency-free.
+
+window.addEventListener("scroll", event => {
+  let fromTop = window.scrollY;
+
+  mainNavLinks.forEach((link, index) => {
+    let section = document.getElementById(decodeURI(link.hash).substring(1));
+    let nextSection = null
+    if (mainNavLinks[index + 1]) {
+      nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+    }
+    if (section.offsetTop <= fromTop) {
+      if (nextSection) {
+        if (nextSection.offsetTop > fromTop) {
+          link.classList.add("current");
+        } else {
+          link.classList.remove("current");    
+        }
+      } else {
+        link.classList.add("current");
+      }
+    } else {
+      link.classList.remove("current");
+    }
+  });
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  var lazyImages = [].slice.call(document.querySelectorAll(".post-feature-image.lazy"));
+
+  if ("IntersectionObserver" in window) {
+    let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          let lazyImage = entry.target
+          lazyImage.style.backgroundImage = `url(${lazyImage.dataset.bg})`
+          lazyImage.classList.remove("lazy")
+          lazyImageObserver.unobserve(lazyImage)
+        }
+      });
+    });
+
+    lazyImages.forEach(function(lazyImage) {
+      lazyImageObserver.observe(lazyImage)
+    })
+  } else {
+    // Possibly fall back to a more compatible method here
+  }
+});
+
+const menuContainer = document.querySelector('.menu-container')
+const menus = document.querySelectorAll('.menu-container .menu')
+const mask = document.querySelector('.mask')
+const contentWrapper = document.querySelector('.content-wrapper')
+const latestArticle = document.querySelector('.latest-article')
+const readMore = document.querySelector('.read-more')
+const indexPage = document.querySelector('.index-page')
+
+const isHome = location.pathname === '/'
+if (latestArticle) {
+  latestArticle.style.display = isHome ? 'block' : 'none'
+  readMore.style.display = isHome ? 'block' : 'none'
+  indexPage.style.display = isHome ? 'none' : 'block'
+}
+
+const openMenu = () => {
+  menuContainer.classList.add('open')
+  menus.forEach(menu => {
+    menu.classList.add('animated', 'fadeInLeft')
+  })
+  mask.classList.add('open')
+  contentWrapper.classList.add('is-second')
+}
+
+const closeMenu = () => {
+  menuContainer.classList.remove('open')
+  menus.forEach(menu => {
+    menu.classList.remove('animated', 'fadeInLeft')
+  })
+  mask.classList.remove('open')
+  contentWrapper.classList.remove('is-second')
+}
+</script>
+  
+  </body>
+</html>

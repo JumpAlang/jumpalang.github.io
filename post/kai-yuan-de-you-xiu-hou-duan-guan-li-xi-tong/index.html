@@ -1,0 +1,331 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Jump!Alang</title>
+<meta name="description" content="永远年轻！永远热泪盈眶！" />
+<link rel="shortcut icon" href="http://git.alang.run/favicon.ico?v=1691903147411">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+<link rel="stylesheet" href="http://git.alang.run/styles/main.css">
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main px-4 flex flex-col lg:flex-row">
+      <div id="sidebar" class="sidebar-wrapper lg:static lg:w-1/4">
+  <div class="lg:sticky top-0">
+    <div class="sidebar-content">
+      <div class="flex lg:block p-4 lg:px-0 items-center fixed lg:static lg:block top-0 right-0 left-0 bg-white z-50">
+        <i class="ri-menu-2-line lg:mt-4 text-2xl cursor-pointer animated fadeIn" onclick="openMenu()"></i>
+        <a href="http://git.alang.run">
+          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="http://git.alang.run/images/avatar.png?v=1691903147411" alt="">
+        </a>
+        <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">Jump!Alang</h1>
+      </div>
+      
+        <div class="animated fadeInLeft" style="animation-delay: 0.4s">
+          <p class="my-4 text-gray-600 font-light hidden lg:block">
+            文章目录
+          </p>
+          <div class="toc-container hidden lg:block">
+            <ul class="markdownIt-TOC">
+<li><a href="#%E5%AF%BB%E8%A7%851">寻觅1</a>
+<ul>
+<li><a href="#%E9%A1%B9%E7%9B%AE%E8%AF%A6%E6%83%85">项目详情</a>
+<ul>
+<li><a href="#smartadmin">SmartAdmin</a></li>
+<li><a href="#timo">Timo</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#%E5%AF%BB%E8%A7%852">寻觅2</a>
+<ul>
+<li><a href="#%E9%A1%B9%E7%9B%AE%E8%AF%A6%E6%83%85-2">项目详情</a>
+<ul>
+<li><a href="#eladmin">eladmin</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#%E6%80%BB%E7%BB%93">总结</a></li>
+</ul>
+
+          </div>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="menu-container">
+  <i class="ri-arrow-left-line text-2xl cursor-pointer animated fadeIn close-menu-btn" onclick="closeMenu()"></i>
+  <div>
+    
+      
+        <a href="/" class="menu" style="animation-delay: 0s">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu" style="animation-delay: 0.2s">
+          所有
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu" style="animation-delay: 0.4s">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu" style="animation-delay: 0.6000000000000001s">
+          关于
+        </a>
+      
+    
+      
+        <a href="/post/world" class="menu" style="animation-delay: 0.8s" target="_blank">
+          世界
+        </a>
+      
+    
+  </div>
+  <div class="site-footer">
+    <div class="py-4 text-gray-700">JumpAlang ©2019  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a></div>
+    <a class="rss" href="http://git.alang.run/atom.xml" target="_blank">RSS</a>
+  </div>
+</div>
+<div class="mask" onclick="closeMenu()">
+</div>
+      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
+        <h1 class="text-3xl font-bold lg:mt-16">开源的优秀后端管理系统</h1>
+        <div class="text-sm text-gray-700 lg:my-8">
+          2020-09-27 / 2 min read
+        </div>
+        
+        <div class="post-content yue">
+          <p><strong>寻觅时间：2020/9/27</strong></p>
+<!-- more -->
+<h1 id="寻觅1">寻觅1</h1>
+<p>从公众号<code>Java技术驿站</code>看到一篇文章<a href="%22https://mp.weixin.qq.com/s/KfToO7xDzbHLva7rvwCOqQ%22">这 5 个能挣钱的 SpringBoot 项目，真TMD香！</a>，正好我也有想找个可以快速开发的通用后台系统模板。<br>
+其中两个吸引了我的注意： <a href="%22https://gitee.com/lab1024/smart-admin%22">SmartAdmin</a> <code>start 1k fork 400</code> 和 <a href="%22https://gitee.com/aun/Timo%22">Timo</a>,<code>start 1.6k fork 673</code>。</p>
+<h2 id="项目详情">项目详情</h2>
+<h3 id="smartadmin">SmartAdmin</h3>
+<ul>
+<li>前端：Vue + Vue-Router + Vuex + ViewUI + vue-enum</li>
+<li>后端：SpringBoot2 + Mybatis-plus + jwt + druid + mysql</li>
+</ul>
+<blockquote>
+<p>在线预览 <a href="http://preview.smartadmin.1024lab.net">http://preview.smartadmin.1024lab.net</a><br>
+<code>start 1k fork 400</code>    <code>前后端分离</code>  <code>前后端代码规范文档</code> <code>维护中</code> <code>始于2019-11-16</code> <code>5天前更新</code></p>
+</blockquote>
+<h3 id="timo">Timo</h3>
+<ul>
+<li>
+<p>前端：Layui + Jquery + zTree + Font-awesome</p>
+</li>
+<li>
+<p>后端：SpringBoot + Spring Data Jpa + Thymeleaf + Shiro + Jwt + EhCache</p>
+<blockquote>
+<p>在线预览 <a href="http://demo.linln.cn">http://demo.linln.cn</a><br>
+<code>start 1.6k fork 673</code>  <code>前后端分离</code>  <code>移动端适配</code> <code>维护中</code> <code>始于2018-10-12</code> <code>3天前更新</code></p>
+</blockquote>
+<h1 id="寻觅2">寻觅2</h1>
+</li>
+</ul>
+<p>因为之前都习惯于在github搜索开源项目，但从github clone项目很慢，发现上面提到的项目都有提供gitee的项目地址，于是转站gitee clone项目。<br>
+出于好奇，我也在gitee上搜索了<code>后台管理</code>，然后筛选<em>java</em>项目，发现了另一个优秀的项目<a href="https://gitee.com/elunez/eladmin">eladmin</a> <code>start 3.3k fork 1.8k</code></p>
+<h2 id="项目详情-2">项目详情</h2>
+<h3 id="eladmin">eladmin</h3>
+<ul>
+<li>前端：Vue + ElementUI</li>
+<li>后端:  Spring Boot 2.1.0 +Spring Boot Jpa+ JWT+Spring Security+Redis + Mysql
+<blockquote>
+<p>在线预览 <a href="https://el-admin.xin/">https://el-admin.xin/</a><br>
+<code>start 3.3k fork 1.8k</code>  <code>前后端分离</code>  <code>移动端适配</code> <code>维护中</code> <code>始于2018-12-22</code> <code>6天前更新</code></p>
+</blockquote>
+</li>
+</ul>
+<h1 id="总结">总结</h1>
+<p>从我自身出发，我倾向于使用mybatis操作数据。于是smartAdmin成为了选择，但是它移动端不适配。想想是不是也可以尝试下spring jpa，没错，那就从eladmin开始吧。而对于Timo很适合于自己赚外快接单使用，可以不前后端分离，方便部署……</p>
+
+        </div>
+
+        
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="http://git.alang.run/tag/DiXr6BfqW/">
+            <span class="flex-auto">赚外快</span>
+          </a>
+        
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="http://git.alang.run/tag/AjOLkd6Y_P/">
+            <span class="flex-auto">优秀开源软件</span>
+          </a>
+        
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="http://git.alang.run/tag/SXZfLFKPsw/">
+            <span class="flex-auto">后台管理系统</span>
+          </a>
+        
+
+
+        <div class="flex justify-between py-8">
+          
+            <div class="prev-post">
+              <a href="http://git.alang.run/post/chuang-jian-springbootredisnodejs-xiang-mu-de-docker-jing-xiang/">
+                <h3 class="post-title">
+                  <i class="ri-arrow-left-line"></i>
+                  创建Springboot+Redis+NodeJs项目的Docker镜像
+                </h3>
+              </a>
+            </div>
+          
+
+          
+            <div class="next-post">
+              <a href="http://git.alang.run/post/pm2-de-jian-dan-shi-yong/">
+                <h3 class="post-title">
+                  pm2的简单使用
+                  <i class="ri-arrow-right-line"></i>
+                </h3>
+              </a>
+            </div>
+          
+        </div>
+
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: 'dd6b58508cc9af58fc1c',
+    clientSecret: 'aa86bd09e6d2eedc03f182792c20275d200ffb62',
+    repo: 'JumpAlang.github.io',
+    owner: 'JumpAlang',
+    admin: ['JumpAlang'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+
+      </div>
+    </div>
+
+    <script src="http://git.alang.run/media/prism.js"></script>  
+<script>
+
+Prism.highlightAll()
+let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+// This should probably be throttled.
+// Especially because it triggers during smooth scrolling.
+// https://lodash.com/docs/4.17.10#throttle
+// You could do like...
+// window.addEventListener("scroll", () => {
+//    _.throttle(doThatStuff, 100);
+// });
+// Only not doing it here to keep this Pen dependency-free.
+
+window.addEventListener("scroll", event => {
+  let fromTop = window.scrollY;
+
+  mainNavLinks.forEach((link, index) => {
+    let section = document.getElementById(decodeURI(link.hash).substring(1));
+    let nextSection = null
+    if (mainNavLinks[index + 1]) {
+      nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+    }
+    if (section.offsetTop <= fromTop) {
+      if (nextSection) {
+        if (nextSection.offsetTop > fromTop) {
+          link.classList.add("current");
+        } else {
+          link.classList.remove("current");    
+        }
+      } else {
+        link.classList.add("current");
+      }
+    } else {
+      link.classList.remove("current");
+    }
+  });
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  var lazyImages = [].slice.call(document.querySelectorAll(".post-feature-image.lazy"));
+
+  if ("IntersectionObserver" in window) {
+    let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          let lazyImage = entry.target
+          lazyImage.style.backgroundImage = `url(${lazyImage.dataset.bg})`
+          lazyImage.classList.remove("lazy")
+          lazyImageObserver.unobserve(lazyImage)
+        }
+      });
+    });
+
+    lazyImages.forEach(function(lazyImage) {
+      lazyImageObserver.observe(lazyImage)
+    })
+  } else {
+    // Possibly fall back to a more compatible method here
+  }
+});
+
+const menuContainer = document.querySelector('.menu-container')
+const menus = document.querySelectorAll('.menu-container .menu')
+const mask = document.querySelector('.mask')
+const contentWrapper = document.querySelector('.content-wrapper')
+const latestArticle = document.querySelector('.latest-article')
+const readMore = document.querySelector('.read-more')
+const indexPage = document.querySelector('.index-page')
+
+const isHome = location.pathname === '/'
+if (latestArticle) {
+  latestArticle.style.display = isHome ? 'block' : 'none'
+  readMore.style.display = isHome ? 'block' : 'none'
+  indexPage.style.display = isHome ? 'none' : 'block'
+}
+
+const openMenu = () => {
+  menuContainer.classList.add('open')
+  menus.forEach(menu => {
+    menu.classList.add('animated', 'fadeInLeft')
+  })
+  mask.classList.add('open')
+  contentWrapper.classList.add('is-second')
+}
+
+const closeMenu = () => {
+  menuContainer.classList.remove('open')
+  menus.forEach(menu => {
+    menu.classList.remove('animated', 'fadeInLeft')
+  })
+  mask.classList.remove('open')
+  contentWrapper.classList.remove('is-second')
+}
+</script>
+  
+  </body>
+</html>

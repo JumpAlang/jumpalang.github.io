@@ -1,0 +1,698 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Jump!Alang</title>
+<meta name="description" content="永远年轻！永远热泪盈眶！" />
+<link rel="shortcut icon" href="http://git.alang.run/favicon.ico?v=1691903147411">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+<link rel="stylesheet" href="http://git.alang.run/styles/main.css">
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main px-4 flex flex-col lg:flex-row">
+      <div id="sidebar" class="sidebar-wrapper lg:static lg:w-1/4">
+  <div class="lg:sticky top-0">
+    <div class="sidebar-content">
+      <div class="flex lg:block p-4 lg:px-0 items-center fixed lg:static lg:block top-0 right-0 left-0 bg-white z-50">
+        <i class="ri-menu-2-line lg:mt-4 text-2xl cursor-pointer animated fadeIn" onclick="openMenu()"></i>
+        <a href="http://git.alang.run">
+          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="http://git.alang.run/images/avatar.png?v=1691903147411" alt="">
+        </a>
+        <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">Jump!Alang</h1>
+      </div>
+      
+        <div class="animated fadeInLeft" style="animation-delay: 0.4s">
+          <p class="my-4 text-gray-600 font-light hidden lg:block">
+            文章目录
+          </p>
+          <div class="toc-container hidden lg:block">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E8%9A%82%E8%9A%81%E9%87%91%E8%9E%8D%E6%9C%8D%E5%8A%A1%E9%9B%86%E5%9B%A2%E9%A6%96%E5%B8%AD%E6%8A%80%E6%9C%AF%E5%AE%98">蚂蚁金融服务集团首席技术官</a></li>
+<li><a href="#%E6%9E%81%E5%AE%A2%E9%82%A6%E7%A7%91%E6%8A%80%E6%80%BB%E8%A3%81">极客邦科技总裁</a></li>
+<li><a href="#%E8%91%97%E5%90%8D%E4%BA%92%E8%81%94%E7%BD%91%E4%BA%BA%E5%A3%AB%E4%BB%8E%E4%B8%9A%E5%8D%81%E5%B9%B4%E7%9A%84%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86">著名互联网人士，从业十年的产品经理</a></li>
+<li><a href="#%E7%9F%A5%E5%90%8D%E5%8D%9A%E4%B8%BB%E9%98%AE%E4%B8%80%E5%B3%B0%E7%9A%84%E4%B9%A6%E5%8D%95%E6%8E%A2%E7%B4%A2%E8%87%AA%E7%84%B6">知名博主阮一峰的书单：探索自然</a></li>
+<li><a href="#%E8%AF%AD%E9%9B%80%E5%B7%A5%E7%A8%8B%E5%B8%88%E5%B9%B3%E4%BE%A0%E7%9A%84%E4%B9%A6%E5%8D%95%E5%8F%91%E7%8E%B0%E6%9B%B4%E5%A4%A7%E7%9A%84%E4%B8%96%E7%95%8C">语雀工程师平侠的书单：发现更大的世界</a></li>
+<li><a href="#%E8%9A%82%E8%9A%81%E9%87%91%E6%9C%8Dceo%E4%BA%95%E8%B4%A4%E6%A0%8B%E4%B8%8E30%E4%BD%99%E5%9F%8E%E5%9B%BE%E4%B9%A6%E9%A6%86%E9%A6%86%E9%95%BF%E6%AF%8F%E4%BA%BA%E6%8E%A8%E8%8D%90%E4%B8%80%E6%9C%AC%E4%B9%A6">蚂蚁金服CEO井贤栋与30余城图书馆馆长，每人推荐一本书</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="menu-container">
+  <i class="ri-arrow-left-line text-2xl cursor-pointer animated fadeIn close-menu-btn" onclick="closeMenu()"></i>
+  <div>
+    
+      
+        <a href="/" class="menu" style="animation-delay: 0s">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu" style="animation-delay: 0.2s">
+          所有
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu" style="animation-delay: 0.4s">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu" style="animation-delay: 0.6000000000000001s">
+          关于
+        </a>
+      
+    
+      
+        <a href="/post/world" class="menu" style="animation-delay: 0.8s" target="_blank">
+          世界
+        </a>
+      
+    
+  </div>
+  <div class="site-footer">
+    <div class="py-4 text-gray-700">JumpAlang ©2019  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a></div>
+    <a class="rss" href="http://git.alang.run/atom.xml" target="_blank">RSS</a>
+  </div>
+</div>
+<div class="mask" onclick="closeMenu()">
+</div>
+      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
+        <h1 class="text-3xl font-bold lg:mt-16">大佬书单（一）</h1>
+        <div class="text-sm text-gray-700 lg:my-8">
+          2019-06-03 / 31 min read
+        </div>
+        
+          <img class="post-feature-image rounded-lg mx-auto my-4" src="http://git.alang.run/post-images/da-lao-shu-dan.webp" alt="">
+        
+        <div class="post-content yue">
+          <h3 id="蚂蚁金融服务集团首席技术官">蚂蚁金融服务集团首席技术官</h3>
+<p>程立</p>
+<ol>
+<li>《素数之恋》：保持好奇心<br>
+《素数之恋》是一本 400 页的厚书，目标是让非数学专业的读者可以理解这个数学中最深奥的问题。作者在序言中说道：“如果你读完我的书以后还不理解黎曼假设，那么你可以断定，你将永远理解不了它”，读完这本书后，深感此言不虚。<br>
+原打算每天晚上读两章当作休闲，结果压抑不住的好奇心总是让我再多读几章。这种欲罢不能的感觉，和小学时读《天龙八部》时一样。<br>
+<img src="http://git.alang.run/post-images/1559572536998.webp" alt="" loading="lazy"></li>
+<li>《刻意练习》：所有的天赋都来自于通过正确的练习对大脑布线的改变<br>
+2017 年元旦，始于钉钉群中的一句“苟日新、又日新、日日新”祝愿。带着这个愿望，拿了一本《刻意练习》看了起来。类似的励志书看了不少，原本也没有抱很大的期望，但一看就无法释手，一气读完。<br>
+本书可以用一句话概括，所有的天赋都来自于通过正确的练习对大脑布线的改变：确定一个明确的目标，找到一个正确的方法，专注地练习足够的时间与强度，能成为绝大多数领域的专家。从莫扎特、国际象棋世界冠军、王牌飞行员到诺贝尔奖得主，都是如此。<br>
+看完这本书，才知道过去在无效的学习上浪费了多少时间。<br>
+<img src="http://git.alang.run/post-images/1559631043374.jpeg" alt="" loading="lazy"></li>
+<li>《英语耳》：用正确的方法“刻意练习”<br>
+读完《刻意练习》，让我拣回了过英语“聋哑关”的勇气。随着公司的服务沿着一带一路出海，英文听说也变得越来越重要起来。过去学校里英文听说基础打得不好，工作十几年更是丢得差不多了。既然“正确的方法”很重要，就上淘宝淘一本好教材，被一本名叫《英语耳》的书的广告吸引了：“一天 20 分钟，100 天你就可以打开耳朵、张开嘴巴”。<br>
+抱着对这个广告半信半疑的态度，把书买回来，开始每天晚上临睡前花 20 分钟按照书中的方法“刻意练习”。每两天学一遍短文，20 分钟的练习包含跟着录音看书读 5 遍，跟着录音不看书读 7 遍，不跟录音看书读 7 遍，然后背出来默写一遍。除了出差外，基本上每天不间断练习，从 2 月份开始，到 6 月份完成。<br>
+最后说说效果，虽然没有广告上说的那么神奇，但完成这本书的所有练习后，和老外交流沟通基本不是障碍了。正好之后也有机会参与到公司更多全球化的工作中，算是学以致用。<br>
+<img src="http://git.alang.run/post-images/1559572802165.webp" alt="" loading="lazy"></li>
+<li>《区块链核心算法解析》：把复杂问题以简洁+严谨的方式讲明白<br>
+去年这一年也啃了不少区块链的书，但其中高价值的不多。这本《区块链核心算法解析》是值得向工程师们推荐的一本。<br>
+区块链核心算法解析，其实讲的是分布式系统的核心算法。它从分布式系统最基本的两阶段协议、到 Paxos、到拜占庭协议、仲裁系统、到一致性和分布式存储，逻辑严谨。关键的关键是，它把各种臭名昭著的复杂问题以简洁+严谨的方式讲明白了。其中关于 Paxos 原理、算法与证明，是我这几年看到的无数版本中最简明易懂的。<br>
+<img src="http://git.alang.run/post-images/1559572956226.webp" alt="" loading="lazy"></li>
+<li>《商业的本质》：以一种更简单的方式看商业、看管理、看领导力<br>
+除了技术与英文外，为了匹配工作职责的一些调整，去年也开始通过读书给自己补一些商业的课。在读过的商业书中，我选《商业的本质》推荐给大家。作者是名门正宗的商业大师杰克.韦尔奇，十年前公司几乎人手一本他写的《赢》，十年后他的这本新书，是否会带给我们更深刻的商业洞见？<br>
+看目录，就让人那么心动：增长是王道、错综复杂的全球化、财务其实很简单、如何做好市场营销、大数据时代的危机管理、建立一个卓越团队…… 每一堂课，应该都价值万金吧。<br>
+当然不可能因为读了这本书就摇身一变成为商业大师了，但大师的确让我开始以一种更简单的方式看商业、看管理、看领导力，更踏实地走在学习与实践的路上。<br>
+比团队认同自己更重要的是，认同共同的目标。<br>
+最顺利的时候总是最危险的时候。<br>
+今天很残酷，明天更残酷，但是后天很美好。<br>
+<img src="http://git.alang.run/post-images/1559573104567.webp" alt="" loading="lazy"></li>
+</ol>
+<h3 id="极客邦科技总裁">极客邦科技总裁</h3>
+<p>池建强</p>
+<ol>
+<li>《阅读是一座随身携带的避难所》<br>
+作者:  [英] 威廉·萨默塞特·毛姆</li>
+</ol>
+<p>出版社: 北京联合出版公司</p>
+<p>推荐理由：</p>
+<p>我最近在读毛姆的读书随笔《阅读是一座随身携带的避难所》，毛姆在书中写到：</p>
+<blockquote>
+<p>我接下来要提到的书籍既不会帮你拿学位，也不会教你谋生的本事；不会教你如何航海，也不会教你如何修理停运的机器，但这些书会让你获得更加丰满。</p>
+</blockquote>
+<p>在人类漫长的文明史中，书是上天对人类最美好的馈赠之一，是对历史和文明的记录和传承，而阅读差不多是我们现代人最常见的行为，只不过有的人书越读越多，从薄到厚，从厚到薄，融汇贯通，知行天下。有些人则越读越少，慢慢的不读书了。书的作用也不一样，好书可以影响一代人，坏书却能给一个民族带来灾难，我个人更偏爱那些记录了时代情感的书和文字。历朝历代会产生很多思想，有些思想可以光照千古，有些只是短暂留存。但人类的情感却通过音乐、书承载下来，源远流长，这些东西才是我们存在的本质。</p>
+<p>所以在今年的读书日，第一本推荐的书就是《阅读是一座随身携带的避难所》，希望能够开启你的阅读之旅。<br>
+<img src="http://git.alang.run/post-images/1559574491980.jpeg" alt="" loading="lazy"></p>
+<ol start="2">
+<li>《我的职业是小说家》<br>
+作者:   [日] 村上春树</li>
+</ol>
+<p>出版社: 南海出版公司</p>
+<p>推荐理由：</p>
+<p>村上春树是我非常喜欢的日本作家，我最近读他的作品也是一本自传类随笔《我的职业是小说家》。内容涵盖了小说家本身，原创性，写作，长篇小说，人物塑造，为何而写等等，笔锋细腻流畅，又不失力度，文字直抵人心，是我一年内看到最好的随笔。比如村上对原创性上的阐述：「新鲜，充满活力，并且深深的打上了创作者的烙印。在人们的心灵之窗上开辟一扇新的窗户，让新鲜的空气吹进来」。从某种角度而言，这本书对我的启发非常大，尤其是写作方面。<br>
+<img src="http://git.alang.run/post-images/1559574554342.jpeg" alt="" loading="lazy"></p>
+<ol start="3">
+<li>《成为乔布斯》<br>
+作者:   [美] 布伦特·施兰德 / [美] 里克·特策利</li>
+</ol>
+<p>出版社: 中信出版集团</p>
+<p>推荐理由：</p>
+<p>第三本书推荐《成为乔布斯》，我个人以为这本书比《乔布斯传》好看，也更真实。在回顾了和乔布斯交往经历之后，作者道出了写作本书的初衷：乔布斯去世以后，关于他的报道和图书铺天盖地，大部分只是在重复关于史蒂夫的那些传说和成见，要么天才，要么魔鬼。所有人都以为了解了乔布斯，一方面，他是一位天才，伟大的产品经理和未来的预见者，可以产生「扭曲现实」的魔力，激励人们完成不可能的任务。另一方面，他是个自以为是的混蛋，一味追求完美，完全不顾他人的感受，冷酷，薄情，从不听任何建议，等等。</p>
+<p>不是这样的。</p>
+<p>在作者看来，史蒂夫比他在任何文章里读到的形象都更复杂，更有人性，更多愁善感，也更聪明。他的一生犹如莎士比亚的戏剧，充满着傲慢、阴谋和豪情，充斥着十恶不赦的坏蛋和笨手笨脚的呆子。在短短几十年的时间里，人生如此跌宕起伏。人们在他活着的时候，根本不可能刻画他的生活轨迹，现在，时间给出了距离和答案，布伦特·施兰德，这位记者和乔布斯的老朋友，穿透了30年时光的迷雾，用大量的采访笔记、磁带和文档、邮件，为大家讲述了一个改变和成长的故事。<br>
+<img src="http://git.alang.run/post-images/1559574614096.jpeg" alt="" loading="lazy"></p>
+<ol start="4">
+<li>《十年一觉电影梦》<br>
+作者:  张靓蓓</li>
+</ol>
+<p>出版社: 中信出版社</p>
+<p>推荐理由：</p>
+<p>这本书记录了李安电影生涯前十年的第一个大高潮。他在序言中写道：「每做一部片子，无论翻江倒海，我也就拍了。但是片子拍完，我仍有许多地方不明所以。这本书得以将那些隐藏在旮旮角角的困惑再翻出来，理清楚，连成线，重回旧日时光」。书中描写了他从青年到中年，从低谷到巅峰，从一马平川到峰峦叠嶂，人生起伏，让人感慨。</p>
+<p>现代社会节奏快压力大，很多人心理上容易出问题，建议读读李安导演的这句话：人生如练功，一份功一份松，松了一环之后，再往紧处练，层层而上。功力越深，无论环境如何变化，综合实力越强的人，越不容易被击败。<br>
+<img src="http://git.alang.run/post-images/1559574709554.jpeg" alt="" loading="lazy"></p>
+<ol start="5">
+<li>《解释的工具》<br>
+作者:  熊秉元</li>
+</ol>
+<p>出版社: 东方出版社</p>
+<p>推荐理由：</p>
+<p>以前经济类图书读的少，其实相关领域的优秀图书很多，经济学并不是枯燥的学术问题，对我们的日常生活都有涉及。《解释的工具》的作者熊秉元教授是著名经济学家，但这本书并不是经济学教科书，而是通过经济学原理去解释我们生活中的现象和美景。比如，书中会帮你搞清楚为什么人们喜欢贴标签，财富真正的意义是什么，蝴蝶效应和囚笼困境是怎么回事，经济学与政治学、法学有什么关系等等。</p>
+<p>寻找一个新的通道，可以帮助我们更好的理解中国古老的文明。经济学就是这样一把开启通道的钥匙。</p>
+<p>最近半年读了多少书呢？没算过，随取随看，小几十本应该是有的。小说类的有刘震云、阿城、林语堂、村上春树、毛姆、菲茨杰拉德、钱德勒的作品。画册有肖全的《我们这一代》《文艺复兴三杰》《世界最美的书店》等等。技术和产品类的书就更多了，不再一一列举。这些书都是我喜欢的，希望你也会喜欢。找到最适合自己读的书，找到自己的阅读兴趣，是最重要的。</p>
+<figure data-type="image" tabindex="1"><img src="http://git.alang.run/post-images/1559574820283.jpeg" alt="" loading="lazy"></figure>
+<h3 id="著名互联网人士从业十年的产品经理">著名互联网人士，从业十年的产品经理</h3>
+<p>邱岳 人称“二爷”，公众号“二爷鉴书”的作者</p>
+<ol>
+<li>《乔布斯的魔力演讲》<br>
+作者:  [美] 卡迈恩·加洛<br>
+出版社: 中信出版社</li>
+</ol>
+<p>推荐理由：</p>
+<p>如果关于「演讲」，你只想读⼀本书，那就推荐你看这本。</p>
+<p>虽然书名听起来透着成功学的鸡精味儿，但书的内容着实精彩，它涵盖了演讲需要注意的⽅方⾯面，给出了了⼤量有效⽽中肯的建议。</p>
+<p>这本书着重强调了「准备工作」在成功演讲中的作⽤，也给出了了很多具体的演讲准备⼯工作的⽅法。所谓台上一分钟，台下⼗年功，演讲也是一样。书中提到某次 MacWorld ⼤大会上对 iDVD 软件的 5 分钟演示，竟⽤了将近 100 个⼩时进行准备，让⼈印象深刻。</p>
+<p>除了 iDVD 之外，作者围绕乔布斯历次教科书般的 Keynote 做了了⼤量的分析和讲解，如果你曾经看过乔布斯的演讲，这本书一定会为你带来更直观的收获。</p>
+<p>记得要买第二版，第一版翻译得很糟糕。<br>
+<img src="http://git.alang.run/post-images/1559575281680.jpeg" alt="" loading="lazy"></p>
+<ol start="2">
+<li>《演说》<br>
+作者: Nancy Duarte</li>
+</ol>
+<p>出版社: 电子工业出版社</p>
+<p>推荐理由：</p>
+<p>沟通是让别⼈接受你的观点，帮助他们理解你。如果你要做的只是陈述事实和数据，那么取消演说，给他们⼀份数据报告得了。</p>
+<p>《演说》介绍了准备一场演讲幻灯片的全过程，从创意到设计到制作一应俱全，很有系统性。</p>
+<p>书中还包含⼤量的实例——由于作者的独特背景（著名的演讲专家），书⾥的实例都⾼端⼤气，让⼈很有现场感。</p>
+<p>她有很多听起来平淡⽆奇，但如果有一点演讲经验，⼜又深以为然的观点。这本书虽然价格略高，但值得一读，推荐。<br>
+<img src="http://git.alang.run/post-images/1559575402393.png" alt="" loading="lazy"></p>
+<ol start="3">
+<li>《简单法则》<br>
+作者:  [美] 前田约翰<br>
+出版社: 中国人民大学出版社</li>
+</ol>
+<p>推荐理由：</p>
+<p>如果演讲结束，听众只能记住⼀句话，你希望是哪⼀句？</p>
+<p>删繁就简，⼒出一孔，才能形成有效的信息传递。这本书虽然不直接跟演讲相关，我却认为它讲出了演讲最重要的原则，就是要在信息、逻辑和形式上，不断做减法、做提炼，当你的⼒量集中在某一个或少数几个（通常认为不能超过3个）观点上时，产⽣的效果要远远⾼于百科全书似的罗列。</p>
+<p>简化看起来好像⼿起⼑落就好，其实却很不容易，这本书中汇聚了了⼗个关于简单的原则，其中包含了不少「如何简单」的技巧，推荐⼤家翻看，如果你不想读完全书，去看一下⾖瓣上其他人的读书笔记也可以。<br>
+<img src="http://git.alang.run/post-images/1559575516493.jpeg" alt="" loading="lazy"></p>
+<ol start="4">
+<li>《从&quot;为什么&quot;开始》<br>
+作者:  [美] 西蒙·斯涅克</li>
+</ol>
+<p>出版社: 海天出版社</p>
+<p>推荐理由：</p>
+<p>当演讲者侃侃⽽谈时，每个听众心中都会默默地问：「我为什么要关⼼这个？」</p>
+<p>西蒙·斯涅克在书中建立了了⼀个「黄⾦圈」的模型，外围是 What（做什么），然后是How（怎样做），最中心是 Why（为什么），在他看来，所有的思考、判断和逻辑，以及所有的信息传达，都应该从中心开始向外发散，所有的 How 和 What 都应该围绕着 Why。</p>
+<p>演讲本⾝就是信息传达与沟通，自然也应当采⽤类似的原则，作者在书中利用黄金圈框架解释了很多案例，其中一部分带给我很多启发，值得一读。如果不想读完整本，也可以去找作者的演讲视频来看，他没有⽤幻灯片，只是用一⽀笔和两张纸，就把⾃己想讲的事情讲得清清楚楚。这给我的触动很深，虽然没有用 PowerPoint ，但既有 Power，⼜有 Point，很酷。</p>
+<figure data-type="image" tabindex="2"><img src="http://git.alang.run/post-images/1559575614156.jpeg" alt="" loading="lazy"></figure>
+<ol start="5">
+<li>如何把你的观点深深地刻在别⼈的脑海中 ——《粘住》【如何演讲系列】</li>
+</ol>
+<p>作者:  [美] 奇普·希思 / [美] 丹·希思</p>
+<p>出版社: 中信出版社</p>
+<p>推荐理由：</p>
+<p>如何把你的观点深深地刻在别⼈的脑海中？</p>
+<p>这本书我很喜欢，读过多遍，书的副标题是「为什么我们记住了这些，忘掉了那些」，内容不错，但结构稍有点儿乱。</p>
+<p>书中作者总结了6个让你的观点更具影响⼒的诀窍，分别是简约、意外、具体、可信、情感、故事。我认为其中的核心是「故事」，整本书都是在教你如何「讲故事」。</p>
+<p>别⼩看讲故事，演讲中让听众记忆最久的是故事，新闻报道中最打动⼈的也是故事，伟⼤的小说家、编剧花毕⽣生精力讲出的还是故事。不⼀定必须有时间地点⼈人物情节才叫故事，在我看来，凡是能让人在脑海中产⽣画⾯感的话语或文字，就是故事。</p>
+<p>书⾥有许多具有可操作性的窍⻔，非常值得⼀读，推荐你试试。<br>
+<img src="http://git.alang.run/post-images/1559575699412.jpeg" alt="" loading="lazy"></p>
+<ol start="6">
+<li>《魏斯曼演讲圣经》<br>
+作者:  [美] 杰瑞·魏斯曼</li>
+</ol>
+<p>出版社: 中国人民大学出版社<br>
+<img src="http://git.alang.run/post-images/1559575778945.jpeg" alt="" loading="lazy"></p>
+<ol start="7">
+<li>《看懂肢体语言》<br>
+作者:  [美] 马克•鲍登 (Mark Bowden)</li>
+</ol>
+<p>出版社: 中国人民大学出版社</p>
+<p>推荐理由：</p>
+<p>演讲时，你的⼿应该放在哪里？</p>
+<p>每次当众讲话之前和刚刚开始的时候，我都会有些慌乱，不知道应该怎样安放双手——该放到身体两边，还是插进⼝袋，还是要抱在胸前，还是在空中挥舞？如果你也有和我一样的困惑，不妨看看这两本书。</p>
+<p>著名的「肢体定律」说，在沟通中，交流者所表现出来的感情、态度和意图，由肢体语⾔表达的占55%，语调表达的占38%，而通过⽂字表达的只占7%。也就是说在沟通效果上，讲话的方式比讲话的内容重要得多。你的思维内容以语言的形式传递出去，⽽非语言的暗⽰却会以它十倍的感染⼒让听众深信不疑。</p>
+<p>这两本书有不同的理论框架，和丰富使用的⽅法，甚⾄一些细节上还会有矛盾。越是这样，我越建议⼤大家两本对照着读读看，博采众长，找到适合⾃己的⽅式。<br>
+<img src="http://git.alang.run/post-images/1559575865919.jpeg" alt="" loading="lazy"></p>
+<h3 id="知名博主阮一峰的书单探索自然">知名博主阮一峰的书单：探索自然</h3>
+<p>阮一峰，著名技术博客作者，《ES6 标准入门》的作者，《黑客与画家》的译者。</p>
+<ol>
+<li>《北方的空地》<br>
+出版社：重庆出版社<br>
+作者：杨柳松<br>
+推荐理由：</li>
+</ol>
+<p>去年，有一部电影《77天》，讲述一个青年独自一人穿越羌塘荒原的故事。这是根据探险家杨柳松的真人真事改编的。</p>
+<p>《北方的空地》这本书就是杨柳松的荒原日记，比电影好看得多，记录了他在1500公里无人区的所见所闻，以及内心对生命和世界的思考。读完这本书，你会对那块荒原和那种远行的冲动，充满了向往。</p>
+<figure data-type="image" tabindex="3"><img src="http://git.alang.run/post-images/1559576054159.jpeg" alt="" loading="lazy"></figure>
+<ol start="2">
+<li>《最后的熊猫》<br>
+作者：〔美〕乔治•夏勒</li>
+</ol>
+<p>出版社：上海译文出版社</p>
+<p>推荐理由：</p>
+<p>1980年，夏勒博士以世界自然基金会特聘专家的身份，来到中国研究熊猫。他一待就是五年，在野外第一线追踪考察熊猫，亲身参与了卧龙大熊猫保护中心的筹建。</p>
+<p>《最后的熊猫》就是夏勒博士的回忆录，讲述了他的熊猫考察记，那几只他亲身参与捕捉的野生大熊猫的故事，以及他与中国同事相处的经历、四川原始森林里面的美景，改革开放初期中国老百姓的生活等等。<br>
+<img src="http://git.alang.run/post-images/1559576125613.jpeg" alt="" loading="lazy"></p>
+<ol start="3">
+<li>《大灭绝时代》<br>
+作者：[美] 伊丽莎白·科尔伯特</li>
+</ol>
+<p>出版社：上海译文出版社</p>
+<p>推荐理由：</p>
+<p>地球的历史上，已经发生了五次生物大灭绝。恐龙就是在第五次大灭绝时消失的。作者伊丽莎白•科尔伯特是《纽约客》杂志的科学记者，提出了一个问题：人类是否正在经历第六次大灭绝？</p>
+<p>她以小故事的形式，讲述自己在全球各地的采访经历，读来异常有趣。她思考着那些生物为什么会灭绝，不可避免地将读者引向那个终极问题：我们人类是否正在加速自己的灭绝？<br>
+<img src="http://git.alang.run/post-images/1559576213371.jpeg" alt="" loading="lazy"></p>
+<ol start="4">
+<li>《英格兰简史》<br>
+作者：[英] 西蒙·詹金斯</li>
+</ol>
+<p>出版社：化学工业出版社</p>
+<p>推荐理由：</p>
+<p>如果你想通过一本书了解英格兰的历史，那就读这本吧。在300多页的篇幅里，从古罗马时期一直讲到脱离欧盟，不仅理清了历史的脉络，而且充满了各种逸闻趣事，读来饶有趣味。同时，书里还配有许多图片，令读者大开眼界。</p>
+<p>作者是英国著名历史学家，但是这本书是以普通人的饭后读物为写作目标的，写得轻松诙谐，读来毫不费力。<br>
+<img src="http://git.alang.run/post-images/1559576299345.jpeg" alt="" loading="lazy"></p>
+<ol start="5">
+<li>《纳尔奇思与歌尔得蒙》<br>
+作者：[德] 黑塞</li>
+</ol>
+<p>出版社：译林出版社</p>
+<p>推荐理由：</p>
+<p>《纳尔奇思与歌尔得蒙》是诺贝尔文学奖得主、德国作家黑塞的代表作，讲述了一个扣人心弦的欧洲中世纪故事。</p>
+<p>纳尔奇思与歌尔得蒙从小在修道院里认识，结为好友，但是不久他们分道扬镳，走上不同的人生道路。两个男孩一个追求理性、献身宗教，另一个追求感性、听从内心的欲望。小说就是他们各自的人生故事，读者仿佛跟随主人公的脚步穿行在中世纪的欧洲。虽然是不同的人生道路，但是他们都在追寻心中的梦想，只有等到重逢时，才最终从对方身上悟到了人生的意义是什么。</p>
+<figure data-type="image" tabindex="4"><img src="http://git.alang.run/post-images/1559576379221.jpeg" alt="" loading="lazy"></figure>
+<h3 id="语雀工程师平侠的书单发现更大的世界">语雀工程师平侠的书单：发现更大的世界</h3>
+<p>平侠<br>
+移动互联网的兴起给人们带来了便捷的生活、触手可及的信息获取方式，但也让我们的宝贵时间被碎片化知识所吞噬，以至于很多人已淡忘了“看书”这个获取知识、认识世界的最佳途径，甚至还找出各种不看书的理由。其实看完一本书并不难，每天晚上花半小时，一年下来就可以看好几本书。语雀研发团队有很多喜欢看书的人，我们从书中也找到不少产品灵感，细心的朋友想必已发现语雀知识库就是参考一本书来设计的，每个知识库其实就是一本书。这份书单，<strong>主题是「发现」</strong>，希望以它们为引子，与大家一起重回读书之路，打开探索世界的大门。作为一个知识协同平台，语雀希望帮助大家沉淀结构化、体系化知识，更希望有招一日在这里也能产生一批优秀书籍，帮助人们更好地发现世界、品味人生。</p>
+<ol>
+<li>
+<p>身边之美 - 《怎样观察一棵树》<br>
+在忙碌的工作和生活中，我们会忽略身边的很多细微事物，比如：柳树发芽了、油菜结籽了、云雀叫了、蚂蚁冬眠了...火遍中国的经典咏流传里，一首《苔花》让很多人意识到毫不起眼的苔藓原来这么美。其实，美就在身边，只不过我们缺少了发现美的耐心与眼睛。《怎样观察一棵树》这本书由美国园艺师 Nancy Ross Hugo 和摄影师 Robert Llewellyn 共同创作，讲述了他们定期观察树木的收获，图文并茂地呈现了树木微妙而常被忽略的细节构造，教会人们从认识身边的一草一木开始发现自然和生命的奇迹。如果你的孩子恰好在上小学或初中，这本书将是你与孩子一起亲近自然的参考书，也是培养孩子好奇心和观察能力的教材。<br>
+<img src="http://git.alang.run/post-images/1559576579263.jpeg" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>认识中国 -《论中国》<br>
+生在中国，我们在与它相关的海量知识的耳濡目染中长大，中国元素已经融入我们的血液。但我们真的了解中国吗？我想恐怕没谁敢自信地说：“非常了解”。其实，我们每个人了解到的中国只是它的一面，即便是穷极一生恐怕都不能完全了解中国，唯一能做的就是从不同的视角去认识它，与它一起成长。这本《论中国》是美国外交家、前国务卿基辛格晚年的一本专著，他在推动中美正常建交中扮演了重要角色，在书中他以政治家的视角、国际话的眼光解读了中国的过去、现在与未来。新加坡首任总理李光耀的《论中国与世界》也是从政治视角看中国的一本难得之作，习大大对李光耀的评价很高，他的这本书有助于我们认识中国和周边国际的关系。<br>
+<img src="http://git.alang.run/post-images/1559576654900.png" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>开拓想象 -《银河帝国》<br>
+科幻小说致力于拓展人类想象力的边界，一些科幻小说中的场景已经变成现实。阿西莫夫的《银河帝国》把人类的发展推演到了极致，是科幻小说难以超越的巅峰之作，书中的心理史学、机器人三大定律两大构思非常巧妙。银河帝国总共 15 本，每本独立成章，但又相互关联形成一个完整的故事，全书的精髓是基地三部曲。据悉，苹果正在制作基于基地三部曲的科幻电视剧。与银河帝国齐名的是丹·西蒙斯的《海伯利安》，但看起来比较烧脑，有趣的是这部书引入了很多中国元素。这两本书的主角都有 AI，讲述的是 AI 与人类的故事，但角度和细节上有差别，在 AI 飞速发展的当下，书中对未来的推演还是值得思考的。</p>
+</li>
+</ol>
+<figure data-type="image" tabindex="5"><img src="http://git.alang.run/post-images/1559576719868.jpeg" alt="" loading="lazy"></figure>
+<ol start="4">
+<li>
+<p>洞见未来 -《失控》<br>
+很多人都听过这本书名字，或许书架上还藏有一本，但我相信有不少人只是买了当摆设，并未认真读完。凯文凯利的《失控》成作与 1994 年，但在移动互联网时代才在中国广为流传，被互联网界奉为圣经，以至于没看过这本书都不好意说自己是产品经理。这本书记录了他对当时科技、社会和经济的思考，以及借此所窥得的未来图景。书中关于科技的很多“预言”已成为现实，但还隐藏着很多尚待探索和破解的密码。虽然是一本老书，但其中的观点、思考方式在当下仍不过时。洞见科技的未来，可以从这本书开始。<br>
+<img src="http://git.alang.run/post-images/1559576776649.jpeg" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>认识生命 -《癌症传》<br>
+癌症是人类的主要杀手，谈癌色变是很多人的第一反应，但癌症也是我们认识生命、珍爱健康的一扇大门。肿瘤学家悉达多·穆克吉的这本历时 6 年的匠心之作《众病之王-癌症传》向人们展示了癌症的起源与发展，人类对抗癌症、预防癌症的斗争史，是一本难得的科普佳作。读完本书，你会对癌症及健康有全新的认识。作者还有一本新书《基因传:众生之源》，讲述了基因理论的起源、发展和未来。<br>
+<img src="http://git.alang.run/post-images/1559576855596.jpeg" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>了解人性 -《人性中的善良天使》<br>
+人性是一个复杂的话题，与之相关的书也非常多，人性本善还是人性本恶已经争论了数千年，但很难有答案。比尔·盖茨多次推荐的这本《人性中的善良天使》是思想家史蒂芬·平克的大作，通过详尽的史实和数据讨论了暴力如何以及为什么在我们的历史中呈现稳步下降的趋势，以及我们该如何使这趋势继续下去。这本书有助于引导我们用全新的角度看人性、看历史、看世界，去深思人类社会的未来命运。<br>
+<img src="http://git.alang.run/post-images/1559576909137.jpeg" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>有诗为伴 -《给孩子的诗》<br>
+诗歌是中国文化的精髓之一，也是古人留给我们的珍贵精神财富。但中国的诗歌实在是太多了，于是在不同时期都会有人精选一批供人诵读，《诗经》、《古诗十九首》、《唐诗三百首》、《千家诗》等都属于这种。这本由北岛选编的《给孩子的诗》精选了古今中外优秀诗作中最适于孩子诵读、领悟的短诗，是学习诗歌、亲子阅读的佳作。“生活不止眼前的苟且，还有诗与远方”，有诗为伴，人生路上会少一分孤单、多一分精彩。<br>
+<img src="http://git.alang.run/post-images/1559576972629.jpeg" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>不忘初心 -《禅者的初心》<br>
+“初心”是近几年入镜率非常高的一个词汇，在各种场合时常撞见，习大大也多次强调“不忘初心，牢记使命”。但可能很多人并不知道，这个词来与佛教颇有渊源。日本著名禅师铃木俊隆的《禅者的初心》，从禅者的视角向我们展示了什么是初心，以及如何在日常生活中习得初心，禅者那种平静的内心、鲜活的生命力、朴实的生活在这本书中有很好的体现。据说，这本书也深受乔布斯喜爱。与这个话题相关的还有一本值得推荐的佳作：一行禅师的《活在此时此刻》，向我们展示了正念这个备受西方关注的禅修方式给生命所带来的奇迹。</p>
+</li>
+</ol>
+<figure data-type="image" tabindex="6"><img src="http://git.alang.run/post-images/1559577081585.jpeg" alt="" loading="lazy"></figure>
+<h3 id="蚂蚁金服ceo井贤栋与30余城图书馆馆长每人推荐一本书">蚂蚁金服CEO井贤栋与30余城图书馆馆长，每人推荐一本书</h3>
+<p>蚂蚁金服董事长兼CEO井贤栋与三十余城图书馆馆长，每人推荐一本书，涉及科技、历史、人文等多方面内容。</p>
+<ol>
+<li>《瓦尔登湖》<br>
+作为自然主义的代表作，它试图告诉我们要简化生活，将时间腾出来深入生命，品味人生。</li>
+</ol>
+<figure data-type="image" tabindex="7"><img src="http://git.alang.run/post-images/1559577375679.png" alt="" loading="lazy"></figure>
+<ol start="2">
+<li>《重庆之眼》<br>
+不忘历史，珍爱和平！</li>
+</ol>
+<figure data-type="image" tabindex="8"><img src="http://git.alang.run/post-images/1559577428973.png" alt="" loading="lazy"></figure>
+<ol start="3">
+<li>
+<p>《枢纽》<br>
+规划未来，更要洞察过去。从时间和空间的维度重新梳理了中国历史，囊括三千年，纵横九千里，一场认知的大爆炸。<br>
+<img src="http://git.alang.run/post-images/1559577493212.png" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>《平凡的世界》<br>
+生活不能等待别人来安排，要自己去争取和奋斗；不论结果是喜是悲，总不枉在这世上活了一场。</p>
+</li>
+</ol>
+<figure data-type="image" tabindex="9"><img src="http://git.alang.run/post-images/1559577559739.png" alt="" loading="lazy"></figure>
+<ol start="5">
+<li>
+<p>《图书馆狮子》<br>
+哪怕是凶猛的大狮子，只要你爱书爱故事，图书馆的大门就永远向你敞开。好的故事本就是为所有爱故事的人准备的。<br>
+<img src="http://git.alang.run/post-images/1559577646312.png" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>《海伦娜的奇迹》<br>
+如何在完成应试教育指标的前提下开展素质教育，以全面提高学生综合能力，海伦娜中学的成功实践不仅为自己赢得了「联合国教科文组织模范学校」「德国最佳学校」等称号，更为家长、老师和孩子找到了一条切实可行的途径。<br>
+<img src="http://git.alang.run/post-images/1559577765804.png" alt="" loading="lazy"></p>
+</li>
+</ol>
+<p>7.《女儿四岁了，我们开始聊哲学》<br>
+一日之计在于晨，人生成长重在幼。这本书给我们提供了很好的思路和实践。尤其建议年轻的父母们和孩子一起好好阅读、好好「读图」。<br>
+<img src="http://git.alang.run/post-images/1559577826724.png" alt="" loading="lazy"></p>
+<p>8.《阅读力》<br>
+阅读力的培养实际是对人们思维能力的培养。</p>
+<figure data-type="image" tabindex="10"><img src="http://git.alang.run/post-images/1559577868866.png" alt="" loading="lazy"></figure>
+<p>9.《活着》<br>
+感悟生命的脆弱与坚韧。</p>
+<figure data-type="image" tabindex="11"><img src="http://git.alang.run/post-images/1559577926608.png" alt="" loading="lazy"></figure>
+<ol start="10">
+<li>《论语别裁》<br>
+将对原文的串讲撮编为一个个历史故事，蕴意深邃而妙趣横生。</li>
+</ol>
+<figure data-type="image" tabindex="12"><img src="http://git.alang.run/post-images/1559578005610.png" alt="" loading="lazy"></figure>
+<ol start="11">
+<li>《朱子读书法》<br>
+循序渐进、熟读精思、虚心涵泳、切己体察、着紧用力、居敬持志。</li>
+</ol>
+<figure data-type="image" tabindex="13"><img src="http://git.alang.run/post-images/1559578064572.png" alt="" loading="lazy"></figure>
+<ol start="12">
+<li>《丝绸之路：一部全新的世界史》<br>
+一部包罗万象、全新的世界史巨著。对于理解当前中国「一带一路」战略价值具有重要的参考意义。<br>
+<img src="http://git.alang.run/post-images/1559578135864.png" alt="" loading="lazy"></li>
+</ol>
+<p>13.《胡适演讲集：读书与人生》<br>
+「人生意义就在我们怎样看人生」，胡适先生以其深邃的思想拨开纷乱的世事迷雾，引导人们更好地阅读经典和理解人生。<br>
+<img src="http://git.alang.run/post-images/1559578329024.png" alt="" loading="lazy"></p>
+<ol start="14">
+<li>
+<p>《泥步修行》<br>
+余秋雨封笔之作。老人之言，皆为心声。<br>
+<img src="http://git.alang.run/post-images/1559578370016.png" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>《苏东坡传》<br>
+看才子如何演绎才子。</p>
+</li>
+</ol>
+<figure data-type="image" tabindex="14"><img src="http://git.alang.run/post-images/1559578440508.png" alt="" loading="lazy"></figure>
+<ol start="16">
+<li>《未来简史》<br>
+我们立足现在，同时需要放眼未来。等到无意识却高度智能的算法比我们更了解我们自己时，社会、政治和日常生活将会有什么变化？</li>
+</ol>
+<figure data-type="image" tabindex="15"><img src="http://git.alang.run/post-images/1559578770921.png" alt="" loading="lazy"></figure>
+<ol start="17">
+<li>《原则》<br>
+一本基于逻辑、理性和常识的系统思考智慧的图书，既有思想的积淀，又有较强的实用性。</li>
+</ol>
+<figure data-type="image" tabindex="16"><img src="http://git.alang.run/post-images/1559578792342.png" alt="" loading="lazy"></figure>
+<ol start="18">
+<li>《红色家书》<br>
+传家风晒家训重家教，人格亲情智慧力量跃然纸上，爱国爱家大爱无疆初心无忘。可以平淡地生活，不可以平凡人生。</li>
+</ol>
+<figure data-type="image" tabindex="17"><img src="http://git.alang.run/post-images/1559578820418.png" alt="" loading="lazy"></figure>
+<ol start="19">
+<li>《尘埃落定》<br>
+这本小说为我们提供了一种别样的眼光，一种普遍的人类情怀，更展现了一种不一样的藏人生活，一部不一样的中国现代史。堪称中国的「旧制度与大革命」。</li>
+</ol>
+<figure data-type="image" tabindex="18"><img src="http://git.alang.run/post-images/1559578847067.png" alt="" loading="lazy"></figure>
+<ol start="20">
+<li>
+<p>《可怕的科学》<br>
+人们读过太多的历史文化书籍，却时常在水膜的张力上莫名其妙。当今时代，科学知识、科学常识应该成为阅读引领者阅读推荐选项。<br>
+<img src="http://git.alang.run/post-images/1559578948974.png" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>《海昏候刘贺》<br>
+惊世考古发现背后鲜活而惊心动魄的历史。通过海昏侯刘贺充满戏剧性的一生，呈现出大汉王朝在汉武帝身后的政局变动，从不同侧面让中国历史上在位时间最短的皇帝刘贺走到寻常百姓眼前。<br>
+<img src="http://git.alang.run/post-images/1559579023209.png" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>《山西密码》<br>
+山西的「小通史」。认识山西、推介山西的「撬动灵魂」之作，堪称山西版的《五百年来谁著史》。</p>
+</li>
+</ol>
+<figure data-type="image" tabindex="19"><img src="http://git.alang.run/post-images/1559579078420.png" alt="" loading="lazy"></figure>
+<ol start="23">
+<li>
+<p>《细菌不小点儿人体历险记》<br>
+这是一本生动、有趣、形象的儿童科普读物，告诉小朋友如何防止坏细菌入侵、如何打败坏细菌、如何爱惜自己的小身体，适合亲子阅读。<br>
+<img src="http://git.alang.run/post-images/1559579141554.png" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>《诗经现场》<br>
+跟随流沙河先生的脚步，重回2500年前的诗经现场，去感知其时的景、物、人、情。<br>
+<img src="http://git.alang.run/post-images/1559579191649.png" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>《激荡十年水大鱼大》<br>
+书中的每一幕都真实地发生在我们经历的过去十年的每一天，展现了中国过去十年的社会经济浮沉片影。<br>
+<img src="http://git.alang.run/post-images/1559579315107.png" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>《财产、法律与政府》<br>
+逻辑的力量，历史的经验，照亮每一颗追求自由的心灵。</p>
+</li>
+</ol>
+<figure data-type="image" tabindex="20"><img src="http://git.alang.run/post-images/1559579409917.png" alt="" loading="lazy"></figure>
+<ol start="27">
+<li>
+<p>《君子之道》<br>
+要复兴中华文化，需要践行「君子之道」。<br>
+<img src="http://git.alang.run/post-images/1559579461757.png" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>《讲谈社中国的历史》<br>
+一套严谨、专业、可读性很强的历史读本。由于文化传统和学术传统不同，他们观察中国历史的角度和兴趣、重点也不同，在许多方面给人以耳目一新之感。<br>
+<img src="http://git.alang.run/post-images/1559579514620.png" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>《人类简史》<br>
+比历史书生动、比哲学书易懂，是值得青少年阅读的一本了解人类历史的好书。</p>
+</li>
+</ol>
+<figure data-type="image" tabindex="21"><img src="http://git.alang.run/post-images/1559579548350.png" alt="" loading="lazy"></figure>
+<ol start="30">
+<li>《白居易传》<br>
+对我们了解传主的传世名句、起伏人生以及那个风起云涌的时代大有裨益，值得一读。</li>
+</ol>
+<figure data-type="image" tabindex="22"><img src="http://git.alang.run/post-images/1559579583958.png" alt="" loading="lazy"></figure>
+<ol start="31">
+<li>
+<p>《如何阅读一本书》<br>
+不懂阅读的人，初探阅读的人，读这本书可以少走冤枉路。对阅读有所体会的人，读这本书可以有更深的印证和领悟。<br>
+<img src="http://git.alang.run/post-images/1559579617342.png" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>《这边风景》<br>
+作品从一件粮食盗窃案入笔，以新疆农村为舞台，为读者展示了极具新疆特色的风土人情画卷。且该作品独具匠心，在每个章节后设计「小说人语」，当老年王蒙遇上中年王蒙，这场跨越40年的文学对话，会碰撞出怎样的火花？<br>
+<img src="http://git.alang.run/post-images/1559579663305.png" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>《中国的科学技术史》<br>
+著名英籍科学史家李约瑟代表作《中国科学技术史》，对于中国现代的科技创新有重要借鉴意义。如果今天续写这部里程碑式的著作，相信当下的很多科技创新、移动支付应用、数字科技浪潮都将成为其中的重要篇章。</p>
+</li>
+</ol>
+<figure data-type="image" tabindex="23"><img src="http://git.alang.run/post-images/1559579719011.png" alt="" loading="lazy"></figure>
+
+        </div>
+
+        
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="http://git.alang.run/tag/booklist/">
+            <span class="flex-auto">书单</span>
+          </a>
+        
+
+
+        <div class="flex justify-between py-8">
+          
+            <div class="prev-post">
+              <a href="http://git.alang.run/post/wu-wei-zi-ben-quan-da-lao-qiang-tui-shu-dan/">
+                <h3 class="post-title">
+                  <i class="ri-arrow-left-line"></i>
+                  五位资本圈大佬“强推”书单
+                </h3>
+              </a>
+            </div>
+          
+
+          
+            <div class="next-post">
+              <a href="http://git.alang.run/post/wo-xi-huan-de-ge-qu-mv/">
+                <h3 class="post-title">
+                  我喜欢的歌曲MV
+                  <i class="ri-arrow-right-line"></i>
+                </h3>
+              </a>
+            </div>
+          
+        </div>
+
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: 'dd6b58508cc9af58fc1c',
+    clientSecret: 'aa86bd09e6d2eedc03f182792c20275d200ffb62',
+    repo: 'JumpAlang.github.io',
+    owner: 'JumpAlang',
+    admin: ['JumpAlang'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+
+      </div>
+    </div>
+
+    <script src="http://git.alang.run/media/prism.js"></script>  
+<script>
+
+Prism.highlightAll()
+let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+// This should probably be throttled.
+// Especially because it triggers during smooth scrolling.
+// https://lodash.com/docs/4.17.10#throttle
+// You could do like...
+// window.addEventListener("scroll", () => {
+//    _.throttle(doThatStuff, 100);
+// });
+// Only not doing it here to keep this Pen dependency-free.
+
+window.addEventListener("scroll", event => {
+  let fromTop = window.scrollY;
+
+  mainNavLinks.forEach((link, index) => {
+    let section = document.getElementById(decodeURI(link.hash).substring(1));
+    let nextSection = null
+    if (mainNavLinks[index + 1]) {
+      nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+    }
+    if (section.offsetTop <= fromTop) {
+      if (nextSection) {
+        if (nextSection.offsetTop > fromTop) {
+          link.classList.add("current");
+        } else {
+          link.classList.remove("current");    
+        }
+      } else {
+        link.classList.add("current");
+      }
+    } else {
+      link.classList.remove("current");
+    }
+  });
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  var lazyImages = [].slice.call(document.querySelectorAll(".post-feature-image.lazy"));
+
+  if ("IntersectionObserver" in window) {
+    let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          let lazyImage = entry.target
+          lazyImage.style.backgroundImage = `url(${lazyImage.dataset.bg})`
+          lazyImage.classList.remove("lazy")
+          lazyImageObserver.unobserve(lazyImage)
+        }
+      });
+    });
+
+    lazyImages.forEach(function(lazyImage) {
+      lazyImageObserver.observe(lazyImage)
+    })
+  } else {
+    // Possibly fall back to a more compatible method here
+  }
+});
+
+const menuContainer = document.querySelector('.menu-container')
+const menus = document.querySelectorAll('.menu-container .menu')
+const mask = document.querySelector('.mask')
+const contentWrapper = document.querySelector('.content-wrapper')
+const latestArticle = document.querySelector('.latest-article')
+const readMore = document.querySelector('.read-more')
+const indexPage = document.querySelector('.index-page')
+
+const isHome = location.pathname === '/'
+if (latestArticle) {
+  latestArticle.style.display = isHome ? 'block' : 'none'
+  readMore.style.display = isHome ? 'block' : 'none'
+  indexPage.style.display = isHome ? 'none' : 'block'
+}
+
+const openMenu = () => {
+  menuContainer.classList.add('open')
+  menus.forEach(menu => {
+    menu.classList.add('animated', 'fadeInLeft')
+  })
+  mask.classList.add('open')
+  contentWrapper.classList.add('is-second')
+}
+
+const closeMenu = () => {
+  menuContainer.classList.remove('open')
+  menus.forEach(menu => {
+    menu.classList.remove('animated', 'fadeInLeft')
+  })
+  mask.classList.remove('open')
+  contentWrapper.classList.remove('is-second')
+}
+</script>
+  
+  </body>
+</html>

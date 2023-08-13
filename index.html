@@ -1,0 +1,376 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Jump!Alang</title>
+<meta name="description" content="永远年轻！永远热泪盈眶！" />
+<link rel="shortcut icon" href="http://git.alang.run/favicon.ico?v=1691903147411">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+<link rel="stylesheet" href="http://git.alang.run/styles/main.css">
+
+
+
+  </head>
+  <body>
+    <div class="main px-4 flex flex-col lg:flex-row">
+      <div id="sidebar" class="sidebar-wrapper lg:static lg:w-1/4">
+  <div class="lg:sticky top-0">
+    <div class="sidebar-content">
+      <div class="flex lg:block p-4 lg:px-0 items-center fixed lg:static lg:block top-0 right-0 left-0 bg-white z-50">
+        <i class="ri-menu-2-line lg:mt-4 text-2xl cursor-pointer animated fadeIn" onclick="openMenu()"></i>
+        <a href="http://git.alang.run">
+          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="http://git.alang.run/images/avatar.png?v=1691903147411" alt="">
+        </a>
+        <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">Jump!Alang</h1>
+      </div>
+      
+        <div class="animated fadeInLeft" style="animation-delay: 0.4s">
+          <p class="my-4 text-gray-600 font-light hidden lg:block">
+            永远年轻！永远热泪盈眶！
+          </p>
+          <div class="animated fadeInLeft social-container hidden lg:block" style="animation-delay: 0.6s">
+            
+              
+                <a href="https://github.com/JumpAlang" target="_blank" class="mr-4 text-xl text-gray-400 font-light hover:text-gray-900">
+                  <i class="ri-github-line"></i>
+                </a>
+              
+            
+              
+            
+              
+                <a href="https://weibo.com/JumpAlang" target="_blank" class="mr-4 text-xl text-gray-400 font-light hover:text-gray-900">
+                  <i class="ri-weibo-line"></i>
+                </a>
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+          </div>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="menu-container">
+  <i class="ri-arrow-left-line text-2xl cursor-pointer animated fadeIn close-menu-btn" onclick="closeMenu()"></i>
+  <div>
+    
+      
+        <a href="/" class="menu" style="animation-delay: 0s">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu" style="animation-delay: 0.2s">
+          所有
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu" style="animation-delay: 0.4s">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu" style="animation-delay: 0.6000000000000001s">
+          关于
+        </a>
+      
+    
+      
+        <a href="/post/world" class="menu" style="animation-delay: 0.8s" target="_blank">
+          世界
+        </a>
+      
+    
+  </div>
+  <div class="site-footer">
+    <div class="py-4 text-gray-700">JumpAlang ©2019  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a></div>
+    <a class="rss" href="http://git.alang.run/atom.xml" target="_blank">RSS</a>
+  </div>
+</div>
+<div class="mask" onclick="closeMenu()">
+</div>
+      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4">
+        <h2 class="latest-article text-lg text-gray-700 mb-8">
+          <i class="ri-article-line"></i>
+          最新文章
+        </h2>
+        
+  <section class="post-item md:flex pb-12 animated fadeIn" :style="{ 'animation-delay': `${0 * 0.2}s` }">
+    
+    <div class="content">
+      <a href="http://git.alang.run/post/sheng-huo-jian-jie/">
+        <h2 class="post-title text-xl font-extrabold mt-5 md:mt-0">生活见解</h2>
+      </a>
+      <div class="post-abstract text-gray-700 font-light my-4">
+        <p>记录我有生之年，见闻的事物。</p>
+
+      </div>
+      <div class="text-gray-400 text-sm font-light">2021-12-08 / 1 min read</div>
+    </div>
+  </section>
+
+  <section class="post-item md:flex pb-12 animated fadeIn" :style="{ 'animation-delay': `${1 * 0.2}s` }">
+    
+    <div class="content">
+      <a href="http://git.alang.run/post/springmvc-chu-li-liu-cheng/">
+        <h2 class="post-title text-xl font-extrabold mt-5 md:mt-0">springmvc  处理流程</h2>
+      </a>
+      <div class="post-abstract text-gray-700 font-light my-4">
+        
+      </div>
+      <div class="text-gray-400 text-sm font-light">2021-10-29 / 1 min read</div>
+    </div>
+  </section>
+
+  <section class="post-item md:flex pb-12 animated fadeIn" :style="{ 'animation-delay': `${2 * 0.2}s` }">
+    
+    <div class="content">
+      <a href="http://git.alang.run/post/lei-de-jia-zai-yu-classloader-de-li-jie/">
+        <h2 class="post-title text-xl font-extrabold mt-5 md:mt-0">类的加载与ClassLoader的理解</h2>
+      </a>
+      <div class="post-abstract text-gray-700 font-light my-4">
+        <p>来自尚硅谷尚硅谷Java零基础入门教程<a href="https://www.bilibili.com/video/BV1Kb411W75N?p=661">https://www.bilibili.com/video/BV1Kb411W75N?p=661</a></p>
+
+      </div>
+      <div class="text-gray-400 text-sm font-light">2021-10-18 / 2 min read</div>
+    </div>
+  </section>
+
+  <section class="post-item md:flex pb-12 animated fadeIn" :style="{ 'animation-delay': `${3 * 0.2}s` }">
+    
+    <div class="content">
+      <a href="http://git.alang.run/post/thread-xue-xi/">
+        <h2 class="post-title text-xl font-extrabold mt-5 md:mt-0">thread学习</h2>
+      </a>
+      <div class="post-abstract text-gray-700 font-light my-4">
+        <p>线程的6个状态：new,runnable(ready,running),timedwaiting,waiting,blocked,teminated</p>
+
+      </div>
+      <div class="text-gray-400 text-sm font-light">2021-10-13 / 1 min read</div>
+    </div>
+  </section>
+
+  <section class="post-item md:flex pb-12 animated fadeIn" :style="{ 'animation-delay': `${4 * 0.2}s` }">
+    
+    <div class="content">
+      <a href="http://git.alang.run/post/io-liu-de-xue-xi/">
+        <h2 class="post-title text-xl font-extrabold mt-5 md:mt-0">IO流的学习</h2>
+      </a>
+      <div class="post-abstract text-gray-700 font-light my-4">
+        <p>学习韩顺平的java基础：<a href="https://www.bilibili.com/video/BV1fh411y7R8?p=622&amp;spm_id_from=pageDriver">https://www.bilibili.com/video/BV1fh411y7R8?p=622&amp;spm_id_from=pageDriver</a></p>
+
+      </div>
+      <div class="text-gray-400 text-sm font-light">2021-10-12 / 1 min read</div>
+    </div>
+  </section>
+
+  <section class="post-item md:flex pb-12 animated fadeIn" :style="{ 'animation-delay': `${5 * 0.2}s` }">
+    
+    <div class="content">
+      <a href="http://git.alang.run/post/mei-tian-mian-fei-ling-hi-bi-shuo-bu-ding-shi-wei-lai-de-bi-te-bi/">
+        <h2 class="post-title text-xl font-extrabold mt-5 md:mt-0">每天免费领HI币，说不定是未来的比特币</h2>
+      </a>
+      <div class="post-abstract text-gray-700 font-light my-4">
+        
+      </div>
+      <div class="text-gray-400 text-sm font-light">2021-08-10 / 2 min read</div>
+    </div>
+  </section>
+
+  <section class="post-item md:flex pb-12 animated fadeIn" :style="{ 'animation-delay': `${6 * 0.2}s` }">
+    
+    <div class="content">
+      <a href="http://git.alang.run/post/c-dll-fu-jia-da-bao-dao-exe-li/">
+        <h2 class="post-title text-xl font-extrabold mt-5 md:mt-0">C# dll附加打包到exe里</h2>
+      </a>
+      <div class="post-abstract text-gray-700 font-light my-4">
+        <p>由于微信内存注入，注入器与dll是分开的。现想把其打包在一起，以免dll文件被人直接拿去用。</p>
+
+      </div>
+      <div class="text-gray-400 text-sm font-light">2021-04-01 / 2 min read</div>
+    </div>
+  </section>
+
+  <section class="post-item md:flex pb-12 animated fadeIn" :style="{ 'animation-delay': `${7 * 0.2}s` }">
+    
+    <div class="content">
+      <a href="http://git.alang.run/post/lesslessnei-wai-jian-xiu-cheng-xu-yuan-de-cheng-chang-zhi-lu-greatergreater-zhai-lu/">
+        <h2 class="post-title text-xl font-extrabold mt-5 md:mt-0">《内外兼修(程序员的成长之路)》摘录</h2>
+      </a>
+      <div class="post-abstract text-gray-700 font-light my-4">
+        
+      </div>
+      <div class="text-gray-400 text-sm font-light">2021-03-21 / 9 min read</div>
+    </div>
+  </section>
+
+  <section class="post-item md:flex pb-12 animated fadeIn" :style="{ 'animation-delay': `${8 * 0.2}s` }">
+    
+    <div class="content">
+      <a href="http://git.alang.run/post/gei-exe-zhuo-mian-ruan-jian-zeng-jia-shi-yong-xian-zhi/">
+        <h2 class="post-title text-xl font-extrabold mt-5 md:mt-0">给.exe桌面软件增加使用限制</h2>
+      </a>
+      <div class="post-abstract text-gray-700 font-light my-4">
+        <p>最近，小伙伴有开发了一个冷门小软件，想采取按软件打开次数收费。</p>
+
+      </div>
+      <div class="text-gray-400 text-sm font-light">2021-03-17 / 2 min read</div>
+    </div>
+  </section>
+
+  <section class="post-item md:flex pb-12 animated fadeIn" :style="{ 'animation-delay': `${9 * 0.2}s` }">
+    
+    <div class="content">
+      <a href="http://git.alang.run/post/ipad3-3104-an-zhuang-wei-xin-ji-qq/">
+        <h2 class="post-title text-xl font-extrabold mt-5 md:mt-0">ipad3 3.10.4安装微信及QQ</h2>
+      </a>
+      <div class="post-abstract text-gray-700 font-light my-4">
+        <p>发小从闲鱼上买了台二手ipad4，800大洋，想用来挂微信及QQ。可从app store安装微信或者QQ总是下载完后提示无法安装。</p>
+
+      </div>
+      <div class="text-gray-400 text-sm font-light">2021-02-28 / 2 min read</div>
+    </div>
+  </section>
+
+        <div class="read-more">
+          
+            <a href="http://git.alang.run/page/2" class="animated fadeIn font-extrabold text-gray-700 hover:text-gray-900 more-btn">
+              阅读更多
+              <i class="ri-arrow-right-line"></i>
+            </a>
+          
+        </div>
+        <div class="index-page">
+          <div class="pagination-container animated fadeIn">
+  
+  
+    <a href="http://git.alang.run/page/2" class="page-btn">下一页 <i class="ri-arrow-right-line"></i></a>
+  
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="http://git.alang.run/media/prism.js"></script>  
+<script>
+
+Prism.highlightAll()
+let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+// This should probably be throttled.
+// Especially because it triggers during smooth scrolling.
+// https://lodash.com/docs/4.17.10#throttle
+// You could do like...
+// window.addEventListener("scroll", () => {
+//    _.throttle(doThatStuff, 100);
+// });
+// Only not doing it here to keep this Pen dependency-free.
+
+window.addEventListener("scroll", event => {
+  let fromTop = window.scrollY;
+
+  mainNavLinks.forEach((link, index) => {
+    let section = document.getElementById(decodeURI(link.hash).substring(1));
+    let nextSection = null
+    if (mainNavLinks[index + 1]) {
+      nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+    }
+    if (section.offsetTop <= fromTop) {
+      if (nextSection) {
+        if (nextSection.offsetTop > fromTop) {
+          link.classList.add("current");
+        } else {
+          link.classList.remove("current");    
+        }
+      } else {
+        link.classList.add("current");
+      }
+    } else {
+      link.classList.remove("current");
+    }
+  });
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  var lazyImages = [].slice.call(document.querySelectorAll(".post-feature-image.lazy"));
+
+  if ("IntersectionObserver" in window) {
+    let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          let lazyImage = entry.target
+          lazyImage.style.backgroundImage = `url(${lazyImage.dataset.bg})`
+          lazyImage.classList.remove("lazy")
+          lazyImageObserver.unobserve(lazyImage)
+        }
+      });
+    });
+
+    lazyImages.forEach(function(lazyImage) {
+      lazyImageObserver.observe(lazyImage)
+    })
+  } else {
+    // Possibly fall back to a more compatible method here
+  }
+});
+
+const menuContainer = document.querySelector('.menu-container')
+const menus = document.querySelectorAll('.menu-container .menu')
+const mask = document.querySelector('.mask')
+const contentWrapper = document.querySelector('.content-wrapper')
+const latestArticle = document.querySelector('.latest-article')
+const readMore = document.querySelector('.read-more')
+const indexPage = document.querySelector('.index-page')
+
+const isHome = location.pathname === '/'
+if (latestArticle) {
+  latestArticle.style.display = isHome ? 'block' : 'none'
+  readMore.style.display = isHome ? 'block' : 'none'
+  indexPage.style.display = isHome ? 'none' : 'block'
+}
+
+const openMenu = () => {
+  menuContainer.classList.add('open')
+  menus.forEach(menu => {
+    menu.classList.add('animated', 'fadeInLeft')
+  })
+  mask.classList.add('open')
+  contentWrapper.classList.add('is-second')
+}
+
+const closeMenu = () => {
+  menuContainer.classList.remove('open')
+  menus.forEach(menu => {
+    menu.classList.remove('animated', 'fadeInLeft')
+  })
+  mask.classList.remove('open')
+  contentWrapper.classList.remove('is-second')
+}
+</script>
+  
+  </body>
+</html>

@@ -1,0 +1,431 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Jump!Alang</title>
+<meta name="description" content="永远年轻！永远热泪盈眶！" />
+<link rel="shortcut icon" href="http://git.alang.run/favicon.ico?v=1691903147411">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+<link rel="stylesheet" href="http://git.alang.run/styles/main.css">
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main px-4 flex flex-col lg:flex-row">
+      <div id="sidebar" class="sidebar-wrapper lg:static lg:w-1/4">
+  <div class="lg:sticky top-0">
+    <div class="sidebar-content">
+      <div class="flex lg:block p-4 lg:px-0 items-center fixed lg:static lg:block top-0 right-0 left-0 bg-white z-50">
+        <i class="ri-menu-2-line lg:mt-4 text-2xl cursor-pointer animated fadeIn" onclick="openMenu()"></i>
+        <a href="http://git.alang.run">
+          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="http://git.alang.run/images/avatar.png?v=1691903147411" alt="">
+        </a>
+        <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">Jump!Alang</h1>
+      </div>
+      
+        <div class="animated fadeInLeft" style="animation-delay: 0.4s">
+          <p class="my-4 text-gray-600 font-light hidden lg:block">
+            文章目录
+          </p>
+          <div class="toc-container hidden lg:block">
+            <ul class="markdownIt-TOC">
+<li><a href="#%E6%88%91%E7%9A%84%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95">我的学习方法</a>
+<ul>
+<li><a href="#%E7%9B%AE%E7%9A%84">目的</a></li>
+<li><a href="#%E9%80%82%E7%94%A8%E5%9C%BA%E6%99%AF">适用场景</a></li>
+<li><a href="#%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8">如何使用</a></li>
+<li><a href="#%E7%B1%BB%E4%BC%BC%E7%9A%84%E6%8A%80%E6%9C%AF">类似的技术</a></li>
+<li><a href="#%E4%BC%98%E7%BC%BA%E7%82%B9">优缺点</a></li>
+<li><a href="#%E4%B8%BA%E4%BB%80%E4%B9%88">为什么</a></li>
+</ul>
+</li>
+<li><a href="#%E6%88%91%E7%9A%84%E5%AD%A6%E4%B9%A0%E5%8E%86%E7%A8%8B">我的学习历程</a>
+<ul>
+<li><a href="#%E5%86%99%E8%87%AA%E5%B7%B1%E7%9A%84%E4%BB%A3%E7%A0%81">写自己的代码</a></li>
+<li><a href="#%E9%98%85%E7%BB%8F%E5%85%B8%E7%9A%84%E4%B9%A6%E7%B1%8D">阅经典的书籍</a></li>
+<li><a href="#%E8%AE%B0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2">记自己的博客</a></li>
+<li><a href="#%E5%90%91%E5%90%8C%E4%BA%8B%E5%AD%A6%E4%B9%A0">向同事学习</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="menu-container">
+  <i class="ri-arrow-left-line text-2xl cursor-pointer animated fadeIn close-menu-btn" onclick="closeMenu()"></i>
+  <div>
+    
+      
+        <a href="/" class="menu" style="animation-delay: 0s">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu" style="animation-delay: 0.2s">
+          所有
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu" style="animation-delay: 0.4s">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu" style="animation-delay: 0.6000000000000001s">
+          关于
+        </a>
+      
+    
+      
+        <a href="/post/world" class="menu" style="animation-delay: 0.8s" target="_blank">
+          世界
+        </a>
+      
+    
+  </div>
+  <div class="site-footer">
+    <div class="py-4 text-gray-700">JumpAlang ©2019  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a></div>
+    <a class="rss" href="http://git.alang.run/atom.xml" target="_blank">RSS</a>
+  </div>
+</div>
+<div class="mask" onclick="closeMenu()">
+</div>
+      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
+        <h1 class="text-3xl font-bold lg:mt-16">(转载)分享我的学习方法——还是坚持+努力</h1>
+        <div class="text-sm text-gray-700 lg:my-8">
+          2019-04-18 / 12 min read
+        </div>
+        
+        <div class="post-content yue">
+          <blockquote>
+<p>本文转载自：开涛博客 <a target="_blank" href="https://jinnianshilongnian.iteye.com/blog/1709268">链接</a></p>
+</blockquote>
+<!--more-->
+<h1 id="我的学习方法">我的学习方法</h1>
+<h2 id="目的">目的</h2>
+<p>目的就是这个技术完成什么功能，解决哪类问题。拿JSON举个例子：<br>
+<strong><a href="http://www.json.org" title="json">http://www.json.org/</a></strong> 写道</p>
+<blockquote>
+<p>JSON (JavaScript Object Notation) is a lightweight data-interchange format. It is easy for humans to read and write. It is easy for machines to parse and generate. It is based on a subset of the JavaScript Programming Language, Standard ECMA-262 3rd Edition - December 1999. JSON is a text format that is completely language independent but uses conventions that are familiar to programmers of the C-family of languages, including C, C++, C#, Java, JavaScript, Perl, Python, and many others. These properties make JSON an ideal data-interchange language.<br>
+即：<br>
+JSON(JavaScript Object Notation) 是一种轻量级的数据交换格式。易于人阅读和编写，同时也易于机器解析和生成。它基于JavaScript（Standard ECMA-262 3rd Edition - December 1999）的一个子集。 JSON采用完全独立于语言的文本格式，但是也使用了类似于C语言家族的习惯（包括C, C++, C#, Java, JavaScript, Perl, Python等）。这些特性使JSON成为理想的数据交换语言。</p>
+</blockquote>
+<p>从定义我们可以总结出几个关键点：</p>
+<ul>
+<li>轻量级</li>
+<li><em><strong>数据交换格式</strong></em></li>
+<li>易于编写和阅读</li>
+<li>基于JavaScript的一个子集</li>
+<li><em><strong>纯文本独立于语言和平台</strong></em><br>
+重点是它以纯文本存储，可以独立于任何语言和平台，且主要用于数据交换。</li>
+</ul>
+<p>再比如Spring:<br>
+<a href="http://www.oschina.net/p/spring">http://www.oschina.net/p/spring</a> 写道</p>
+<blockquote>
+<p>Spring Framewok 是一个开源的Java/Java EE全功能栈（full-stack）的应用程序框架，以Apache许可证形式发布，也有.NET平台上的移植版本。该框架基于Expert One-on-One Java EE Design and Development(ISBN 0-7645-4385-7)一书中的代码，最初由 Rod Johnson 和 Juergen Hoeller等开发。Spring Framework提供了一个简易的开发方式，这种开发方式，将避免那些可能致使底层代码变得繁杂混乱的大量属性文件和帮助类。</p>
+<blockquote>
+<p>Spring中包含的关键特性：<br>
+请前往<a href="http://www.oschina.net/p/spring">http://www.oschina.net/p/spring</a>浏览<br>
+spring Framework官网 http://www.springsource.org/spring-framework</p>
+</blockquote>
+</blockquote>
+<p>从定义我们可以总结几个关键点：<br>
+Java/JavaEE一站式解决方案（即不管是开发普通Java应用还是JavaEE企业应用都能提供解决方案）框架基于Expert One-on-One Java EE Design and Development（告诉我们需要去读这本书 这本书介绍了Spring的设计思想）<br>
+IoC容器（此时我们需要问什么是IoC容器）<br>
+数据库事务的一般化抽象层（此时需要问自己怎么个一般化抽象）<br>
+JDBC抽象层（怎么个抽象法，比普通JDBC调用有哪些好处）等等……</p>
+<p>再比如Jsoup：<br>
+<a href="http://jsoup.org/">http://jsoup.org/</a>写道</p>
+<blockquote>
+<p>jsoup是一款 Java的HTML解析器，可直接解析某个URL地址、HTML文本内容。它提供了一套非常省力的API，可通过DOM，CSS以及类似于JQuery的操作方法来取出和操作数据。<br>
+从定义上可以总结几个关键点：</p>
+</blockquote>
+<ol>
+<li>Java版的HTML解析器</li>
+<li>提供了类似于DOM、CSS及类似于Jquery的操作方法来取出和操作数据（重点是DOM、CSS、Jquery我们都有所了解，再学这个应该不难）</li>
+</ol>
+<p><code>从一个技术的定义上，找关键词，我们能总结出它的核心目的。</code>而且能提出一系列问题，有了这一系列问题我们能知道我们接下来要学习什么，只有了解了这些功能才能真正理解设计的目的和是什么。</p>
+<h2 id="适用场景">适用场景</h2>
+<p>就是我们这个技术的适应的环境，可以在哪些场景中使用。<br>
+比如JSON适用于：</p>
+<ul>
+<li>数据交换，尤其跨平台的数据交流</li>
+<li>表示JavaSccript对象</li>
+</ul>
+<p>比如Spring：<br>
+在Java/JavaEE开发的整个过程中都有帮助。此时需要问有哪些帮助？为什么？</p>
+<p>比如Jsoup：<br>
+只要我们想在Java里解析HTML就可以考虑使用它。</p>
+<h2 id="如何使用">如何使用</h2>
+<p>到这一步其实是最简单的，可以按照如下步骤学习：</p>
+<ol>
+<li>根据官网的hello world进行简单入门，了解最基本的使用，到此我们入门了；</li>
+<li>如果官网提供了单元测试用例，最好的学习方式就是跟着单元测试挨着试，到此该技术的所有特性就有所了解了；</li>
+<li>写自己的功能，根据之前学的知识开始开发自己需要的功能；</li>
+<li>如果需要经常使用/涉及项目核心技术，一定要读读官方文档，有时候读读API做到心中有数。</li>
+</ol>
+<h2 id="类似的技术">类似的技术</h2>
+<p>每当我们学习完一个新技术的时候，都要留一手，防止一个技术有bug/性能问题造成后续无替代方案。</p>
+<p>比如Jsoup类似的技术有：<br>
+HTMLParser<br>
+NekoHTML<br>
+这两个解析工具功能十分强大，但是使用上没Jsoup简单。</p>
+<p>比如我要实现论坛内容过滤问题：<br>
+过滤掉所有的事件注册，如&lt;a onclick=&quot;……&quot;&gt;需要删除onclick<br>
+删除form相关的表单元素，防止恶意用户注入表单窃取用户数据这个功能我使用Jsoup实现的。</p>
+<p>比如我要抓取iteye的论坛内容（主题、内容、发布人、发布时间）等，使用Jsoup十分方便，因为它的选择器语法类似于Jquery语法，十分方便，而且学习成本很低，基本上只要会Jquery，10几分钟就能上手。</p>
+<h2 id="优缺点">优缺点</h2>
+<p>我们应该对我们经常使用的核心技术做到心中有数，即了解优缺点，对于普通的技术只要基本会用即可（有时候可以对比）。<br>
+比如hibernate和ibatis，springmvc和struts2等等，做个对比，总结不出来几点说明自己对这个玩意还是了解不深，需要断续学习和研究。</p>
+<h2 id="为什么">为什么</h2>
+<p>对于一些项目中使用的核心技术，需要掌握：<br>
+做好了解为什么，即为什么有这个东西，即了解发展历史和产生的背景<br>
+如何实现的，读源码，知其所以然<br>
+重复发明个轮子，这样可以更好的了解原理，而且学习效果更佳，这样比读N遍源码效果更好<br>
+有朋友会说我看不懂咋办？不会写啊！<br>
+<code>告诉你个笨办法： 之前我学习CGLIB，是照着人家单元测试挨着敲和试的；还有学习源码建议从低版本开始，因为功能少都是核心，好研究。</code><br>
+在此学习过程中一定要有把握度：<br>
+有些东西只需了解目的和怎么使用既可；<br>
+有些需要理解到为什么，像spring、junit、slf4j/logback、ehcache、proxool、tomcat、ibatis等等，有时间多读点源代码或者自己造个轮子；尽量做到每一个方面都有涉及（出问题我不怕），但要专一，如spring。）</p>
+<h1 id="我的学习历程">我的学习历程</h1>
+<h2 id="写自己的代码">写自己的代码</h2>
+<p>代码量非常重要，前期要写足一定量代码，再看一些书籍/读一些源码才有感觉。我是如何写代码的：</p>
+<ol>
+<li>项目代码，这个没得说，在写的过程中思考我们在读书时遇到的一些问题；</li>
+<li>在写项目的时候我们可以发现我们经常重复做一些事情，此时就需要考虑建立自己的代码工具库，如通用代码库、代码生成工具、常用工具类等；不要重复自己，遇到重复的就考虑往自己工具箱添加可利用的组件；</li>
+<li>按照自己兴趣发展一个方向，此时可以考虑写一些相关的轮子；通过轮子再反过来深入学习其他相关的技术。</li>
+<li>如果有能力就考虑构建自己的平台、简化重复劳动，提升开发效率。</li>
+</ol>
+<p>发明轮子我觉得是很有必要的，光看不练没有什么多大效果，发明个轮子可以帮助我们更好的理解，轮子不一定非得<br>
+用到我们的项目，此时的轮子是帮助我们学习的。</p>
+<h2 id="阅经典的书籍">阅经典的书籍</h2>
+<p>读大师经典著作，如：<br>
+<a href="http://blog.jobbole.com/5886/">《国外程序员推荐：每个程序员都应读的书》</a><br>
+<a href="http://blog.jobbole.com/1383/">《一些经典的计算机书籍》</a><br>
+或者关注如iteye等网站，推荐的一些好书。我经常到<a href="http://www.china-pub.com/?chinapub=eqf&amp;website_id=931693&amp;eu_id=00zp88bd355d38c42ed0&amp;ref=yqf">互动</a>、<a href="http://www.itpub.net/forum-61-1.html">itpub</a>、<a href="http://www.ituring.com.cn/">图灵社区</a>等看一些新书<br>
+读书不是到用的时候再读，而是按照自己的方向和兴趣选择相关的书籍进行阅读，学习前人经验和思想，开阔自己思路。<br>
+读书不是只读一遍，有些好书如《Effective Java》、《设计模式——可复用面向对象软件的基础》、《企业应用架构模式》、《敏捷软件开发：原则、模式与实践》、《面向对象软件构造 》等需要重复读，因为时间段不同积累的经验不同，理解会产生改变，每次读都有不同的收获。<br>
+读书读不懂没关系，先放一放，过一段时间再来看，经验到了自然就明白，不要刻意去背，刻意去记，一定要理解着记，记住要理论指导实践，实践检验理论，不可脱节。<br>
+不能心急，一下子啃N页，像看小说似的，这样什么都学不到，记不住，即使今天记住了过了几天就忘了，所以要温故而知新。<br>
+读书要思考自己之前遇到过类似的场景吗？对比着记更容易，而且记忆的成本会很低。<br>
+不要光看自己使用的技术相关的，其他方面的如产品、测试，数据库等相关书籍也建议阅读。在此推荐一本产品入门书：<br>
+《Dont Mak Me Think》<br>
+尤其在学习Java技术时，建议大家有时间把JDK的核心API（java.lang/java.util等这些我们经常用的）读一下/还有相关的规范（规范是最权威的指南）。</p>
+<p>##读优秀的代码<br>
+阅读优秀的源代码可以帮助我们消化书籍中学到的理论，更好的去使用它，而且能开阔我们的思路，完善我们的思想。<br>
+读源码思路：</p>
+<ol>
+<li>从使用进行阅读，按照调用关系深入到源代码中，不要一口吃胖子；</li>
+<li>跟着单元测试走；</li>
+<li>只需读最核心部分即可，无需读所有的代码；</li>
+<li>从简单的源码入手，刚开始放低难度，如阅读junit、slf4j、ehcache等相对简单的源码，再深入阅读如spring等源代码；</li>
+<li>阅读源代码要分而治之，一次读一块，不要混读，不要杂读。</li>
+</ol>
+<h2 id="记自己的博客">记自己的博客</h2>
+<p>记博客可以思维缜密，完善知识体系，扎实技术；而且可以分享自己的经验想法，如果有错误会有朋友指正，非常好的学习方式。</p>
+<p>记博客思路：</p>
+<ol>
+<li>记录自己工作中遇到的问题及解决方案；自己既然遇到了别人也可能遇到；</li>
+<li>不要怕写的简单，没面子，我觉得要厚脸皮；</li>
+<li>任何东西都可以记，留作回忆。</li>
+</ol>
+<h2 id="向同事学习">向同事学习</h2>
+<p>既然能作为同事，说明大家水平差不多，学习同事的优点。</p>
+<p>向同事学习思路：</p>
+<ol>
+<li>没事聊聊技术，听听它的想法；</li>
+<li>看他的源代码，从中学习；</li>
+<li>如果你的老大/同事都不上进，你又是很上进的，建议物以类聚，人以群分，换个环境好好发展自己。</li>
+</ol>
+<p>##善于观察细节<br>
+善于观察细节，比如从最基本的同事怎么操作的那么快（观察他是如何进行操作的，如发现自己不会的快捷键）</p>
+<p>观察细节思路：</p>
+<ol>
+<li>眼要尖，关于发现自己不会的；</li>
+<li>嘴要勤，善于问自己不了解的（此处不是没事就去问，而是自己思考过，实在不会的，不要憋在肚子里，问一下又不会怀孕）；</li>
+<li>没事读同事的源代码，这个可是免费的，从中能学到好的编码习惯和好的解决问题思路。</li>
+</ol>
+<p><code>学习没有捷径，我不聪明，但我刻苦；刻苦还是不够，得善于思考和总结。学习不要怕丢人，学到手是自己的，学会厚脸皮。</code></p>
+<p>希望对需要的人有所帮助，每个人都有自己的学习方法，可以借鉴学习，但不要临摹，适合自己的才是最好的。</p>
+
+        </div>
+
+        
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="http://git.alang.run/tag/study/">
+            <span class="flex-auto">学习方法</span>
+          </a>
+        
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="http://git.alang.run/tag/summary/">
+            <span class="flex-auto">摘抄</span>
+          </a>
+        
+
+
+        <div class="flex justify-between py-8">
+          
+            <div class="prev-post">
+              <a href="http://git.alang.run/post/zhuan-zai-bi-te-bi-ru-men-jiao-cheng/">
+                <h3 class="post-title">
+                  <i class="ri-arrow-left-line"></i>
+                  (转载)比特币入门教程
+                </h3>
+              </a>
+            </div>
+          
+
+          
+            <div class="next-post">
+              <a href="http://git.alang.run/post/gan-wu-ji-zhai-chao/">
+                <h3 class="post-title">
+                  感悟及摘抄
+                  <i class="ri-arrow-right-line"></i>
+                </h3>
+              </a>
+            </div>
+          
+        </div>
+
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: 'dd6b58508cc9af58fc1c',
+    clientSecret: 'aa86bd09e6d2eedc03f182792c20275d200ffb62',
+    repo: 'JumpAlang.github.io',
+    owner: 'JumpAlang',
+    admin: ['JumpAlang'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+
+      </div>
+    </div>
+
+    <script src="http://git.alang.run/media/prism.js"></script>  
+<script>
+
+Prism.highlightAll()
+let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+// This should probably be throttled.
+// Especially because it triggers during smooth scrolling.
+// https://lodash.com/docs/4.17.10#throttle
+// You could do like...
+// window.addEventListener("scroll", () => {
+//    _.throttle(doThatStuff, 100);
+// });
+// Only not doing it here to keep this Pen dependency-free.
+
+window.addEventListener("scroll", event => {
+  let fromTop = window.scrollY;
+
+  mainNavLinks.forEach((link, index) => {
+    let section = document.getElementById(decodeURI(link.hash).substring(1));
+    let nextSection = null
+    if (mainNavLinks[index + 1]) {
+      nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+    }
+    if (section.offsetTop <= fromTop) {
+      if (nextSection) {
+        if (nextSection.offsetTop > fromTop) {
+          link.classList.add("current");
+        } else {
+          link.classList.remove("current");    
+        }
+      } else {
+        link.classList.add("current");
+      }
+    } else {
+      link.classList.remove("current");
+    }
+  });
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  var lazyImages = [].slice.call(document.querySelectorAll(".post-feature-image.lazy"));
+
+  if ("IntersectionObserver" in window) {
+    let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          let lazyImage = entry.target
+          lazyImage.style.backgroundImage = `url(${lazyImage.dataset.bg})`
+          lazyImage.classList.remove("lazy")
+          lazyImageObserver.unobserve(lazyImage)
+        }
+      });
+    });
+
+    lazyImages.forEach(function(lazyImage) {
+      lazyImageObserver.observe(lazyImage)
+    })
+  } else {
+    // Possibly fall back to a more compatible method here
+  }
+});
+
+const menuContainer = document.querySelector('.menu-container')
+const menus = document.querySelectorAll('.menu-container .menu')
+const mask = document.querySelector('.mask')
+const contentWrapper = document.querySelector('.content-wrapper')
+const latestArticle = document.querySelector('.latest-article')
+const readMore = document.querySelector('.read-more')
+const indexPage = document.querySelector('.index-page')
+
+const isHome = location.pathname === '/'
+if (latestArticle) {
+  latestArticle.style.display = isHome ? 'block' : 'none'
+  readMore.style.display = isHome ? 'block' : 'none'
+  indexPage.style.display = isHome ? 'none' : 'block'
+}
+
+const openMenu = () => {
+  menuContainer.classList.add('open')
+  menus.forEach(menu => {
+    menu.classList.add('animated', 'fadeInLeft')
+  })
+  mask.classList.add('open')
+  contentWrapper.classList.add('is-second')
+}
+
+const closeMenu = () => {
+  menuContainer.classList.remove('open')
+  menus.forEach(menu => {
+    menu.classList.remove('animated', 'fadeInLeft')
+  })
+  mask.classList.remove('open')
+  contentWrapper.classList.remove('is-second')
+}
+</script>
+  
+  </body>
+</html>

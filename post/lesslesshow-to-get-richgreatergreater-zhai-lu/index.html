@@ -1,0 +1,575 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Jump!Alang</title>
+<meta name="description" content="永远年轻！永远热泪盈眶！" />
+<link rel="shortcut icon" href="http://git.alang.run/favicon.ico?v=1691903147411">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+<link rel="stylesheet" href="http://git.alang.run/styles/main.css">
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main px-4 flex flex-col lg:flex-row">
+      <div id="sidebar" class="sidebar-wrapper lg:static lg:w-1/4">
+  <div class="lg:sticky top-0">
+    <div class="sidebar-content">
+      <div class="flex lg:block p-4 lg:px-0 items-center fixed lg:static lg:block top-0 right-0 left-0 bg-white z-50">
+        <i class="ri-menu-2-line lg:mt-4 text-2xl cursor-pointer animated fadeIn" onclick="openMenu()"></i>
+        <a href="http://git.alang.run">
+          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="http://git.alang.run/images/avatar.png?v=1691903147411" alt="">
+        </a>
+        <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">Jump!Alang</h1>
+      </div>
+      
+        <div class="animated fadeInLeft" style="animation-delay: 0.4s">
+          <p class="my-4 text-gray-600 font-light hidden lg:block">
+            文章目录
+          </p>
+          <div class="toc-container hidden lg:block">
+            <ul class="markdownIt-TOC">
+<li><a href="#%E5%AF%BB%E6%B1%82%E8%B4%A2%E5%AF%8C%E8%80%8C%E4%B8%8D%E6%98%AF%E9%87%91%E9%92%B1%E6%88%96%E5%9C%B0%E4%BD%8D">寻求财富，而不是金钱或地位</a></li>
+<li><a href="#%E4%B8%BA%E4%B8%96%E7%95%8C%E5%88%9B%E9%80%A0%E6%9B%B4%E5%A4%9A">为世界创造更多</a></li>
+<li><a href="#%E8%87%B4%E5%AF%8C%E4%B8%8E%E8%BF%90%E6%B0%94%E6%97%A0%E5%85%B3">致富与运气无关</a></li>
+<li><a href="#%E4%BD%A0%E5%BF%85%E9%A1%BB%E6%9C%89%E7%82%B9%E5%BC%82%E4%B9%8E%E5%AF%BB%E5%B8%B8%E6%89%8D%E8%83%BD%E7%8B%AC%E8%87%AA%E8%B5%B0%E5%9C%A8%E5%89%8D%E6%B2%BF">你必须有点异乎寻常，才能独自走在前沿</a></li>
+<li><a href="#%E5%87%BA%E7%A7%9F%E6%97%B6%E9%97%B4%E4%B8%8D%E4%BC%9A%E8%AE%A9%E4%BD%A0%E5%8F%98%E5%BE%97%E5%AF%8C%E6%9C%89">出租时间不会让你变得富有</a></li>
+<li><a href="#%E6%88%91%E4%BB%AC%E5%BA%94%E8%AF%A5%E5%8D%87%E7%BA%A7%E8%87%AA%E5%B7%B1%E7%9A%84%E8%87%AA%E7%94%B1%E8%80%8C%E4%B8%8D%E6%98%AF%E7%94%9F%E6%B4%BB%E6%96%B9%E5%BC%8F">我们应该升级自己的自由，而不是生活方式</a></li>
+<li><a href="#%E7%BB%99%E7%A4%BE%E4%BC%9A%E6%8F%90%E4%BE%9B%E5%AE%83%E4%B8%8D%E7%9F%A5%E9%81%93%E5%A6%82%E4%BD%95%E8%8E%B7%E5%BE%97%E7%9A%84%E4%B8%9C%E8%A5%BF">给社会提供它不知道如何获得的东西</a></li>
+<li><a href="#%E4%BA%92%E8%81%94%E7%BD%91%E6%9E%81%E5%A4%A7%E5%9C%B0%E4%B8%B0%E5%AF%8C%E4%BA%86%E8%81%8C%E4%B8%9A%E5%8F%91%E5%B1%95%E7%9A%84%E5%8F%AF%E8%83%BD%E6%80%A7">互联网极大地丰富了职业发展的可能性</a></li>
+<li><a href="#%E5%AF%BB%E6%89%BE%E8%B4%A2%E5%AF%8C%E6%B8%B8%E6%88%8F%E4%B8%AD%E7%9A%84%E9%95%BF%E6%9C%9F%E6%88%98%E5%8F%8B">寻找财富游戏中的长期战友</a></li>
+<li><a href="#%E9%80%89%E6%8B%A9%E6%99%BA%E6%85%A7-%E7%B2%BE%E5%8A%9B%E5%85%85%E6%B2%9B%E5%92%8C%E6%AD%A3%E7%9B%B4%E7%9A%84%E5%90%88%E4%BD%9C%E4%BC%99%E4%BC%B4">选择智慧、精力充沛和正直的合作伙伴</a></li>
+<li><a href="#%E4%B8%8E%E7%90%86%E6%80%A7%E7%9A%84%E4%B9%90%E8%A7%82%E4%B8%BB%E4%B9%89%E8%80%85%E5%90%88%E4%BD%9C">与理性的乐观主义者合作</a></li>
+<li><a href="#%E7%94%A8%E7%89%B9%E6%AE%8A%E6%8A%80%E8%83%BDspecific-knowledge%E6%AD%A6%E8%A3%85%E8%87%AA%E5%B7%B1">用特殊技能（Specific knowledge）武装自己</a></li>
+<li><a href="#%E7%89%B9%E6%AE%8A%E6%8A%80%E8%83%BDspecific-knowledge%E6%9E%81%E5%AF%8C%E5%88%9B%E9%80%A0%E6%80%A7%E6%88%96%E6%8A%80%E6%9C%AF%E6%80%A7">特殊技能（specific knowledge）极富创造性或技术性</a></li>
+<li><a href="#%E5%AD%A6%E4%BC%9A%E9%94%80%E5%94%AE%E5%AD%A6%E4%BC%9A%E5%BB%BA%E9%80%A0">学会销售，学会建造</a></li>
+<li><a href="#%E9%98%85%E8%AF%BB%E4%BD%A0%E6%89%80%E7%83%AD%E7%88%B1%E7%9A%84%E5%86%85%E5%AE%B9-%E7%9B%B4%E5%88%B0%E4%BD%A0%E7%88%B1%E4%B8%8A%E9%98%85%E8%AF%BB">阅读你所热爱的内容 直到你爱上阅读</a></li>
+<li><a href="#%E6%95%B0%E5%AD%A6%E5%92%8C%E9%80%BB%E8%BE%91%E6%89%8D%E6%98%AF%E4%B8%80%E5%88%87%E4%BA%8B%E7%89%A9%E7%9A%84%E5%9F%BA%E7%A1%80">数学和逻辑才是一切事物的基础</a></li>
+<li><a href="#%E6%B2%A1%E6%9C%89%E8%A2%AB%E7%A7%B0%E4%B8%BA%E5%95%86%E4%B8%9A%E7%9A%84%E6%8A%80%E8%83%BD">没有被称为“商业”的技能</a></li>
+<li><a href="#%E5%8B%87%E6%95%A2%E6%89%BF%E6%8B%85%E8%B4%A3%E4%BB%BB%E6%89%8D%E8%83%BD%E8%8E%B7%E5%BE%97%E5%BD%B1%E5%93%8D%E5%8A%9B">勇敢承担责任才能获得影响力</a></li>
+<li><a href="#%E5%86%B7%E9%9D%99%E7%9A%84%E5%A4%B4%E8%84%91%E5%81%A5%E5%BA%B7%E7%9A%84%E8%BA%AB%E4%BD%93%E5%85%85%E6%BB%A1%E7%88%B1%E7%9A%84%E5%AE%B6%E5%BA%AD">冷静的头脑，健康的身体，充满爱的家庭</a></li>
+<li><a href="#%E6%B2%A1%E6%9C%89%E4%BB%80%E4%B9%88%E5%BF%AB%E9%80%9F%E8%87%B4%E5%AF%8C%E7%9A%84%E6%96%B9%E6%B3%95">没有什么快速致富的方法</a></li>
+<li><a href="#%E6%AF%8F%E4%B8%AA%E5%88%9B%E5%A7%8B%E4%BA%BA%E9%83%BD%E4%BC%9A%E5%AF%B9%E4%BB%96%E7%9A%84%E5%91%98%E5%B7%A5%E6%92%92%E8%B0%8E">每个创始人都会对他的员工撒谎</a></li>
+<li><a href="#%E4%BA%A7%E5%93%81%E5%8C%96%E4%BD%A0%E8%87%AA%E5%B7%B1">产品化你自己</a></li>
+</ul>
+
+          </div>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="menu-container">
+  <i class="ri-arrow-left-line text-2xl cursor-pointer animated fadeIn close-menu-btn" onclick="closeMenu()"></i>
+  <div>
+    
+      
+        <a href="/" class="menu" style="animation-delay: 0s">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu" style="animation-delay: 0.2s">
+          所有
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu" style="animation-delay: 0.4s">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu" style="animation-delay: 0.6000000000000001s">
+          关于
+        </a>
+      
+    
+      
+        <a href="/post/world" class="menu" style="animation-delay: 0.8s" target="_blank">
+          世界
+        </a>
+      
+    
+  </div>
+  <div class="site-footer">
+    <div class="py-4 text-gray-700">JumpAlang ©2019  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a></div>
+    <a class="rss" href="http://git.alang.run/atom.xml" target="_blank">RSS</a>
+  </div>
+</div>
+<div class="mask" onclick="closeMenu()">
+</div>
+      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
+        <h1 class="text-3xl font-bold lg:mt-16">《How to get rich》摘录</h1>
+        <div class="text-sm text-gray-700 lg:my-8">
+          2021-02-18 / 19 min read
+        </div>
+        
+        <div class="post-content yue">
+          <h1 id="寻求财富而不是金钱或地位">寻求财富，而不是金钱或地位</h1>
+<ul>
+<li>财富可以在你睡觉时赚钱的资产</li>
+<li>财富会带来你的自由，可以拒绝的自由</li>
+<li>金钱是我们转移财富的方式<br>
+金钱是社会信用。如果我做的事情正确，如果我为社会创造了价值，社会说：”谢谢你，对于你过去所做的工作，我们欠你一些东西。这是一点点借条。”</li>
+<li>财富是正和游戏（共赢），地位是零和游戏（损人利己）</li>
+</ul>
+<h1 id="为世界创造更多">为世界创造更多</h1>
+<p>财富不是从别人那里拿走什么，而是为这个世界创造更多</p>
+<ul>
+<li>财富创造带来了世界的丰富<br>
+显然没有限量的工作，或限量的财富。</li>
+<li>自由市场是人类社会固有的<br>
+这是一场美妙的比赛，值得我们从伦理上、理性上、道德上去挑战一次。它将继续使我们所有人越来越富有，直到我们为任何想要的人创造大量财富。</li>
+<li>太多的索取者和没有足够的创造者会使社会陷入毁灭<br>
+即使在自然界中，寄生虫也比非寄生生物更多。你身上有很多寄生虫，它们依赖于你。更好的是共生的，他们会回馈一些东西。<br>
+想象一个有太多寄生虫的有机体。你需要一些少量的寄生虫来保持健康。你需要很多共生体。我们所有细胞中的所有线粒体都可以帮助我们呼吸和燃烧氧气。这些是帮助我们生存的共生体。没有他们，我们无法生存。<br>
+任何生物体只能承受少量寄生虫。当寄生元素失去控制时，你就会死亡。</li>
+</ul>
+<h1 id="致富与运气无关">致富与运气无关</h1>
+<ul>
+<li>致富与运气无关，要掌握致富的技能
+<ol>
+<li>狗屎运</li>
+<li>坚持不懈的实干运<br>
+这种幸运来自于坚持、努力、不停的尝试和行动。当你四处奔波创造了各种各样的机会，这期间你输出了很多能量，你做了很多事情，会有大量的能量交换。</li>
+<li>早有预备的运气<br>
+第三种方法是你变得非常善于发现运气。如果你在某个领域非常精通，你会注意到在那个领域幸运的事件是如何发生的。当其他人没有注意到它的时候，你会变得对运气敏感，这是通过技能、认识和工作经验的积累达成的。</li>
+<li>独特的人格给你带来的好运<br>
+最后一种运气是最奇怪、最艰难的一种，但这就是我们要讨论的。在这里，你建立了一个独特的人格，一个独特的品牌，一个独特的心态，然后好运会找到你。<br>
+例如，假设你是世界上最擅长深海潜水的人。大家都知道，你会进行别人都不敢尝试的深海潜水。然后，有人幸运的在海岸外发现了一艘沉没的宝藏船。他们没办法拿到，只能跑来找你求助。也就是说，他们的运气同时变成了你的运气，你会因此得到非常丰厚的报酬。这是一个比较极端的例子。那个找到宝藏的幸运儿们，走的是狗屎运。但他们不得不来找你帮忙把宝藏拿出来，最终你会得到一部分这里面的财富，这不是运气。也就是说，虽然这个好运的起始不是你，但是你能让那些发现好运的人在关键时刻想起你，很明显你可以在其中起到不可替代的作用。这种情况下你既成就了别人，又分享了他人的好运，这就是你为什么要打造自己独特的个性和品牌</li>
+</ol>
+</li>
+</ul>
+<h1 id="你必须有点异乎寻常才能独自走在前沿">你必须有点异乎寻常，才能独自走在前沿</h1>
+<p>独自走在前沿可能需要你有点异乎寻常，而且愿意比一般人挖掘得更深，挖掘的更深仅仅因为你感兴趣。</p>
+<h1 id="出租时间不会让你变得富有">出租时间不会让你变得富有</h1>
+<ul>
+<li>出租时间不会让你变得富有，因为你不能非线性地赚钱<br>
+投入与产出相关性太强</li>
+<li>出租时间赚钱意味着你很容易被替代</li>
+<li>你必须拥有股权才能获得财务自由</li>
+<li>追求一份投入与产出“不匹配”的工作<br>
+一个职业的创造力成分越高，它就越有可能有不匹配的投入和产出。</li>
+</ul>
+<h1 id="我们应该升级自己的自由而不是生活方式">我们应该升级自己的自由，而不是生活方式</h1>
+<p>生活水平远低于其收入水平的人们享受着一种自由，这种自由是那些忙于改善生活方式的人们无法理解的</p>
+<ul>
+<li>世界上最危险的东西是海洛因和月薪</li>
+<li>理想的情况是，你的赚钱路径是离散的</li>
+</ul>
+<h1 id="给社会提供它不知道如何获得的东西">给社会提供它不知道如何获得的东西</h1>
+<p>社会会因为你创造了它想要、却不知道如何大规模获取的东西，而给你丰厚的回报</p>
+<ul>
+<li>
+<p>给社会它需要的，但不知道如何规模化获取的东西<br>
+技术只是一套还不太管用的东西。一旦某样东西成功了，它就不再是技术了。所以，社会总是想要新事物。</p>
+</li>
+<li>
+<p>想清楚你能提供的产品，然后考虑如何扩大规模<br>
+你创造它只是因为你想要它。你想要它，需要它，所以你知道如何建造它。其实一开始你是为自己建造它。然后你要想办法把它带给其他人。如何把曾经只是富人拥有的东西给到给每个人。</p>
+</li>
+</ul>
+<h1 id="互联网极大地丰富了职业发展的可能性">互联网极大地丰富了职业发展的可能性</h1>
+<p>互联网会给你的小众兴趣找到买单的人</p>
+<ul>
+<li>
+<p>互联网极大扩展了职业发展的可能性<br>
+你要明白，借助互联网，你就总能为你的产品、你的才能、你的技艺找到观众，不论他们来自哪里。</p>
+</li>
+<li>
+<p>互联网能让你的小众兴趣找到观众<br>
+互联网可以让你低成本的「走出去」，找到属于自己的观众。然后你通过创建业务、创造产品、积累财富，你通过在互联网上展现独特的你让大众获得快乐。你事业的发展空间就会因互联网而扩大。</p>
+</li>
+<li>
+<p>通过做自己来规避无意义的竞争<br>
+大家都觉得模仿简单，但其实模仿远比你做自己要难。所以不要纯模仿，不要纯复制，专注于做自己的事情，当你真正在做自己时，你就会发现没有人能和你竞争，就是这么简单。<br>
+因此，你对你自己是谁和你喜欢做什么认识的越深入，你就会面临越少的竞争。</p>
+</li>
+</ul>
+<h1 id="寻找财富游戏中的长期战友">寻找财富游戏中的长期战友</h1>
+<p>选择一个你可以和长期伙伴玩长期游戏的行业，所有的回报都来自于多次游戏的复利。</p>
+<ul>
+<li>
+<p>寻找财富游戏中的长期战友<br>
+事实上，生活中所有的收益都来自于复利。<br>
+不管是善意、爱情、人际关系还是金钱。<br>
+为什么致富是一场持久战？长期博弈不仅对复利有利，对信任也有利。</p>
+</li>
+<li>
+<p>当你转行时，你是在从零开始</p>
+</li>
+<li>
+<p>长期游戏中，每个人都在让彼此更富有<br>
+在长期游戏中，似乎每个人都在让彼此更富有。而在短期游戏中，似乎每个人都在让自己更富有。</p>
+</li>
+<li>
+<p>收益来自重复游戏的复利<br>
+当你与一个相处了十年，二十年，三十年的老友做生意时，你根本不需要信任他，事情也可以做得越来越好。因为在相处过程中摩擦逐渐减弱，你们可以一起做越来越大的事情。</p>
+</li>
+</ul>
+<p>举个极端的例子，最简单的方法是与某人结婚，生孩子然后养孩子，这就是复利（笑）。投资于这些长期的关系，与更随意的关系相比，这些关系最终是无价的。</p>
+<p>在健康和健身方面也是如此。 你的身体越健康，保持健康就越容易。 而你的身体恶化的越多，就越难回到正常的水平。</p>
+<h1 id="选择智慧-精力充沛和正直的合作伙伴">选择智慧、精力充沛和正直的合作伙伴</h1>
+<ul>
+<li>
+<p>选择高智商、精力和正直的商业伙伴<br>
+你需要和聪明的人共事，至少他们不是在错误的方向上一路向西。你需要与精力充沛的人共事，因为世界上到处都是聪明却懒惰，光想不干的人。在生活中，我们都认识一些非常聪明的人，他们可以不起床，或者动一动手指就完成很多事情。我们也知道有些人精力很旺盛，但并不聪明，他们工作非常非常努力，但有时在朝着错误的方向埋头苦干。<br>
+做一件事情的动力终究来自于你自己到底想做什么，觉得什么有意义，而不是为了讨好别人。</p>
+</li>
+<li>
+<p>动机必须是内在的<br>
+但如果你想让人们长期保持动力，这种动力必须是内在的。你不能只是创造它，如果他们没有内在的动力，你也不能成为他们的拐杖。所以，你必须确保员工精力充沛，愿意做你希望他们做的事，愿意和你一起工作，一起创造。</p>
+</li>
+<li>
+<p>诚信反映在一个人的行为，而不是他说了什么</p>
+</li>
+<li>
+<p>自尊是你对自己的评价</p>
+</li>
+</ul>
+<h1 id="与理性的乐观主义者合作">与理性的乐观主义者合作</h1>
+<ul>
+<li>
+<p>不要与悲观主义者为伍<br>
+本质上，要创造事物，你必须是一个理性的乐观主义者。理性的意思是你必须看清世界的真相。但你必须对自己的能力保持乐观，对自己想要完成的使命保持乐观。<br>
+我认识的所有真正成功的人都有很强的行动力，他们只是做事。判断一件事是否可行的最简单方法就是去做，至少做第一步，第二步，第三步，然后再决定下一步。<br>
+因此，如果你想在生活中取得成功，创造财富，或者拥有良好的人际关系，或者保持健康，甚至是快乐，你需要有一种超强的行动力，这样才能获得你想要的。</p>
+</li>
+<li>
+<p>与理性的乐观主义者合作<br>
+因此，最好还是想得远一点。当然还是要理性地，在你的能力范围内保持乐观。</p>
+</li>
+<li>
+<p>我们是悲观主义者的后代<br>
+历史上，如果你回到2000年，5000年，10000年，两个人在丛林中漫步，他们听到了老虎的声音。一个是乐观主义者，说，“哦，它不是朝我们这边来的。另一个说：“我是个悲观主义者，我要离开这里。”悲观的人跑了，活了下来，乐观的人被吃掉了。<br>
+我们是悲观主义者的后代，我们天生就是悲观主义者。但现代社会要安全得多，没有老虎在街上游荡，虽然你应该避免彻底破产，但你最终不太可能一无所有。<br>
+他的境遇是有下限的，但上限却很难说（白话说是你很难饿死，但是成功却不可限量）<br>
+因此，适应现代社会意味着要克服你的悲观情绪，做出稍微不理性的乐观押注<br>
+你必须注意的一件事就是，不要做任何违法的事情，远离可能会带来灾难性的损失的事。尽可能不做对身体有害的事情，注意你的健康。远离那些会让你失去所有资本和储蓄的事情。</p>
+</li>
+</ul>
+<h1 id="用特殊技能specific-knowledge武装自己">用特殊技能（Specific knowledge）武装自己</h1>
+<p>大部分情况下你想学的东西，要么来源于你的兴趣或DNA，要么是源于你从小养成的一些习惯，这些在之后非常难被“教”会；<br>
+因此特殊技能就是你特别关注的技能，尤其是你已经到了20、21、22之后，你几乎就不用去选你需要什么样的特殊技能了。你需要做的就是回顾之前的人生经历中，你建立了什么样的技能是你觉得可以着重被发展的。</p>
+<ul>
+<li>
+<p>特殊技能无法被训练出来</p>
+</li>
+<li>
+<p>特殊技能与你的兴趣高度相关<br>
+你会发现更多的特殊技能是通过认识到你的天赋、你真正的好奇心和你的热情而建立起来的。</p>
+</li>
+<li>
+<p>特殊技能往往处于知识的边缘<br>
+它也是一些刚刚被发现或者很难被发现的东西。因此，如果你不是100%的投入，其他人会比你做得更好。<br>
+如果你的杠杆率为1000倍，有人在80％的时间都是正确的，而其他人在90％的时间都是正确的，那么90％的时间正确的人将因为市场的杠杆作用和复利获得数百倍的报酬。因此，如果你想确保自己在这方面具有优势，真正具有好奇心非常重要。</p>
+</li>
+<li>
+<p>建立特殊技能对你来说就像游戏</p>
+</li>
+</ul>
+<h1 id="特殊技能specific-knowledge极富创造性或技术性">特殊技能（specific knowledge）极富创造性或技术性</h1>
+<ul>
+<li>
+<p>特殊技能能通过课程传授获得<br>
+这就是为什么最好的企业、最好的职业是学徒或自学的职业，因为这些都是社会还没有弄清楚如何培训以及使其批量自动生产的事情。</p>
+</li>
+<li>
+<p>特殊的技能具有高度的创造性或者技术性</p>
+</li>
+<li>
+<p>特殊的技能特定于个体和情境</p>
+</li>
+<li>
+<p>特殊技能不能刻意获得<br>
+因此，在三四件事上成为前25%要比在某件事上成为世界第一容易得多。</p>
+</li>
+<li>
+<p>在你擅长的领域建立自己的特殊技能</p>
+</li>
+</ul>
+<h1 id="学会销售学会建造">学会销售，学会建造</h1>
+<ul>
+<li>
+<p>学会销售，学会建造</p>
+</li>
+<li>
+<p>硅谷模式：建造者+销售者=最佳拍档</p>
+</li>
+<li>
+<p>如果你两者都能做到，你将势不可挡</p>
+</li>
+<li>
+<p>宁愿教工程师销售，也不愿教营销人员工程？<br>
+举个例子，假设你是一个很棒的工程师，然后人们会说，你需要擅长销售。你可能不擅长上门推销东西，但你可能是一个很好的作家。写作是一种比面对面销售门槛更低的技能，所以你可以培养写作技能，直到你成为一个良好的在线交流者，然后将其运用在你的销售上。另一种情况，你可能是一个很好的建造者，但你不擅长写作，你不喜欢与大众沟通，但你擅长一对一说服，所以你可能会用你的销售技能来招聘或募资，这需要更多一对一方向的努力。<br>
+你可以从建造开始，然后过渡到销售。</p>
+</li>
+</ul>
+<h1 id="阅读你所热爱的内容-直到你爱上阅读">阅读你所热爱的内容 直到你爱上阅读</h1>
+<ul>
+<li>
+<p>阅读你所热爱的内容 直到你爱上阅读<br>
+没有所谓的商业技能。少读商业杂志和商业课程，学习微观经济学、博弈论、心理学、说服力、伦理学、数学和计算机<br>
+你应该可以从容的拿起图书馆里的任何一本书来读。<br>
+阅读比听快，做比看快。<br>
+读书不是目的，重要的是学会如何教育自己，教育自己的方法就是培养对阅读的热爱。<br>
+读你喜欢的内容，直到你爱上阅读。</p>
+</li>
+<li>
+<p>阅读某一领域的科学原著<br>
+比如，与其读一本商业畅销书，不如读亚当·斯密的《国富论》。与其读今天谁写的一本关于生物学或进化论的书，我更愿意读达尔文《物种起源》。与其现在读一本可能非常先进的生物技术方面的书，我只想学习Horace F. Judson的《创世第八天》(The Eighth Day of Creation)。你不必死磕关于宇宙学和尼尔·德格拉斯·泰森和斯蒂芬·霍金一直在说什么的高级书籍，你需要的是拿起理查德·费曼的《费曼讲物理：入门》，从基础物理学开始。</p>
+</li>
+<li>
+<p>不要害怕任何书<br>
+你有一套自己的方法论，分辨哪些是逻辑和科学的</p>
+</li>
+<li>
+<p>学习的手段是丰富的，学习的欲望是稀缺的<br>
+你需要创造力，你需要有激励自己的大脑去学习你想要的东西的能力。</p>
+</li>
+</ul>
+<h1 id="数学和逻辑才是一切事物的基础">数学和逻辑才是一切事物的基础</h1>
+<ul>
+<li>
+<p>终极基础是数学和逻辑<br>
+如果你懂逻辑和数学，那么你就有了理解科学方法的基础。一旦你理解了科学方法，你就能理解如何在其他领域和其他你正在阅读的东西中区分真理和谬误。</p>
+</li>
+<li>
+<p>速食一百本书毫无意义</p>
+</li>
+<li>
+<p>学习讲故事和编程<br>
+我认为五个最重要的技能是，阅读，写作，算术，然后加上说服的技巧，也就是会讲故事（storytelling）让别人信服。最后，我还要加上计算机编程</p>
+</li>
+</ul>
+<h1 id="没有被称为商业的技能">没有被称为“商业”的技能</h1>
+<ul>
+<li>
+<p>没有被称为“商业”的实际技能<br>
+我并不想完全贬低商学院传授的东西的价值，他们会传授非常聪明的东西—一些成功的案例/轶事，并称之为“案例分析”（case study）。但它们只是一些趣闻轶事，它们试图通过向你抛出大量数据点来帮助你进行模式匹配，但事实是，在你设身处地思考之前，你永远不能完全理解它们，就像你无法重复打造一个可口可乐一样。但是，你会发现博弈论、心理学、伦理学、数学、计算机和逻辑学中的这些基本概念才会更好地帮到你。这也是我为什么会更专注于基础科学、基础逻辑的原因。<br>
+因为很多微妙的东西在你真正进入这个行业之前是不会真正懂得的。<br>
+你可以学习所有不同的心理模式。但哪个更重要？你更常应用哪些？在什么情况下哪一个更重要？这其实是最难的部分。<br>
+学习博弈论的最好方法是自己设计游戏</p>
+</li>
+<li>
+<p>“执行”迭代的次数决定着你的学习曲线</p>
+</li>
+<li>
+<p>如果你愿意每天流一点血，你可能在未来的人生路上赢得很多</p>
+</li>
+</ul>
+<h1 id="勇敢承担责任才能获得影响力">勇敢承担责任才能获得影响力</h1>
+<ul>
+<li>
+<p>你需要通过责任获得影响力<br>
+所以要想发财，你需要杠杆。杠杆来自于劳动力、资本，也可能是通过代码和媒体。但其中的大多数，比如劳动力和资本，必须来自于他人的给予。对于劳动力，必须是有人愿意跟随你；对于资本，必须有人给你钱或资产来让你管理和使用。</p>
+</li>
+<li>
+<p>以自己的名义承担商业风险</p>
+</li>
+<li>
+<p>一个运作良好的团队对每个职位都有明确的责任分工</p>
+</li>
+<li>
+<p>能在公众面前坦然面对失败的人都有很大的能量</p>
+</li>
+</ul>
+<h1 id="冷静的头脑健康的身体充满爱的家庭">冷静的头脑，健康的身体，充满爱的家庭</h1>
+<ul>
+<li>
+<p>平静的头脑，健康的身体和充满爱的家庭必须要经营</p>
+</li>
+<li>
+<p>很多离婚案例是为了钱，很多争吵是因为内心恐惧<br>
+很多外在的纷争主要是因为你的内在状态不好。当你内心自然平静的时候，你会选择更少的争斗，你会变得更有爱心而不期待任何回报，这会让你应对外部关系更加得心应手。</p>
+</li>
+</ul>
+<h1 id="没有什么快速致富的方法">没有什么快速致富的方法</h1>
+<h1 id="每个创始人都会对他的员工撒谎">每个创始人都会对他的员工撒谎</h1>
+<p>于是我开始尝试一些保持诚实的方法，我招募了一些有企业家精神的员工，然后告诉他们，“你们可以在这个公司成为企业家，当你们准备好开始自己的事业的那一天，我将支持你们。我永远不会妨碍你创业。但在你想开始一些新东西之前，这里可能是一个好地方，让你学习如何构建一个良好的团队，建立一个好的企业文化，通过打磨自己的技能找到适合的产品市场，见更多更加优秀的人、和他们交流碰撞，直到最终想通自己到底想做什么。因为定位、时机、以及必要的深思熟虑，在开始创业时很重要。”</p>
+<h1 id="产品化你自己">产品化你自己</h1>
+<p>找出你最擅长的，并尽可能多地运用杠杆<br>
+你要弄清楚你有什么特别擅长的，或者你有什么特别之处，然后尽可能地运用杠杆。在这种情况下你不是在刻意赚钱，赚钱甚至也不是一种技能。你就是在做你自己，探索成千上百种方式找到真正的你。</p>
+<ul>
+<li>找到让你富有、健康和有创造力的爱好<br>
+我会说，找到三个爱好，一个让你赚钱，一个让你健康，一个让你更聪明。<br>
+那些早年发现冲浪、游泳、网球或某种他们一生中大部分时间都在做的运动的人是非常幸运的，因为他们发现了一种使他们健康的爱好。</li>
+</ul>
+
+        </div>
+
+        
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="http://git.alang.run/tag/note/">
+            <span class="flex-auto">笔记</span>
+          </a>
+        
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="http://git.alang.run/tag/summary/">
+            <span class="flex-auto">摘抄</span>
+          </a>
+        
+
+
+        <div class="flex justify-between py-8">
+          
+            <div class="prev-post">
+              <a href="http://git.alang.run/post/yin-cang-wang-ye-suo-you-tu-pian-dai-ma/">
+                <h3 class="post-title">
+                  <i class="ri-arrow-left-line"></i>
+                  隐藏网页所有图片代码
+                </h3>
+              </a>
+            </div>
+          
+
+          
+            <div class="next-post">
+              <a href="http://git.alang.run/post/tencent-video-business/">
+                <h3 class="post-title">
+                  tencent video business
+                  <i class="ri-arrow-right-line"></i>
+                </h3>
+              </a>
+            </div>
+          
+        </div>
+
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: 'dd6b58508cc9af58fc1c',
+    clientSecret: 'aa86bd09e6d2eedc03f182792c20275d200ffb62',
+    repo: 'JumpAlang.github.io',
+    owner: 'JumpAlang',
+    admin: ['JumpAlang'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+
+      </div>
+    </div>
+
+    <script src="http://git.alang.run/media/prism.js"></script>  
+<script>
+
+Prism.highlightAll()
+let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+// This should probably be throttled.
+// Especially because it triggers during smooth scrolling.
+// https://lodash.com/docs/4.17.10#throttle
+// You could do like...
+// window.addEventListener("scroll", () => {
+//    _.throttle(doThatStuff, 100);
+// });
+// Only not doing it here to keep this Pen dependency-free.
+
+window.addEventListener("scroll", event => {
+  let fromTop = window.scrollY;
+
+  mainNavLinks.forEach((link, index) => {
+    let section = document.getElementById(decodeURI(link.hash).substring(1));
+    let nextSection = null
+    if (mainNavLinks[index + 1]) {
+      nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+    }
+    if (section.offsetTop <= fromTop) {
+      if (nextSection) {
+        if (nextSection.offsetTop > fromTop) {
+          link.classList.add("current");
+        } else {
+          link.classList.remove("current");    
+        }
+      } else {
+        link.classList.add("current");
+      }
+    } else {
+      link.classList.remove("current");
+    }
+  });
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  var lazyImages = [].slice.call(document.querySelectorAll(".post-feature-image.lazy"));
+
+  if ("IntersectionObserver" in window) {
+    let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          let lazyImage = entry.target
+          lazyImage.style.backgroundImage = `url(${lazyImage.dataset.bg})`
+          lazyImage.classList.remove("lazy")
+          lazyImageObserver.unobserve(lazyImage)
+        }
+      });
+    });
+
+    lazyImages.forEach(function(lazyImage) {
+      lazyImageObserver.observe(lazyImage)
+    })
+  } else {
+    // Possibly fall back to a more compatible method here
+  }
+});
+
+const menuContainer = document.querySelector('.menu-container')
+const menus = document.querySelectorAll('.menu-container .menu')
+const mask = document.querySelector('.mask')
+const contentWrapper = document.querySelector('.content-wrapper')
+const latestArticle = document.querySelector('.latest-article')
+const readMore = document.querySelector('.read-more')
+const indexPage = document.querySelector('.index-page')
+
+const isHome = location.pathname === '/'
+if (latestArticle) {
+  latestArticle.style.display = isHome ? 'block' : 'none'
+  readMore.style.display = isHome ? 'block' : 'none'
+  indexPage.style.display = isHome ? 'none' : 'block'
+}
+
+const openMenu = () => {
+  menuContainer.classList.add('open')
+  menus.forEach(menu => {
+    menu.classList.add('animated', 'fadeInLeft')
+  })
+  mask.classList.add('open')
+  contentWrapper.classList.add('is-second')
+}
+
+const closeMenu = () => {
+  menuContainer.classList.remove('open')
+  menus.forEach(menu => {
+    menu.classList.remove('animated', 'fadeInLeft')
+  })
+  mask.classList.remove('open')
+  contentWrapper.classList.remove('is-second')
+}
+</script>
+  
+  </body>
+</html>

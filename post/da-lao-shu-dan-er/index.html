@@ -1,0 +1,307 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Jump!Alang</title>
+<meta name="description" content="永远年轻！永远热泪盈眶！" />
+<link rel="shortcut icon" href="http://git.alang.run/favicon.ico?v=1691903147411">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+<link rel="stylesheet" href="http://git.alang.run/styles/main.css">
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main px-4 flex flex-col lg:flex-row">
+      <div id="sidebar" class="sidebar-wrapper lg:static lg:w-1/4">
+  <div class="lg:sticky top-0">
+    <div class="sidebar-content">
+      <div class="flex lg:block p-4 lg:px-0 items-center fixed lg:static lg:block top-0 right-0 left-0 bg-white z-50">
+        <i class="ri-menu-2-line lg:mt-4 text-2xl cursor-pointer animated fadeIn" onclick="openMenu()"></i>
+        <a href="http://git.alang.run">
+          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="http://git.alang.run/images/avatar.png?v=1691903147411" alt="">
+        </a>
+        <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">Jump!Alang</h1>
+      </div>
+      
+        <div class="animated fadeInLeft" style="animation-delay: 0.4s">
+          <p class="my-4 text-gray-600 font-light hidden lg:block">
+            文章目录
+          </p>
+          <div class="toc-container hidden lg:block">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4%E9%9B%86%E5%9B%A2%E6%80%BB%E8%A3%81">阿里巴巴集团总裁</a></li>
+<li><a href="#%E5%A4%A7%E4%BC%97%E7%82%B9%E8%AF%84%E9%A6%96%E5%B8%AD%E6%89%A7%E8%A1%8C%E5%AE%98">大众点评首席执行官</a></li>
+<li><a href="#%E4%BA%92%E5%8A%A8%E7%99%BE%E7%A7%91%E5%88%9B%E5%A7%8B%E4%BA%BA">互动百科创始人</a></li>
+<li><a href="#%E7%8C%8E%E8%B1%B9%E7%A7%BB%E5%8A%A8%E9%A6%96%E5%B8%AD%E6%89%A7%E8%A1%8C%E5%AE%98">猎豹移动首席执行官</a></li>
+<li><a href="#%E7%BD%91%E6%98%93%E5%85%AC%E5%8F%B8%E9%A6%96%E5%B8%AD%E6%89%A7%E8%A1%8C%E5%AE%98">网易公司首席执行官</a></li>
+<li><a href="#%E5%BE%AE%E8%BD%AF%E4%BA%9A%E5%A4%AA%E7%A0%94%E5%8F%91%E9%9B%86%E5%9B%A2%E4%B8%BB%E5%B8%AD">微软亚太研发集团主席</a></li>
+<li><a href="#%E4%BA%AC%E4%B8%9C%E9%9B%86%E5%9B%A2%E9%A6%96%E5%B8%AD%E6%89%A7%E8%A1%8C%E5%AE%98">京东集团首席执行官</a></li>
+<li><a href="#%E5%A5%87%E8%99%8E360%E8%91%A3%E4%BA%8B%E9%95%BF">奇虎360董事长</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="menu-container">
+  <i class="ri-arrow-left-line text-2xl cursor-pointer animated fadeIn close-menu-btn" onclick="closeMenu()"></i>
+  <div>
+    
+      
+        <a href="/" class="menu" style="animation-delay: 0s">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu" style="animation-delay: 0.2s">
+          所有
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu" style="animation-delay: 0.4s">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu" style="animation-delay: 0.6000000000000001s">
+          关于
+        </a>
+      
+    
+      
+        <a href="/post/world" class="menu" style="animation-delay: 0.8s" target="_blank">
+          世界
+        </a>
+      
+    
+  </div>
+  <div class="site-footer">
+    <div class="py-4 text-gray-700">JumpAlang ©2019  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a></div>
+    <a class="rss" href="http://git.alang.run/atom.xml" target="_blank">RSS</a>
+  </div>
+</div>
+<div class="mask" onclick="closeMenu()">
+</div>
+      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
+        <h1 class="text-3xl font-bold lg:mt-16">大佬书单（二）</h1>
+        <div class="text-sm text-gray-700 lg:my-8">
+          2019-06-04 / 1 min read
+        </div>
+        
+        <div class="post-content yue">
+          <h3 id="阿里巴巴集团总裁">阿里巴巴集团总裁</h3>
+<p>金建杭<br>
+推荐书：《三体》、《互联网从ID到DT》<br>
+<img src="http://git.alang.run/post-images/1559613896742.jpg" alt="" loading="lazy"></p>
+<h3 id="大众点评首席执行官">大众点评首席执行官</h3>
+<p>张涛<br>
+推荐书：《国家的选择》、《想你、创造性的原理》<br>
+<img src="http://git.alang.run/post-images/1559614037101.jpg" alt="" loading="lazy"></p>
+<h3 id="互动百科创始人">互动百科创始人</h3>
+<p>潘海东<br>
+推荐书：《从0到1-开启商业与未来秘密》、《下一个倒下的会不会是华为》<br>
+<img src="http://git.alang.run/post-images/1559614178474.jpg" alt="" loading="lazy"></p>
+<h3 id="猎豹移动首席执行官">猎豹移动首席执行官</h3>
+<p>傅盛<br>
+推荐书：《从0到1-开启商业与未来秘密》<br>
+<img src="http://git.alang.run/post-images/1559615257556.jpg" alt="" loading="lazy"></p>
+<h3 id="网易公司首席执行官">网易公司首席执行官</h3>
+<p>丁磊<br>
+推荐书：《设计中的设计》、《专业主义》<br>
+<img src="http://git.alang.run/post-images/1559615329017.jpg" alt="" loading="lazy"></p>
+<h3 id="微软亚太研发集团主席">微软亚太研发集团主席</h3>
+<p>洪小文<br>
+推荐书：《零边际成本社会》<br>
+<img src="http://git.alang.run/post-images/1559615427747.jpg" alt="" loading="lazy"></p>
+<h3 id="京东集团首席执行官">京东集团首席执行官</h3>
+<p>刘强东<br>
+推荐书：《促销的本质》<br>
+<img src="http://git.alang.run/post-images/1559615542286.jpg" alt="" loading="lazy"></p>
+<h3 id="奇虎360董事长">奇虎360董事长</h3>
+<p>周鸿祎<br>
+推荐书：《奇点临近》、《从0到1-开启商业与未来秘密》<br>
+<img src="http://git.alang.run/post-images/1559615690452.jpg" alt="" loading="lazy"></p>
+
+        </div>
+
+        
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="http://git.alang.run/tag/booklist/">
+            <span class="flex-auto">书单</span>
+          </a>
+        
+
+
+        <div class="flex justify-between py-8">
+          
+            <div class="prev-post">
+              <a href="http://git.alang.run/post/zhuan-wei-shi-me-zhe-xie-shu-ying-xiang-liao-ma-yun-qiao-bu-si-yi-sheng-ni-que-mei-you-du-guo/">
+                <h3 class="post-title">
+                  <i class="ri-arrow-left-line"></i>
+                  (转)为什么这些书影响了马云、乔布斯一生，你却没有读过？
+                </h3>
+              </a>
+            </div>
+          
+
+          
+            <div class="next-post">
+              <a href="http://git.alang.run/post/wu-wei-zi-ben-quan-da-lao-qiang-tui-shu-dan/">
+                <h3 class="post-title">
+                  五位资本圈大佬“强推”书单
+                  <i class="ri-arrow-right-line"></i>
+                </h3>
+              </a>
+            </div>
+          
+        </div>
+
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: 'dd6b58508cc9af58fc1c',
+    clientSecret: 'aa86bd09e6d2eedc03f182792c20275d200ffb62',
+    repo: 'JumpAlang.github.io',
+    owner: 'JumpAlang',
+    admin: ['JumpAlang'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+
+      </div>
+    </div>
+
+    <script src="http://git.alang.run/media/prism.js"></script>  
+<script>
+
+Prism.highlightAll()
+let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+// This should probably be throttled.
+// Especially because it triggers during smooth scrolling.
+// https://lodash.com/docs/4.17.10#throttle
+// You could do like...
+// window.addEventListener("scroll", () => {
+//    _.throttle(doThatStuff, 100);
+// });
+// Only not doing it here to keep this Pen dependency-free.
+
+window.addEventListener("scroll", event => {
+  let fromTop = window.scrollY;
+
+  mainNavLinks.forEach((link, index) => {
+    let section = document.getElementById(decodeURI(link.hash).substring(1));
+    let nextSection = null
+    if (mainNavLinks[index + 1]) {
+      nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+    }
+    if (section.offsetTop <= fromTop) {
+      if (nextSection) {
+        if (nextSection.offsetTop > fromTop) {
+          link.classList.add("current");
+        } else {
+          link.classList.remove("current");    
+        }
+      } else {
+        link.classList.add("current");
+      }
+    } else {
+      link.classList.remove("current");
+    }
+  });
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  var lazyImages = [].slice.call(document.querySelectorAll(".post-feature-image.lazy"));
+
+  if ("IntersectionObserver" in window) {
+    let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          let lazyImage = entry.target
+          lazyImage.style.backgroundImage = `url(${lazyImage.dataset.bg})`
+          lazyImage.classList.remove("lazy")
+          lazyImageObserver.unobserve(lazyImage)
+        }
+      });
+    });
+
+    lazyImages.forEach(function(lazyImage) {
+      lazyImageObserver.observe(lazyImage)
+    })
+  } else {
+    // Possibly fall back to a more compatible method here
+  }
+});
+
+const menuContainer = document.querySelector('.menu-container')
+const menus = document.querySelectorAll('.menu-container .menu')
+const mask = document.querySelector('.mask')
+const contentWrapper = document.querySelector('.content-wrapper')
+const latestArticle = document.querySelector('.latest-article')
+const readMore = document.querySelector('.read-more')
+const indexPage = document.querySelector('.index-page')
+
+const isHome = location.pathname === '/'
+if (latestArticle) {
+  latestArticle.style.display = isHome ? 'block' : 'none'
+  readMore.style.display = isHome ? 'block' : 'none'
+  indexPage.style.display = isHome ? 'none' : 'block'
+}
+
+const openMenu = () => {
+  menuContainer.classList.add('open')
+  menus.forEach(menu => {
+    menu.classList.add('animated', 'fadeInLeft')
+  })
+  mask.classList.add('open')
+  contentWrapper.classList.add('is-second')
+}
+
+const closeMenu = () => {
+  menuContainer.classList.remove('open')
+  menus.forEach(menu => {
+    menu.classList.remove('animated', 'fadeInLeft')
+  })
+  mask.classList.remove('open')
+  contentWrapper.classList.remove('is-second')
+}
+</script>
+  
+  </body>
+</html>

@@ -1,0 +1,596 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Jump!Alang</title>
+<meta name="description" content="永远年轻！永远热泪盈眶！" />
+<link rel="shortcut icon" href="http://git.alang.run/favicon.ico?v=1691903147411">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+<link rel="stylesheet" href="http://git.alang.run/styles/main.css">
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main px-4 flex flex-col lg:flex-row">
+      <div id="sidebar" class="sidebar-wrapper lg:static lg:w-1/4">
+  <div class="lg:sticky top-0">
+    <div class="sidebar-content">
+      <div class="flex lg:block p-4 lg:px-0 items-center fixed lg:static lg:block top-0 right-0 left-0 bg-white z-50">
+        <i class="ri-menu-2-line lg:mt-4 text-2xl cursor-pointer animated fadeIn" onclick="openMenu()"></i>
+        <a href="http://git.alang.run">
+          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="http://git.alang.run/images/avatar.png?v=1691903147411" alt="">
+        </a>
+        <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">Jump!Alang</h1>
+      </div>
+      
+        <div class="animated fadeInLeft" style="animation-delay: 0.4s">
+          <p class="my-4 text-gray-600 font-light hidden lg:block">
+            文章目录
+          </p>
+          <div class="toc-container hidden lg:block">
+            
+          </div>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="menu-container">
+  <i class="ri-arrow-left-line text-2xl cursor-pointer animated fadeIn close-menu-btn" onclick="closeMenu()"></i>
+  <div>
+    
+      
+        <a href="/" class="menu" style="animation-delay: 0s">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu" style="animation-delay: 0.2s">
+          所有
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu" style="animation-delay: 0.4s">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu" style="animation-delay: 0.6000000000000001s">
+          关于
+        </a>
+      
+    
+      
+        <a href="/post/world" class="menu" style="animation-delay: 0.8s" target="_blank">
+          世界
+        </a>
+      
+    
+  </div>
+  <div class="site-footer">
+    <div class="py-4 text-gray-700">JumpAlang ©2019  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a></div>
+    <a class="rss" href="http://git.alang.run/atom.xml" target="_blank">RSS</a>
+  </div>
+</div>
+<div class="mask" onclick="closeMenu()">
+</div>
+      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
+        <h1 class="text-3xl font-bold lg:mt-16">JAVA面试题</h1>
+        <div class="text-sm text-gray-700 lg:my-8">
+          2019-08-11 / 8 min read
+        </div>
+        
+        <div class="post-content yue">
+          <blockquote>
+<p>机会是留给有准备的人！</p>
+</blockquote>
+<!-- more -->
+<ol>
+<li>
+<p>简单说下什么是跨平台？<br>
+由于各种操作系统指令集不是完全一致的，所有在操作系统之上加个虚拟机可以来提供统一接口，屏蔽系统之间的差异。</p>
+</li>
+<li>
+<p>java有几种基本数据类型</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">数据类型</th>
+<th style="text-align:center">字节</th>
+<th style="text-align:center">默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">byte</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">short</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">int</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">long</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">float</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">0.0f</td>
+</tr>
+<tr>
+<td style="text-align:center">double</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">0.0d</td>
+</tr>
+<tr>
+<td style="text-align:center">char</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">'\u0000'</td>
+</tr>
+<tr>
+<td style="text-align:center"><em><strong>boolean</strong></em></td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">false</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>ArratList和LinkedList区别<br>
+ArrayList是基于动态数组的数据结构，LinkedList是基于链表的数据结构。<br>
+对于随机访问get和set,ArrayList优于LinkedList,因为LinkedList要移动指针。<br>
+对于新增和删除add和remove，LinkedList优于ArrayList，因为ArrayList要移动数据。</p>
+</li>
+<li>
+<p>ConncurrentModificationException异常出现的原因</p>
+<pre><code class="language-java">  public class Test{
+ 	 public static void main(String[] args){
+ 		 ArrayList&lt;Integer&gt; list = new ArrayList&lt;Integer&gt;();
+ 		 list.add(2);
+ 		 Iterator&lt;Integer&gt; ite = list.iterator();
+ 		 while(ite.hasNext()){
+ 			 Integer integer = ite.next();
+ 			 if(integer == 2){
+ 				 list.remove(integer);
+ 			 }
+ 		 }
+ 	 }
+  }
+</code></pre>
+<p>执行上段代码是有问题的，会抛出<code>ConcurrentModification</code>异常。<br>
+<strong>原因</strong>：调用list.remove()方法导致modCount和expectedModeCount的值不一致。</p>
+<pre><code class="language-java">final void checkForComodication(){
+    if(modCount != expectedModCount
+   	 throw new ConcurrentModification();
+}
+</code></pre>
+<p><strong>解决方法</strong>：在迭代器中如果要删除元素的话，需要调用Iterator类的remove方法。</p>
+<pre><code class="language-java">public class Test{
+    public static void main(String[] args){
+   	 ArrayList&lt;Integer&gt; list = new ArrayList&lt;Integer&gt;();
+   	 list.add(2);
+   	 Iterator&lt;Integer&gt; ite = list.iterator();
+   	 while(ite.hasNext()){
+   		 Integer integer = ite.next();
+   		 if(integer == 2){
+   			 ite.remove();//注意这个地方
+   		 }
+   	 }
+    }
+} 
+</code></pre>
+</li>
+<li>
+<p>String、StringBuffer和StringBuilder区别</p>
+<ol>
+<li>数据可变和不可变<br>
+<code>String</code>底层使用一个不可变的字符数组private final char value[];所以它内容不可变；<br>
+<code>StringBuffer</code>和<code>StringBuilder</code>都继承了<code>AbstractStringBuilder</code>底层使用的是可变字符数组：<code>char[] value</code>;</li>
+<li>线程安全<br>
+<code>StringBuilder</code>是线程不安全的，效率较高；而StringBuffer是线程安全的，效率较低。<br>
+通过他们的<code>append()</code>方法来看，<code>StringBuffer</code>是有同步锁，而StringBuilder没有：</li>
+</ol>
+<pre><code class="language-java">@Override
+public sychronized StringBuffer append(Object obj){
+	toStringCache = null;
+	super.append(String.valueOf(obj));
+	return this;
+}
+
+@Override
+public StringBuilder append(String str){
+	super.append(str);
+	return this;
+}
+</code></pre>
+<ol start="3">
+<li>相同点<br>
+<code>StringBuilder</code>与<code>StringBuffer</code>有公共父类`AbstractStringBuilder'。</li>
+</ol>
+<p>最后，操作可变字符速度：<code>StringBuilder &gt; StringBuffer &gt; String</code>。</p>
+</li>
+<li>
+<p>HashMap和HashTable、ConcurrentHashMap区别？<br>
+相同点：<br>
+1.HashMap和HashTable都实现Map接口<br>
+2.都可以存储key-value数据<br>
+不同点：<br>
+1.HashMap可以将null作为key或value，HashTable不可以。<br>
+2.HashMap是线程不安全，效率高，HashTable是线程安全，效率低。<br>
+3.HashMap的迭代器(Iterator)是fail-fast迭代器,而HashTable的迭代器(enumerator)不是fail-fast。</p>
+<blockquote>
+<p>fail-fast:就是就快的时间能把错误抛出而不是让程序执行。</p>
+</blockquote>
+<p>如何保证线程安全又效率高？<br>
+Java5提供了ConcurrentHashMap，它是HashTable的替代，比HashTable的扩展性更好。<br>
+我们能否让HashMap同步？<br>
+HashMap可以通过下面的语句进行同步：<br>
+<code>Map m = Collections.sychronizeMap(hashMap);</code></p>
+</li>
+<li>
+<p>线程创建方式</p>
+<ol>
+<li>继承Thread类，作为线程对象存在(继承Thread对象)</li>
+</ol>
+<pre><code class="language-java">public class CreatThreadDemo1 extends Thread{
+/**
+ * 构造方法： 继承父类方法的Thread(String name)；方法
+ * @param name
+ */
+public CreatThreadDemo1(String name){
+    super(name);
+}
+
+@Override
+public void run() {
+    while (!interrupted()){
+        System.out.println(getName()+&quot;线程执行了...&quot;);
+        try {
+            Thread.sleep(200);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+public static void main(String[] args) {
+    CreatThreadDemo1 d1 = new CreatThreadDemo1(&quot;first&quot;);
+    CreatThreadDemo1 d2 = new CreatThreadDemo1(&quot;second&quot;);
+
+    d1.start();
+    d2.start();
+
+    d1.interrupt();  //中断第一个线程
+}
+}
+</code></pre>
+<p>常规方法，不多做介绍了，interrupted方法，是来判断该线程是否被中断。（终止线程不允许用stop方法，该方法不会施放占用的资源。所以我们在设计程序的时候，要按照中断线程的思维去设计，就像上面的代码一样）。<br>
+2. 实现runnable接口作为线程任务存在</p>
+<pre><code class="language-java">public class CreatThreadDemo2 implements Runnable {
+@Override
+public void run() {
+    while (true){
+        System.out.println(&quot;线程执行了...&quot;);
+    }
+}
+
+public static void main(String[] args) {
+    //将线程任务传给线程对象
+    Thread thread = new Thread(new CreatThreadDemo2());
+    //启动线程
+    thread.start();
+}
+}
+</code></pre>
+<p>Runnable 只是来修饰线程所执行的任务，它不是一个线程对象。想要启动Runnable对象，必须将它放到一个线程对象里。<br>
+3. 匿名内部类创建线程对象</p>
+<pre><code class="language-java">public class CreatThreadDemo3 extends Thread{
+public static void main(String[] args) {
+    //创建无参线程对象
+    new Thread(){
+        @Override
+        public void run() {
+            System.out.println(&quot;线程执行了...&quot;);
+        }
+    }.start();
+   //创建带线程任务的线程对象
+    new Thread(new Runnable() {
+        @Override
+        public void run() {
+            System.out.println(&quot;线程执行了...&quot;);
+        }
+    }).start();
+    //创建带线程任务并且重写run方法的线程对象
+    new Thread(new Runnable() {
+        @Override
+        public void run() {
+            System.out.println(&quot;runnable run 线程执行了...&quot;);
+        }
+    }){
+        @Override
+        public void run() {
+            System.out.println(&quot;override run 线程执行了...&quot;);
+        }
+    }.start();
+}
+}
+</code></pre>
+<p>创建带线程任务并且重写run方法的线程对象中，为什么只运行了Thread的run方法。我们看看Thread类的源码:<br>
+<code>public class Thread implements Runnable{……}</code>;<br>
+4.创建带返回值的线程</p>
+<pre><code class="language-java">public class CreatThreadDemo4 implements Callable {
+public static void main(String[] args) throws ExecutionException, InterruptedException {
+    CreatThreadDemo4 demo4 = new CreatThreadDemo4();
+
+    FutureTask&lt;Integer&gt; task = new FutureTask&lt;Integer&gt;(demo4); //FutureTask最终实现的是runnable接口
+
+    Thread thread = new Thread(task);
+
+    thread.start();
+
+    System.out.println(&quot;我可以在这里做点别的业务逻辑...因为FutureTask是提前完成任务&quot;);
+    //拿出线程执行的返回值
+    Integer result = task.get();
+    System.out.println(&quot;线程中运算的结果为:&quot;+result);
+}
+
+//重写Callable接口的call方法
+@Override
+public Object call() throws Exception {
+    int result = 1;
+    System.out.println(&quot;业务逻辑计算中...&quot;);
+    Thread.sleep(3000);
+    return result;
+}
+}
+</code></pre>
+<p>Callable接口介绍：</p>
+<pre><code class="language-java">public interface Callable&lt;V&gt; {
+/**
+ * Computes a result, or throws an exception if unable to do so.
+ *
+ * @return computed result
+ * @throws Exception if unable to compute a result
+ */
+V call() throws Exception;
+}
+</code></pre>
+<p>返回指定泛型的call方法。然后调用FutureTask对象的get方法得道call方法的返回值。<br>
+5. 定时器Timer</p>
+<pre><code class="language-java">public class CreatThreadDemo5 {
+
+public static void main(String[] args) {
+    Timer timer = new Timer();
+
+    timer.schedule(new TimerTask() {
+        @Override
+        public void run() {
+            System.out.println(&quot;定时器线程执行了...&quot;);
+        }
+    },0,1000);   //延迟0，周期1s
+
+}
+}
+</code></pre>
+<ol start="6">
+<li>线程池创建线程</li>
+</ol>
+<pre><code class="language-java">public class CreatThreadDemo6 {
+public static void main(String[] args) {
+    //创建一个具有10个线程的线程池
+    ExecutorService threadPool = Executors.newFixedThreadPool(10);
+    long threadpoolUseTime = System.currentTimeMillis();
+    for (int i = 0;i&lt;10;i++){
+        threadPool.execute(new Runnable() {
+            @Override
+            public void run() {
+                System.out.println(Thread.currentThread().getName()+&quot;线程执行了...&quot;);
+            }
+        });
+    }
+    long threadpoolUseTime1 = System.currentTimeMillis();
+    System.out.println(&quot;多线程用时&quot;+(threadpoolUseTime1-threadpoolUseTime));
+    //销毁线程池
+    threadPool.shutdown();
+    threadpoolUseTime = System.currentTimeMillis();
+}
+
+}
+</code></pre>
+<p>7.利用java8新特性 stream 实现并发</p>
+<pre><code class="language-java">public class CreatThreadDemo7 {
+public static void main(String[] args) {
+    List&lt;Integer&gt; values = Arrays.asList(10,20,30,40);
+    //parallel 平行的，并行的
+    int result = values.parallelStream().mapToInt(p -&gt; p*2).sum();
+    System.out.println(result);
+    //怎么证明它是并发处理呢
+    values.parallelStream().forEach(p-&gt; System.out.println(p));
+		}
+	}
+</code></pre>
+</li>
+</ol>
+
+        </div>
+
+        
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="http://git.alang.run/tag/java/">
+            <span class="flex-auto">java</span>
+          </a>
+        
+
+
+        <div class="flex justify-between py-8">
+          
+            <div class="prev-post">
+              <a href="http://git.alang.run/post/mou-pao-xuan-ze-cha-ru-kuai-su-pai-xu-java-suan-fa/">
+                <h3 class="post-title">
+                  <i class="ri-arrow-left-line"></i>
+                  冒泡、选择、插入、快速排序JAVA算法
+                </h3>
+              </a>
+            </div>
+          
+
+          
+            <div class="next-post">
+              <a href="http://git.alang.run/post/xiao-kou-chang-kai-hao-cai-zi-ran-lai/">
+                <h3 class="post-title">
+                  笑口常开，好彩自然来
+                  <i class="ri-arrow-right-line"></i>
+                </h3>
+              </a>
+            </div>
+          
+        </div>
+
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: 'dd6b58508cc9af58fc1c',
+    clientSecret: 'aa86bd09e6d2eedc03f182792c20275d200ffb62',
+    repo: 'JumpAlang.github.io',
+    owner: 'JumpAlang',
+    admin: ['JumpAlang'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+
+      </div>
+    </div>
+
+    <script src="http://git.alang.run/media/prism.js"></script>  
+<script>
+
+Prism.highlightAll()
+let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+// This should probably be throttled.
+// Especially because it triggers during smooth scrolling.
+// https://lodash.com/docs/4.17.10#throttle
+// You could do like...
+// window.addEventListener("scroll", () => {
+//    _.throttle(doThatStuff, 100);
+// });
+// Only not doing it here to keep this Pen dependency-free.
+
+window.addEventListener("scroll", event => {
+  let fromTop = window.scrollY;
+
+  mainNavLinks.forEach((link, index) => {
+    let section = document.getElementById(decodeURI(link.hash).substring(1));
+    let nextSection = null
+    if (mainNavLinks[index + 1]) {
+      nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+    }
+    if (section.offsetTop <= fromTop) {
+      if (nextSection) {
+        if (nextSection.offsetTop > fromTop) {
+          link.classList.add("current");
+        } else {
+          link.classList.remove("current");    
+        }
+      } else {
+        link.classList.add("current");
+      }
+    } else {
+      link.classList.remove("current");
+    }
+  });
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  var lazyImages = [].slice.call(document.querySelectorAll(".post-feature-image.lazy"));
+
+  if ("IntersectionObserver" in window) {
+    let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          let lazyImage = entry.target
+          lazyImage.style.backgroundImage = `url(${lazyImage.dataset.bg})`
+          lazyImage.classList.remove("lazy")
+          lazyImageObserver.unobserve(lazyImage)
+        }
+      });
+    });
+
+    lazyImages.forEach(function(lazyImage) {
+      lazyImageObserver.observe(lazyImage)
+    })
+  } else {
+    // Possibly fall back to a more compatible method here
+  }
+});
+
+const menuContainer = document.querySelector('.menu-container')
+const menus = document.querySelectorAll('.menu-container .menu')
+const mask = document.querySelector('.mask')
+const contentWrapper = document.querySelector('.content-wrapper')
+const latestArticle = document.querySelector('.latest-article')
+const readMore = document.querySelector('.read-more')
+const indexPage = document.querySelector('.index-page')
+
+const isHome = location.pathname === '/'
+if (latestArticle) {
+  latestArticle.style.display = isHome ? 'block' : 'none'
+  readMore.style.display = isHome ? 'block' : 'none'
+  indexPage.style.display = isHome ? 'none' : 'block'
+}
+
+const openMenu = () => {
+  menuContainer.classList.add('open')
+  menus.forEach(menu => {
+    menu.classList.add('animated', 'fadeInLeft')
+  })
+  mask.classList.add('open')
+  contentWrapper.classList.add('is-second')
+}
+
+const closeMenu = () => {
+  menuContainer.classList.remove('open')
+  menus.forEach(menu => {
+    menu.classList.remove('animated', 'fadeInLeft')
+  })
+  mask.classList.remove('open')
+  contentWrapper.classList.remove('is-second')
+}
+</script>
+  
+  </body>
+</html>

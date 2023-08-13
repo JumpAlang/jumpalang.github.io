@@ -1,0 +1,512 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Jump!Alang</title>
+<meta name="description" content="永远年轻！永远热泪盈眶！" />
+<link rel="shortcut icon" href="http://git.alang.run/favicon.ico?v=1691903147411">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+<link rel="stylesheet" href="http://git.alang.run/styles/main.css">
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main px-4 flex flex-col lg:flex-row">
+      <div id="sidebar" class="sidebar-wrapper lg:static lg:w-1/4">
+  <div class="lg:sticky top-0">
+    <div class="sidebar-content">
+      <div class="flex lg:block p-4 lg:px-0 items-center fixed lg:static lg:block top-0 right-0 left-0 bg-white z-50">
+        <i class="ri-menu-2-line lg:mt-4 text-2xl cursor-pointer animated fadeIn" onclick="openMenu()"></i>
+        <a href="http://git.alang.run">
+          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="http://git.alang.run/images/avatar.png?v=1691903147411" alt="">
+        </a>
+        <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">Jump!Alang</h1>
+      </div>
+      
+        <div class="animated fadeInLeft" style="animation-delay: 0.4s">
+          <p class="my-4 text-gray-600 font-light hidden lg:block">
+            文章目录
+          </p>
+          <div class="toc-container hidden lg:block">
+            <ul class="markdownIt-TOC">
+<li><a href="#%E5%86%92%E6%B3%A1-%E9%80%89%E6%8B%A9-%E6%8F%92%E5%85%A5">冒泡、选择、插入</a></li>
+<li><a href="#%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F">快速排序</a></li>
+</ul>
+
+          </div>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="menu-container">
+  <i class="ri-arrow-left-line text-2xl cursor-pointer animated fadeIn close-menu-btn" onclick="closeMenu()"></i>
+  <div>
+    
+      
+        <a href="/" class="menu" style="animation-delay: 0s">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu" style="animation-delay: 0.2s">
+          所有
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu" style="animation-delay: 0.4s">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu" style="animation-delay: 0.6000000000000001s">
+          关于
+        </a>
+      
+    
+      
+        <a href="/post/world" class="menu" style="animation-delay: 0.8s" target="_blank">
+          世界
+        </a>
+      
+    
+  </div>
+  <div class="site-footer">
+    <div class="py-4 text-gray-700">JumpAlang ©2019  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a></div>
+    <a class="rss" href="http://git.alang.run/atom.xml" target="_blank">RSS</a>
+  </div>
+</div>
+<div class="mask" onclick="closeMenu()">
+</div>
+      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
+        <h1 class="text-3xl font-bold lg:mt-16">冒泡、选择、插入、快速排序JAVA算法</h1>
+        <div class="text-sm text-gray-700 lg:my-8">
+          2019-08-11 / 6 min read
+        </div>
+        
+        <div class="post-content yue">
+          <p>熟能生巧！</p>
+<!-- more -->
+<h1 id="冒泡-选择-插入">冒泡、选择、插入</h1>
+<pre><code class="language-java">public class OrdinarySortRepeat {
+    public static void main(String[] args) {
+        int[] arr = getRandomInts(10);
+        int[] arr2 = Arrays.copyOf(arr,10);
+        int[] arr3 = Arrays.copyOf(arr,10);
+        int[] arr4 = Arrays.copyOf(arr,10);
+        System.out.println(&quot;origin:&quot;+Arrays.toString(arr));
+        bubbleSort(arr);
+        System.out.println(&quot;bubbleSort:&quot;+Arrays.toString(arr));
+        selectSort(arr2);
+        System.out.println(&quot;selectSort:&quot;+Arrays.toString(arr2));
+        insertSort(arr3);
+        System.out.println(&quot;insertSort:&quot;+Arrays.toString(arr3));
+        insertSort2(arr4);
+        System.out.println(&quot;insertSort2:&quot;+Arrays.toString(arr4));
+    }
+    public static int[] getRandomInts(int length){
+        int[] numbers = new int[length];
+        Random random = new Random();
+        for (int i = 0; i &lt; length; i++) {
+            numbers[i] = random.nextInt(9999);
+        }
+        return numbers;
+    }
+
+    public static void swap(int[] arr, int a, int b){
+        int temp = arr[a];
+        arr[a] = arr[b];
+        arr[b] = temp;
+    }
+
+    public static void bubbleSort(int[] arr){
+        for(int i = 0; i &lt; arr.length-1; i++){
+            boolean isNoSorted = true;
+            for(int j = 0; j &lt; arr.length-i-1; j++){
+                if(arr[j] &gt; arr[j+1]){
+                    swap(arr,j,j+1);
+                    isNoSorted = false;
+                }
+            }
+            if(isNoSorted){
+                return;
+            }
+        }
+    }
+
+    public static void selectSort(int[] arr){
+        for(int i = 0; i &lt; arr.length-1; i++){
+            for(int j = i+1; j &lt; arr.length;j++){
+                if(arr[i] &gt; arr[j]){
+                    swap(arr,i,j);
+                }
+            }
+        }
+    }
+
+    public static void insertSort(int[] arr){
+        for(int i = 1; i &lt; arr.length; i++){
+            int temp = arr[i];
+            int j = i-1;
+            while(j &gt;= 0 &amp;&amp; arr[j] &gt; temp){
+                arr[j+1] = arr[j];
+                j--;
+            }
+            arr[j+1] = temp;
+        }
+    }
+
+    public static void insertSort2(int[] arr){
+        for(int i = 1;i &lt; arr.length; i++){
+            int temp = arr[i];
+            int j;
+            for(j = i-1; j &gt;= 0; j--){
+                if(arr[j] &gt; temp){
+                    arr[j+1] = arr[j];
+                }else{
+                    break;
+                }
+            }
+            arr[j+1] = temp;
+        }
+    }
+}
+
+</code></pre>
+<h1 id="快速排序">快速排序</h1>
+<pre><code class="language-java">public class QuickSortRepeat {
+    public static void main(String[] args) {
+        int[] arr = getRandomInts(10);
+        int[] arr2 = Arrays.copyOf(arr,10);
+        int[] arr3 = Arrays.copyOf(arr,10);
+        int[] arr4 = Arrays.copyOf(arr,10);
+        System.out.println(&quot;origin:&quot;+Arrays.toString(arr));
+        quickSort(arr,0,arr.length-1);
+        System.out.println(&quot;quickSort:&quot;+Arrays.toString(arr));
+        quickSort2(arr2,0,arr.length-1);
+        System.out.println(&quot;quickSort2:&quot;+ Arrays.toString(arr2));
+        quickSort3(arr3,0,arr.length-1);
+        System.out.println(&quot;quickSort3:&quot;+Arrays.toString(arr3));
+        quickSort4(arr4,0,arr.length-1);
+        System.out.println(&quot;quickSort4:&quot;+Arrays.toString(arr4));
+    }
+    public static int[] getRandomInts(int length){
+        int[] numbers = new int[length];
+        Random random = new Random();
+        for (int i = 0; i &lt; length; i++) {
+            numbers[i] = random.nextInt(9999);
+        }
+        return numbers;
+    }
+
+    public static void swap(int[] arr, int a, int b){
+        int temp = arr[a];
+        arr[a] = arr[b];
+        arr[b] = temp;
+    }
+
+    /**
+     * 根据阮一峰博客：http://www.ruanyifeng.com/blog/2011/04/quicksort_in_javascript.html
+     * @param arr
+     * @param left
+     * @param right
+     */
+    public static void quickSort(int[] arr, int left, int right){
+        if(left &gt;= right){
+            return;
+        }
+        int standard = arr[left];
+        int index = left;
+        for(int i = left+1; i &lt;= right; i++){
+            if(arr[i] &lt; standard){
+                arr[index] = arr[i];
+                for(int j = i-1; j &gt; index;j--){
+                    arr[j+1] = arr[j];
+                }
+                arr[++index] = standard;
+            }
+        }
+        quickSort(arr,left,index-1);
+        quickSort(arr,index+1,right);
+    }
+
+    /**
+     * 根据马桶上看算法：http://developer.51cto.com/art/201403/430986.htm
+     * @param arr
+     * @param left
+     * @param right
+     */
+    public static void quickSort2(int[] arr,int left, int right){
+        if(left &gt;= right){
+            return;
+        }
+        int standard = arr[left];
+        int i = left;
+        int j = right;
+        while(i &lt; j){
+            while(i &lt; j &amp;&amp; arr[j] &gt;= standard){
+                j--;
+            }
+            while(i &lt; j &amp;&amp; arr[i] &lt;= standard){
+                i++;
+            }
+            if(i &lt; j){
+                swap(arr,i,j);
+            }else{
+                break;
+            }
+        }
+        if(i != left){
+            arr[left] = arr[i];
+            arr[i] = standard;
+        }
+
+        quickSort2(arr,left,i-1);
+        quickSort2(arr,i+1,right);
+    }
+
+    /**
+     * 根据博客园：https://www.cnblogs.com/coderising/p/5708801.html
+     * @param arr
+     * @param left
+     * @param right
+     */
+    public static void quickSort3(int[] arr, int left, int right){
+        if(left &gt;= right){
+            return;
+        }
+        int standard = arr[left];
+        int i = left;
+        int j = right;
+        while(i &lt; j){
+            while(i &lt; j &amp;&amp; arr[j] &gt;= standard){
+                j--;
+            }
+            arr[i] = arr[j];
+            while(i &lt; j &amp;&amp; arr[i] &lt;= standard){
+                i++;
+            }
+            arr[j] = arr[i];
+        }
+        arr[i] = standard;
+        quickSort3(arr,left,i-1);
+        quickSort3(arr,i+1,right);
+    }
+
+    /**
+     * 同上，对quickSort3进行优化(三数取中)，也是根据博客园：https://www.cnblogs.com/coderising/p/5708801.html
+     * @param arr
+     * @param left
+     * @param right
+     */
+    public static void quickSort4(int[] arr, int left, int right){
+        if(left &gt;= right){
+            return;
+        }
+        int mid = (left+right)/2;
+        if(arr[right] &lt; arr[left]){
+            swap(arr,left,right);
+        }
+        if(arr[right] &lt; arr[mid]){
+            swap(arr,mid,right);
+        }
+        if(arr[left] &lt; arr[mid]){
+            swap(arr,left,mid);
+        }
+        int standard = arr[left];
+        int i = left;
+        int j = right;
+        while(i &lt; j){
+            while(i &lt; j &amp;&amp; arr[j] &gt;= standard){
+                j--;
+            }
+            arr[i] = arr[j];
+            while(i &lt; j &amp;&amp; arr[i] &lt;= standard){
+                i++;
+            }
+            arr[j] = arr[i];
+        }
+        arr[i] = standard;
+        quickSort3(arr,left,i-1);
+        quickSort3(arr,i+1,right);
+    }
+}
+</code></pre>
+
+        </div>
+
+        
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="http://git.alang.run/tag/algorithm/">
+            <span class="flex-auto">算法</span>
+          </a>
+        
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="http://git.alang.run/tag/java/">
+            <span class="flex-auto">java</span>
+          </a>
+        
+
+
+        <div class="flex justify-between py-8">
+          
+            <div class="prev-post">
+              <a href="http://git.alang.run/post/ni-chi-kai-liao-nan-jing-cong-ci-mei-you-ren-he-wo-shuo-hua/">
+                <h3 class="post-title">
+                  <i class="ri-arrow-left-line"></i>
+                  你离开了南京，从此没有人和我说话
+                </h3>
+              </a>
+            </div>
+          
+
+          
+            <div class="next-post">
+              <a href="http://git.alang.run/post/java-mian-shi-ti/">
+                <h3 class="post-title">
+                  JAVA面试题
+                  <i class="ri-arrow-right-line"></i>
+                </h3>
+              </a>
+            </div>
+          
+        </div>
+
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: 'dd6b58508cc9af58fc1c',
+    clientSecret: 'aa86bd09e6d2eedc03f182792c20275d200ffb62',
+    repo: 'JumpAlang.github.io',
+    owner: 'JumpAlang',
+    admin: ['JumpAlang'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+
+      </div>
+    </div>
+
+    <script src="http://git.alang.run/media/prism.js"></script>  
+<script>
+
+Prism.highlightAll()
+let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+// This should probably be throttled.
+// Especially because it triggers during smooth scrolling.
+// https://lodash.com/docs/4.17.10#throttle
+// You could do like...
+// window.addEventListener("scroll", () => {
+//    _.throttle(doThatStuff, 100);
+// });
+// Only not doing it here to keep this Pen dependency-free.
+
+window.addEventListener("scroll", event => {
+  let fromTop = window.scrollY;
+
+  mainNavLinks.forEach((link, index) => {
+    let section = document.getElementById(decodeURI(link.hash).substring(1));
+    let nextSection = null
+    if (mainNavLinks[index + 1]) {
+      nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+    }
+    if (section.offsetTop <= fromTop) {
+      if (nextSection) {
+        if (nextSection.offsetTop > fromTop) {
+          link.classList.add("current");
+        } else {
+          link.classList.remove("current");    
+        }
+      } else {
+        link.classList.add("current");
+      }
+    } else {
+      link.classList.remove("current");
+    }
+  });
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  var lazyImages = [].slice.call(document.querySelectorAll(".post-feature-image.lazy"));
+
+  if ("IntersectionObserver" in window) {
+    let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          let lazyImage = entry.target
+          lazyImage.style.backgroundImage = `url(${lazyImage.dataset.bg})`
+          lazyImage.classList.remove("lazy")
+          lazyImageObserver.unobserve(lazyImage)
+        }
+      });
+    });
+
+    lazyImages.forEach(function(lazyImage) {
+      lazyImageObserver.observe(lazyImage)
+    })
+  } else {
+    // Possibly fall back to a more compatible method here
+  }
+});
+
+const menuContainer = document.querySelector('.menu-container')
+const menus = document.querySelectorAll('.menu-container .menu')
+const mask = document.querySelector('.mask')
+const contentWrapper = document.querySelector('.content-wrapper')
+const latestArticle = document.querySelector('.latest-article')
+const readMore = document.querySelector('.read-more')
+const indexPage = document.querySelector('.index-page')
+
+const isHome = location.pathname === '/'
+if (latestArticle) {
+  latestArticle.style.display = isHome ? 'block' : 'none'
+  readMore.style.display = isHome ? 'block' : 'none'
+  indexPage.style.display = isHome ? 'none' : 'block'
+}
+
+const openMenu = () => {
+  menuContainer.classList.add('open')
+  menus.forEach(menu => {
+    menu.classList.add('animated', 'fadeInLeft')
+  })
+  mask.classList.add('open')
+  contentWrapper.classList.add('is-second')
+}
+
+const closeMenu = () => {
+  menuContainer.classList.remove('open')
+  menus.forEach(menu => {
+    menu.classList.remove('animated', 'fadeInLeft')
+  })
+  mask.classList.remove('open')
+  contentWrapper.classList.remove('is-second')
+}
+</script>
+  
+  </body>
+</html>

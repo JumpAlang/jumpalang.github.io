@@ -1,0 +1,429 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Jump!Alang</title>
+<meta name="description" content="永远年轻！永远热泪盈眶！" />
+<link rel="shortcut icon" href="http://git.alang.run/favicon.ico?v=1691903147411">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+<link rel="stylesheet" href="http://git.alang.run/styles/main.css">
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main px-4 flex flex-col lg:flex-row">
+      <div id="sidebar" class="sidebar-wrapper lg:static lg:w-1/4">
+  <div class="lg:sticky top-0">
+    <div class="sidebar-content">
+      <div class="flex lg:block p-4 lg:px-0 items-center fixed lg:static lg:block top-0 right-0 left-0 bg-white z-50">
+        <i class="ri-menu-2-line lg:mt-4 text-2xl cursor-pointer animated fadeIn" onclick="openMenu()"></i>
+        <a href="http://git.alang.run">
+          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="http://git.alang.run/images/avatar.png?v=1691903147411" alt="">
+        </a>
+        <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">Jump!Alang</h1>
+      </div>
+      
+        <div class="animated fadeInLeft" style="animation-delay: 0.4s">
+          <p class="my-4 text-gray-600 font-light hidden lg:block">
+            文章目录
+          </p>
+          <div class="toc-container hidden lg:block">
+            <ul class="markdownIt-TOC">
+<li><a href="#%E7%A9%B7%E6%9F%A5%E7%90%86%E5%AE%9D%E5%85%B8%E6%9F%A5%E7%90%86%E8%8A%92%E6%A0%BC%E6%99%BA%E6%85%A7%E7%AE%B4%E8%A8%80%E5%BD%95">《穷查理宝典：查理·芒格智慧箴言录》</a></li>
+<li><a href="#%E5%88%AB%E9%97%B9%E4%BA%86%E8%B4%B9%E6%9B%BC%E5%85%88%E7%94%9F">《别闹了，费曼先生》</a></li>
+<li><a href="#%E5%AF%8C%E5%85%B0%E5%85%8B%E6%9E%97%E4%BC%A0">《富兰克林传》</a></li>
+<li><a href="#%E8%87%AA%E4%B8%8B%E8%80%8C%E4%B8%8A%E4%B8%87%E7%89%A9%E8%BF%9B%E5%8C%96%E5%8F%B2">《自下而上：万物进化史》</a></li>
+<li><a href="#%E9%BB%91%E5%A4%A9%E9%B9%85">《黑天鹅》</a></li>
+<li><a href="#%E4%BA%BA%E7%B1%BB%E7%AE%80%E5%8F%B2">《人类简史》</a></li>
+<li><a href="#%E6%B2%89%E6%80%9D%E5%BD%95">《沉思录》</a></li>
+<li><a href="#%E9%9B%AA%E5%B4%A9">《雪崩》</a></li>
+<li><a href="#%E5%AF%B9%E8%B5%8C">《对赌》</a></li>
+<li><a href="#%E4%BB%8E0%E5%88%B01%E5%BC%80%E5%90%AF%E5%95%86%E4%B8%9A%E4%B8%8E%E6%9C%AA%E6%9D%A5%E7%9A%84%E7%A7%98%E5%AF%86">《从0到1：开启商业与未来的秘密》</a></li>
+<li><a href="#%E5%8E%9F%E6%96%87%E9%93%BE%E6%8E%A5">原文链接</a></li>
+</ul>
+
+          </div>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="menu-container">
+  <i class="ri-arrow-left-line text-2xl cursor-pointer animated fadeIn close-menu-btn" onclick="closeMenu()"></i>
+  <div>
+    
+      
+        <a href="/" class="menu" style="animation-delay: 0s">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu" style="animation-delay: 0.2s">
+          所有
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu" style="animation-delay: 0.4s">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu" style="animation-delay: 0.6000000000000001s">
+          关于
+        </a>
+      
+    
+      
+        <a href="/post/world" class="menu" style="animation-delay: 0.8s" target="_blank">
+          世界
+        </a>
+      
+    
+  </div>
+  <div class="site-footer">
+    <div class="py-4 text-gray-700">JumpAlang ©2019  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a></div>
+    <a class="rss" href="http://git.alang.run/atom.xml" target="_blank">RSS</a>
+  </div>
+</div>
+<div class="mask" onclick="closeMenu()">
+</div>
+      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
+        <h1 class="text-3xl font-bold lg:mt-16">(转)你与硅谷大佬们，只差这几本书的距离！</h1>
+        <div class="text-sm text-gray-700 lg:my-8">
+          2019-06-04 / 14 min read
+        </div>
+        
+          <img class="post-feature-image rounded-lg mx-auto my-4" src="http://git.alang.run/post-images/zhuan-ni-yu-huo-gu-da-lao-men-zhi-chai-zhe-ji-ben-shu-de-ju-chi.webp" alt="">
+        
+        <div class="post-content yue">
+          <p>如果你正思索在职业生涯中实现自己的价值或寻找突破，那么养成阅读习惯，并接触领域内最前沿的书籍，是帮助你在短时间内获取更多的信息有效方式。</p>
+<p>为了让自己有更高的阅读量，马克·扎克伯格、比尔·盖茨这些科技大牛，甚至为自己建立了私人图书馆。比尔·盖茨一直保持着每年50本书以上的阅读量......</p>
+<p>这些顶尖的投资者和创业者需要超越现有的文化范式去探索，思考普通人的视野忽视了什么，下一步可能会发生什么，什么又是恒久不变的。</p>
+<p>在2019年4月23日世界读书日到来之际，总结了一些硅谷大佬在采访和社交媒体中被反复提及、引用和推荐的书。这些书往往意在揭示关于人性中的隐性思考模式和深层状况。</p>
+<p>也许你与硅谷大佬们，只差这几本书的距离！</p>
+<h1 id="穷查理宝典查理芒格智慧箴言录">《穷查理宝典：查理·芒格智慧箴言录》</h1>
+<p><img src="http://git.alang.run/post-images/1559616173203.webp" alt="" loading="lazy"><br>
+Poor Charlie’s Almanack:</p>
+<p>The Wit and Wisdom of Charles T. Munger</p>
+<p>By Charlie Munger</p>
+<p>中文版</p>
+<p>《穷查理宝典：查理·芒格智慧箴言录》</p>
+<p>查理·芒格 著 彼得·考夫曼 编</p>
+<p>中信出版集团 | 2016.12<br>
+<img src="http://git.alang.run/post-images/1559616218181.webp" alt="" loading="lazy"></p>
+<blockquote>
+<p>在我的一生中，我所认识的各个领域的智者，他们无不每时每刻都在读书。如果知道巴菲特读了多少书，或者知道我读了多少书，你一定会感到惊讶。我的孩子们经常调侃我说，你就是一本长了两条腿的书。              ——查理·T.芒格《穷查理宝典：查理·芒格智慧箴言录》<br>
+查理·芒格是我们这个时代最伟大的商业思想家之一。</p>
+</blockquote>
+<p>他最为人熟知的名头是伯克希尔·哈撒韦公司的副总裁，以及沃伦·巴菲特的黄金搭档。但查理·芒格的成就远超于此。</p>
+<p>芒格是一个博学多才、思想独立的人。通过经济学、历史学、生物学、物理学和心理学等领域的钻研，芒格提出一些“有益心智模型”，它们有的与我们的直觉相悖，但却像一套高分辨率的镜头，让我们更深刻地认识世界。正是这些模型让芒格了解复杂情况，认清现实问题——也顺便送他成了亿万富翁。</p>
+<p>《穷查理宝典》一书是查理·芒格的个人传记，展现了芒格的投资哲学、学习理念与人生心得，书中收录了芒格的公开演讲、媒体访谈、写作素材以及一些金句，贯穿全书的是芒格的聪慧、机智，其令人敬服的价值观和深不可测的修辞天赋，读这本书可以领略芒格如何透过纷纷扰扰的表面看清事物本质的特点。</p>
+<h1 id="别闹了费曼先生">《别闹了，费曼先生》</h1>
+<p><img src="http://git.alang.run/post-images/1559616407200.webp" alt="" loading="lazy"><br>
+Surely you're joking, Mr. Feynman!</p>
+<p>By Richard P. Feynman<br>
+<img src="http://git.alang.run/post-images/1559616413121.webp" alt="" loading="lazy"><br>
+《别闹了，费曼先生》</p>
+<p>理查德·费曼 著</p>
+<p>生活·读书·新知三联书店 | 1997.12</p>
+<figure data-type="image" tabindex="1"><img src="http://git.alang.run/post-images/1559616400390.webp" alt="" loading="lazy"></figure>
+<blockquote>
+<p>我没有责任去完成别人期待我完成的事情，没有责任去迎合他人的期待。这是他们的错误，没有做到不代表我的失败。              ——理查德·费曼《别闹了，费曼先生》</p>
+</blockquote>
+<p>《别闹了，费曼先生》是关于诺贝尔奖物理学奖得主理查德·费曼先生的自传，介绍了费曼先生的经历和趣闻轶事。和查理·芒格一样，费曼先生也是一位不拘一格的思想家。不止于此，费曼先生还有更加离经叛道的人生。</p>
+<p>他一生特立独行，他没时间在乎世俗眼光与套路。他讨厌装腔作势，讨厌所谓的惯例以及那个时代大众盲目遵循的一些“规矩”。除非事情的背后有深刻的科学原因和依据，否则费曼先生绝不会买账。与此同时，他热爱生活，爱吹牛，是位花花公子，也喜欢搞点小破坏。</p>
+<p>弗里曼·戴森曾评价他：“半是天才，半是滑稽演员”。除去在物理学领域的造诣之外，费曼还擅长演奏邦戈鼓，擅长画画，并对生物学做出了很多的贡献。</p>
+<p>他的一生精彩地诠释了——挑战常规和跨界思维如何打开新世界的大门。</p>
+<h1 id="富兰克林传">《富兰克林传》</h1>
+<p><img src="http://git.alang.run/post-images/1559616511348.webp" alt="" loading="lazy"><br>
+Benjamin Franklin</p>
+<p>by Walter Isaacson</p>
+<p>中文版</p>
+<p>《富兰克林传》</p>
+<p>沃尔特·艾萨克森 著</p>
+<p>中信出版集团 | 2016.7<br>
+<img src="http://git.alang.run/post-images/1559616520461.webp" alt="" loading="lazy"></p>
+<blockquote>
+<p>那些为了获得暂时的安全而放弃自由的人，既不配获得自由，也终将丧失安全。  ——本杰明·富兰克林</p>
+</blockquote>
+<p>美国开国元勋本杰明·富兰克林是硅谷科技企业家们最受推崇的一位名人。富兰克林除了在大革命中奠定了国家的根基，也是一位杰出的科学家和发明家。富兰克林发明避雷针、潜水脚蹼、双光眼镜、玻璃琴、图书馆用高架取书椅、富兰克林炉等等。</p>
+<p>为了让自己具有足够的精力去从事发明活动，富兰克林创建了他独有的生产力系统，并在他的自传中对其进行了详细的描述和介绍。这令他的自传内容非常特别，像是发明者的自助书。</p>
+<p>同样也是发明控的埃隆·马斯克这样评价到：富兰克林是真的了不起！嗯，是迷弟无疑了。</p>
+<h1 id="自下而上万物进化史">《自下而上：万物进化史》</h1>
+<p><img src="http://git.alang.run/post-images/1559616655753.webp" alt="" loading="lazy"><br>
+The Evolution of Everything (and anything)</p>
+<p>by Matt Ridley</p>
+<p><img src="http://git.alang.run/post-images/1559616616003.webp" alt="" loading="lazy"><br>
+《自下而上：万物进化史》</p>
+<p>马特·里德利 著</p>
+<p>机械工业出版社 | 2017.8<br>
+<img src="http://git.alang.run/post-images/1559616683011.webp" alt="" loading="lazy"></p>
+<blockquote>
+<p>进化，就在我们的身边。它是我们了解人类以及自然世界如何变化的最佳方式。<br>
+人类制度、人工制品和习惯的改变，都是渐进的、必然的、不可避免的。它遵循从一个阶段到下一个阶段的叙述方式；它慢慢推进而非跳跃式发展；它有自己自发的势头，不为外部力量所推动；它心里没有什么目标，也没有具体的终点；它基本上是靠不断地尝试与碰撞错误而产生的，而这也正是自然选择的一种形式。   ——《自下而上：万物进化史》</p>
+</blockquote>
+<p>长期以来，进化一直被用来解释一点一点小小的改变最终会具备重塑地球的力量这一过程，仅此而已。但作者马特·里德利没有局限于此。</p>
+<p>通过列举各领域的大量案例，里德利阐述了进化的力量具体是如何在各个系统中发挥作用，促使其发生变化和迭代。本书展示了如何自下而上、仅仅通过迭代和交互来构建极其复杂的系统。</p>
+<p>全美最大的股权众筹网站 AngelList 创始人 Naval Ravikant 是里德利的忠实拥趸者，他曾说过：“在我最喜欢的20本书中，马特·里德利的作品足足占了4席。”</p>
+<h1 id="黑天鹅">《黑天鹅》</h1>
+<p><img src="http://git.alang.run/post-images/1559616808619.webp" alt="" loading="lazy"><br>
+The Black Swan</p>
+<p>by Nassim Nicholas Taleb</p>
+<p>中文版</p>
+<p>《黑天鹅》</p>
+<p>纳西姆·塔勒布 著</p>
+<p>中信出版集团 | 2011.10</p>
+<figure data-type="image" tabindex="2"><img src="http://git.alang.run/post-images/1559616816706.webp" alt="" loading="lazy"></figure>
+<blockquote>
+<p>与其权衡事件发生的概率大或小，不如去衡量事件一旦发生可能带来多大的危害。  ——《黑天鹅：如何应对不可知的未来》<br>
+《黑天鹅》是当下讲风险概率问题最具影响力的书之一。什么是黑天鹅事件？所谓黑天鹅事件是指小发生概率、但却会产生很大影响的事件，例如毁灭性的陨石撞击事件（恐龙的危机）或者是毁灭性的金融大崩溃（人类的危机）。</p>
+</blockquote>
+<p>除了《黑天鹅》之外，塔勒布“不确定性”系列丛书还包括：《随机漫步的傻瓜》、《反脆弱》和《非对称风险》。</p>
+<p>如果说在《黑天鹅》中，塔勒布向我们揭示了罕见而不可预测的事件如何潜伏在世间万物的背后，那么《随机漫步的傻瓜》指出“随机性”是整个世界的运行方式。在《反脆弱》中，塔勒布又提出“反脆弱性”概念，以引导人们在“黑天鹅”的世界中继续生存下去，而增强自身的“反脆弱性”不能以牺牲他人的利益为代价。在《非对称风险》中，塔勒布进一步指出，人类社会应建立一种“做出决定”（权利）和“承担后果”（责任）相互平衡的机制，也特别强调了决策者本人的担当精神。</p>
+<h1 id="人类简史">《人类简史》</h1>
+<p><img src="http://git.alang.run/post-images/1559616909871.webp" alt="" loading="lazy"><br>
+Sapiens</p>
+<p>by Yuval Noah Harari</p>
+<p>中文版</p>
+<p>《人类简史》</p>
+<p>尤瓦尔·赫拉利 著</p>
+<p>中信出版集团 | 2014.11</p>
+<figure data-type="image" tabindex="3"><img src="http://git.alang.run/post-images/1559616916829.webp" alt="" loading="lazy"></figure>
+<blockquote>
+<p>历史只告诉我们极少数人在做些什么，而实际上大多数人就是在不停地挑水和耕地中度过。 ——《人类简史》</p>
+</blockquote>
+<p>这是一本万物大历史——关于我们人类的胜利、人类的文明和文化。很少有其他书能像这本书一样覆盖如此广泛的话题，而能做到像赫拉利这样有理有据的就更少了。</p>
+<p>该书的主要观点之一是人类得以生存和繁荣发展的关键在于“讲故事的能力”。得益于故事的形成和讲述，我们才能在不同部落之间建立合作关系，进行交易、发动战争，通过宗教和神话的力量来形成紧密的联系。</p>
+<p>这是一部宏大的人类简史，更见微知著、以小写大，让人类重新审视自己。虽然，赫拉利关于人类历史发展方面的一些看法存在争议性，但是，他所探讨的每一个议题都堪称横向思维和创造力的结晶。</p>
+<h1 id="沉思录">《沉思录》</h1>
+<p><img src="http://git.alang.run/post-images/1559617022451.webp" alt="" loading="lazy"><br>
+Meditations</p>
+<p>by Marcus Aurelius</p>
+<p>中文版<br>
+《沉思录》是公版书，版本众多<br>
+<img src="http://git.alang.run/post-images/1559617026790.webp" alt="" loading="lazy"><br>
+豆瓣上评价比较高的是译林出版社在2009年出版的，译者是梁实秋。这本书的内地版基本就两位译者——梁实秋和何怀宏，大家按喜好选择吧。</p>
+<figure data-type="image" tabindex="4"><img src="http://git.alang.run/post-images/1559617082420.webp" alt="" loading="lazy"></figure>
+<blockquote>
+<p>你有控制自己思想的力量，除此之外一切皆不可控。意识到这一点，你终将发现自身的优势。 ——《沉思录》</p>
+</blockquote>
+<p>《沉思录》是古代罗马皇帝马可·奥勒留的日记，记录了他对于美好生活的思考。他之前并无意将这些内容发表面世，但机缘巧合，这本书成为斯多葛哲学思想最重要的参考作品之一。硅谷科技巨头们从各个角度解读《沉思录》，提炼出“斯多葛主义”——一种训练心智的操作方法论。</p>
+<p>马可·奥勒留在《沉思录》中详细记录了自己的生活：如何追求自律、节制、自控、驯服欲望、避免落入追求奢侈的陷阱以及避免自负。培养这些美德比追求幸福、快乐更重要。通过公正的行为，让自己顺应世界的秩序、达成内心的和平。</p>
+<h1 id="雪崩">《雪崩》</h1>
+<p><img src="http://git.alang.run/post-images/1559617196902.webp" alt="" loading="lazy"><br>
+Snow Crash</p>
+<p>by Neal Stephenson</p>
+<p>中文版<br>
+<img src="http://git.alang.run/post-images/1559617213535.webp" alt="" loading="lazy"></p>
+<p>《雪崩》</p>
+<p>尼尔•史蒂芬森 著</p>
+<p>四川科学技术出版社 | 2009</p>
+<figure data-type="image" tabindex="5"><img src="http://git.alang.run/post-images/1559617235509.webp" alt="" loading="lazy"></figure>
+<p>作为计算机赛博朋克小说的经典之作，《雪崩》的故事背景设置在有点乌托邦、又有点反乌托邦色彩的未来。美国政府垮台，美国社会彻底公司化，公司统治的微小国家成为新形式的政府。一场可以在生物上杀死程序员的病毒爆发。主人公 Hiro Protagonist 是一名黑客，当雪崩病毒爆发之后，他成为了制服这一计算机病毒的最佳人选。</p>
+<p>《雪崩》也是硅谷科技企业家们忠爱之作，据LinkedIn创始人Reid Hoffman的朋友、也是PayPal的创始人Peter Thiel说，《雪崩》在1992年出版之后，Hoffman就迷上了它。当时的互联网世界与现在截然不同，社交媒体也不存在，但正是这本书在 Hoffman 的脑海中播下了一个庞大的社交网络的种子。Hoffman 在1999年将这一想法应用于实践，推出了SocialNet，虽然以失败告终，但这为2002年LinkedIn的诞生奠定了基础。</p>
+<p>值得一提的是，在 Hoffman 钟情于《雪崩》的同时，另一位硅谷传奇人物比尔·盖茨力荐了作者史蒂芬森的另一本赛博朋克著作“SEVENEVES”（《七夏娃》）。这本书再次突破了人们的认知界限，将人类未来的生活图景放置在月亮爆炸后的七个星球上，黑科技的脑洞冲击自不在话下，更有意思的是，这位男性作家在男性抑或女性主宰未来世界这一问题上做出了值得玩味的设定，而这也成就了这本书充满想象空间的书名“七夏娃”。</p>
+<h1 id="对赌">《对赌》</h1>
+<p><img src="http://git.alang.run/post-images/1559617307851.webp" alt="" loading="lazy"><br>
+Thinking in Bets</p>
+<p>by Annie Duke</p>
+<p>中文版</p>
+<p>《对赌》</p>
+<p>安妮·杜克 著</p>
+<p>中信出版社出品 | 2018.12</p>
+<figure data-type="image" tabindex="6"><img src="http://git.alang.run/post-images/1559617317731.webp" alt="" loading="lazy"></figure>
+<p>作者安妮·杜克是传奇职业扑克手，	世界扑克系列赛冠军、认知心理学博士，后来她成为了一名概率论的普及者，先后为多个世界500强企业提供决策咨询。作为职业扑克手，在信息不足时，扑克手需要在两分钟内做出20个决策，玩牌本质上是一场又一场的决策实验。这本书就是她“对赌”思维多年的集大成之作——在信息不对称的情况下如何做出有效决策。</p>
+<p>网景创始人、硅谷著名投资人Marc Andreessen曾盛赞这本书：</p>
+<blockquote>
+<p>一本关于如何像扑克手或者风险投资人运用概率进行决策的实用手册。推荐给所有想知道这个真实世界运行法则的人一读。”</p>
+</blockquote>
+<h1 id="从0到1开启商业与未来的秘密">《从0到1：开启商业与未来的秘密》</h1>
+<p><img src="http://git.alang.run/post-images/1559617450753.webp" alt="" loading="lazy"><br>
+Zero to One:</p>
+<p>Notes on Startups, or How to Build the Future</p>
+<p>by Peter Thiel<br>
+中文版</p>
+<p>《从0到1：开启商业与未来的秘密》</p>
+<p>彼得·蒂尔 著</p>
+<p>中信出版集团 | 2015.1</p>
+<figure data-type="image" tabindex="7"><img src="http://git.alang.run/post-images/1559617481049.webp" alt="" loading="lazy"></figure>
+<blockquote>
+<p>商业世界从零到一的时刻不会重演。下一个比尔·盖茨不会再开发操作系统，下一个拉里·佩奇或谢尔盖·布林是不会再研发搜索引擎，下一个马克·扎克伯格也不会去创建社交网络。 ——《从零到一：开启商业与未来的秘密》</p>
+</blockquote>
+<p>《从0到1》的作者是硅谷著名的创业者彼得·蒂尔，他曾在1998年创办了 PayPal，后来以15亿美元卖给eBay。之后彼得·蒂尔专注于金融投资和创业投资，曾投资过 Facebook 等著名企业。这本书浓缩了他几十年的硅谷创业心法，手把手教你如何打造一只独角兽企业。</p>
+<p>彼得·蒂尔是个颇有争议的人物，不过在书中他有几大核心观点还是值得深思：1. 垄断不是坏事，实际上，企业应该尽快建立起自己的垄断性竞争力。2. 正确的选择比努力更重要，选对了“1”的方向，后面才有从1到1000的机会。3. 不要深陷竞争，而要研究如何绕开竞争。成功企业建立在未知的秘密上，所以不要复制别人的成功，因为所有成功的企业都是不同的。</p>
+<h1 id="原文链接">原文链接</h1>
+<p><a href="https://mp.weixin.qq.com/s?__biz=MzI4MzA1Mzg0Mg==&amp;mid=2649661379&amp;idx=1&amp;sn=0b044896188f8fb4306790bbf2e0d06e&amp;chksm=f38aa5bec4fd2ca8131b41bb4f60f1be5af62e6ff22a20b510fe5ecccfa2e6b0b6957453a966&amp;token=449027753&amp;lang=zh_CN#rd">跳转</a></p>
+
+        </div>
+
+        
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="http://git.alang.run/tag/booklist/">
+            <span class="flex-auto">书单</span>
+          </a>
+        
+
+
+        <div class="flex justify-between py-8">
+          
+            <div class="prev-post">
+              <a href="http://git.alang.run/post/lesslesszhe-ge-shi-jie-ji-can-ku-you-wen-rou-greatergreater-zhai-chao/">
+                <h3 class="post-title">
+                  <i class="ri-arrow-left-line"></i>
+                  摘抄《这个世界既残酷又温柔》
+                </h3>
+              </a>
+            </div>
+          
+
+          
+            <div class="next-post">
+              <a href="http://git.alang.run/post/zhuan-wei-shi-me-zhe-xie-shu-ying-xiang-liao-ma-yun-qiao-bu-si-yi-sheng-ni-que-mei-you-du-guo/">
+                <h3 class="post-title">
+                  (转)为什么这些书影响了马云、乔布斯一生，你却没有读过？
+                  <i class="ri-arrow-right-line"></i>
+                </h3>
+              </a>
+            </div>
+          
+        </div>
+
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: 'dd6b58508cc9af58fc1c',
+    clientSecret: 'aa86bd09e6d2eedc03f182792c20275d200ffb62',
+    repo: 'JumpAlang.github.io',
+    owner: 'JumpAlang',
+    admin: ['JumpAlang'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+
+      </div>
+    </div>
+
+    <script src="http://git.alang.run/media/prism.js"></script>  
+<script>
+
+Prism.highlightAll()
+let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+// This should probably be throttled.
+// Especially because it triggers during smooth scrolling.
+// https://lodash.com/docs/4.17.10#throttle
+// You could do like...
+// window.addEventListener("scroll", () => {
+//    _.throttle(doThatStuff, 100);
+// });
+// Only not doing it here to keep this Pen dependency-free.
+
+window.addEventListener("scroll", event => {
+  let fromTop = window.scrollY;
+
+  mainNavLinks.forEach((link, index) => {
+    let section = document.getElementById(decodeURI(link.hash).substring(1));
+    let nextSection = null
+    if (mainNavLinks[index + 1]) {
+      nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+    }
+    if (section.offsetTop <= fromTop) {
+      if (nextSection) {
+        if (nextSection.offsetTop > fromTop) {
+          link.classList.add("current");
+        } else {
+          link.classList.remove("current");    
+        }
+      } else {
+        link.classList.add("current");
+      }
+    } else {
+      link.classList.remove("current");
+    }
+  });
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  var lazyImages = [].slice.call(document.querySelectorAll(".post-feature-image.lazy"));
+
+  if ("IntersectionObserver" in window) {
+    let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          let lazyImage = entry.target
+          lazyImage.style.backgroundImage = `url(${lazyImage.dataset.bg})`
+          lazyImage.classList.remove("lazy")
+          lazyImageObserver.unobserve(lazyImage)
+        }
+      });
+    });
+
+    lazyImages.forEach(function(lazyImage) {
+      lazyImageObserver.observe(lazyImage)
+    })
+  } else {
+    // Possibly fall back to a more compatible method here
+  }
+});
+
+const menuContainer = document.querySelector('.menu-container')
+const menus = document.querySelectorAll('.menu-container .menu')
+const mask = document.querySelector('.mask')
+const contentWrapper = document.querySelector('.content-wrapper')
+const latestArticle = document.querySelector('.latest-article')
+const readMore = document.querySelector('.read-more')
+const indexPage = document.querySelector('.index-page')
+
+const isHome = location.pathname === '/'
+if (latestArticle) {
+  latestArticle.style.display = isHome ? 'block' : 'none'
+  readMore.style.display = isHome ? 'block' : 'none'
+  indexPage.style.display = isHome ? 'none' : 'block'
+}
+
+const openMenu = () => {
+  menuContainer.classList.add('open')
+  menus.forEach(menu => {
+    menu.classList.add('animated', 'fadeInLeft')
+  })
+  mask.classList.add('open')
+  contentWrapper.classList.add('is-second')
+}
+
+const closeMenu = () => {
+  menuContainer.classList.remove('open')
+  menus.forEach(menu => {
+    menu.classList.remove('animated', 'fadeInLeft')
+  })
+  mask.classList.remove('open')
+  contentWrapper.classList.remove('is-second')
+}
+</script>
+  
+  </body>
+</html>
